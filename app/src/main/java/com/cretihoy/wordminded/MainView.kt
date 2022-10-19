@@ -1,4 +1,11 @@
 package com.cretihoy.wordminded
 
-class MainView {
+import com.arellomobile.mvp.MvpView
+import com.arellomobile.mvp.viewstate.strategy.SkipStrategy
+import com.arellomobile.mvp.viewstate.strategy.StateStrategyType
+
+interface MainView : MvpView {
+
+    @StateStrategyType(SkipStrategy::class)
+    fun openGameScreen()
 }
