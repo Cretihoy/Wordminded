@@ -1,4 +1,4 @@
-package com.cretihoy.wordminded
+package com.cretihoy.wordminded.main
 
 import com.arellomobile.mvp.MvpView
 import com.arellomobile.mvp.viewstate.strategy.SkipStrategy

@@ -1,4 +1,4 @@
-package com.cretihoy.wordminded
+package com.cretihoy.wordminded.main
 
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
