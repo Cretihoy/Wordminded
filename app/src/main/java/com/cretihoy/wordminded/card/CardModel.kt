@@ -1,4 +1,4 @@
-package com.cretihoy.wordminded
+package com.cretihoy.wordminded.card
 
 data class CardModel (
     val content: Int
