@@ -4,7 +4,7 @@ import com.cretihoy.wordminded.R.string
 
 object CardFactory {
 
-    fun getLetters(): List<CardModel> {
+    fun getLetter(): List<CardModel> {
         return listOf(
             CardModel(content = string.letter_1),
             CardModel(content = string.letter_2),
@@ -35,7 +35,7 @@ object CardFactory {
         )
     }
 
-    fun getTasks(): List<CardModel> {
+    fun getTask(): List<CardModel> {
         return listOf(
             CardModel(content = string.task_1),
             CardModel(content = string.task_2),
@@ -92,5 +92,12 @@ object CardFactory {
             CardModel(content = string.task_51),
             CardModel(content = string.task_52),
         )
+    }
+    fun getRandomLetter(): CardModel {
+        return getLetter().random()
+    }
+
+    fun getRandomTask(): CardModel {
+        return getTask().random()
     }
 }
