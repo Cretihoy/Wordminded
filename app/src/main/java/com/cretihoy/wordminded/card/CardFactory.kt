@@ -59,8 +59,6 @@ object CardFactory {
             CardModel(content = string.task_20),
             CardModel(content = string.task_21),
             CardModel(content = string.task_22),
-            CardModel(content = string.task_21),
-            CardModel(content = string.task_22),
             CardModel(content = string.task_23),
             CardModel(content = string.task_24),
             CardModel(content = string.task_25),
@@ -94,10 +92,14 @@ object CardFactory {
         )
     }
     fun getRandomLetter(): CardModel {
-        return getLetter().random()
+        val list = getLetter()
+        list.shuffled()
+        return list.random()
     }
 
     fun getRandomTask(): CardModel {
-        return getTask().random()
+        val list = getTask()
+        list.shuffled()
+        return list.random()
     }
 }
