@@ -12,9 +12,9 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.Wordminded"
-        tools:targetApi="31">
+        tools:targetApi="32">
         <activity
-            android:name=".GameScreenActivity"
+            android:name=".game.GameScreenActivity"
             android:exported="false"/>
         <activity
             android:name=".main.MainActivity"

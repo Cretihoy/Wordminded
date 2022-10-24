@@ -6,7 +6,7 @@ import android.util.Log
 import android.widget.Button
 import com.arellomobile.mvp.MvpActivity
 import com.arellomobile.mvp.presenter.InjectPresenter
-import com.cretihoy.wordminded.GameScreenActivity
+import com.cretihoy.wordminded.game.GameScreenActivity
 import com.cretihoy.wordminded.R.id
 import com.cretihoy.wordminded.R.layout
 
