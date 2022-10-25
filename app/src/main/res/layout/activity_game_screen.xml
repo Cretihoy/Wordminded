@@ -5,15 +5,15 @@
     android:id="@+id/game_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightBlack"
+    android:background="?colorOnPrimary"
     android:orientation="vertical"
     android:padding="32dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:layout_marginBottom="16dp"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
@@ -21,7 +21,7 @@
             android:layout_height="match_parent"
             android:layout_marginEnd="16dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/darkRed"
+            android:backgroundTint="?colorSecondary"
             app:cardCornerRadius="32dp">
 
             <TextView
@@ -30,9 +30,8 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:rotation="180"
-                android:textColor="@color/white"
+                android:textColor="?colorOnSecondary"
                 tools:text="@string/letter_1"/>
-
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -40,7 +39,7 @@
             android:layout_height="match_parent"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/darkBlue"
+            android:backgroundTint="?colorPrimary"
             app:cardCornerRadius="32dp">
 
             <TextView
@@ -49,7 +48,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:rotation="180"
-                android:textColor="@color/white"
+                android:textColor="?colorOnSecondary"
                 tools:text="@string/task_1"/>
 
         </androidx.cardview.widget.CardView>
@@ -59,8 +58,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:layout_marginTop="16dp"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
@@ -68,7 +67,7 @@
             android:layout_height="match_parent"
             android:layout_marginEnd="16dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/darkBlue"
+            android:backgroundTint="?colorPrimary"
             app:cardCornerRadius="32dp">
 
             <TextView
@@ -76,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:textColor="@color/white"
+                android:textColor="?colorOnSecondary"
                 tools:text="@string/task_1"/>
 
         </androidx.cardview.widget.CardView>
@@ -86,7 +85,7 @@
             android:layout_height="match_parent"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/darkRed"
+            android:backgroundTint="?colorSecondary"
             app:cardCornerRadius="32dp">
 
             <TextView
@@ -94,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:textColor="@color/white"
+                android:textColor="?colorOnSecondary"
                 tools:text="@string/letter_1"/>
 
         </androidx.cardview.widget.CardView>
