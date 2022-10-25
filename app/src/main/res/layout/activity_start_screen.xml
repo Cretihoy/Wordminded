@@ -11,7 +11,7 @@
         android:id="@+id/button_play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/red2"
+        android:backgroundTint="@color/darkRed"
         android:text="@string/start"
         android:textSize="32dp"
         android:textColor="@color/white"
