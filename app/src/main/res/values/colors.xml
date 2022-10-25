@@ -11,4 +11,5 @@
     <color name="darkRed">#B71C1C</color>
     <color name="lightBlue">#40C4FF</color>
     <color name="lightRed">#FF5252</color>
+    <color name="lightBlack">#333333</color>
 </resources>
