@@ -1,69 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/game_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/white">
+    android:background="@color/lightBlack"
+    android:orientation="vertical"
+    android:padding="32dp">
 
-    <TextView
-        android:id="@+id/task_bottom"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/blue"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/letter_bottom"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/letter_top"
-        tools:text="@string/task_1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/letter_bottom"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/red2"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/task_bottom"
-        app:layout_constraintTop_toBottomOf="@id/letter_top"
-        tools:text="@string/letter_1"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/darkRed"
+            app:cardCornerRadius="32dp">
 
-    <TextView
-        android:id="@+id/task_top"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/blue"
-        android:gravity="center"
-        android:rotation="180"
-        android:textColor="@color/white"
-        android:textSize="32dp"
-        app:layout_constraintBottom_toTopOf="@id/task_bottom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/letter_top"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/task_1"/>
+            <TextView
+                android:id="@+id/letter_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:rotation="180"
+                android:textColor="@color/white"
+                tools:text="@string/letter_1"/>
 
-    <TextView
-        android:id="@+id/letter_top"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/red2"
-        android:gravity="center"
-        android:rotation="180"
-        android:textColor="@color/white"
-        android:textSize="32dp"
-        app:layout_constraintBottom_toTopOf="@id/task_bottom"
-        app:layout_constraintEnd_toStartOf="@id/task_top"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/letter_1"/>
+        </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/darkBlue"
+            app:cardCornerRadius="32dp">
+
+            <TextView
+                android:id="@+id/task_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:rotation="180"
+                android:textColor="@color/white"
+                tools:text="@string/task_1"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/darkBlue"
+            app:cardCornerRadius="32dp">
+
+            <TextView
+                android:id="@+id/task_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/white"
+                tools:text="@string/task_1"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/darkRed"
+            app:cardCornerRadius="32dp">
+
+            <TextView
+                android:id="@+id/letter_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/white"
+                tools:text="@string/letter_1"/>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

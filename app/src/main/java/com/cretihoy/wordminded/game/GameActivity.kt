@@ -1,8 +1,8 @@
 package com.cretihoy.wordminded.game
 
 import android.os.Bundle
+import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.arellomobile.mvp.MvpActivity
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.cretihoy.wordminded.R
@@ -14,10 +14,10 @@ const val TAG = "Banana"
 class GameScreenActivity : MvpActivity(), GameView {
 
     private val taskTop: TextView by lazy { findViewById(R.id.task_top) }
-    private val taskBottom: TextView by lazy { findViewById(R.id.task_bottom) }
     private val letterTop: TextView by lazy { findViewById(R.id.letter_top) }
+    private val taskBottom: TextView by lazy { findViewById(R.id.task_bottom) }
     private val letterBottom: TextView by lazy { findViewById(R.id.letter_bottom) }
-    private val gameScreen: ConstraintLayout by lazy { findViewById(R.id.game_screen) }
+    private val gameScreen: LinearLayout by lazy { findViewById(R.id.game_screen) }
 
     @InjectPresenter
     lateinit var presenter: GamePresenter
