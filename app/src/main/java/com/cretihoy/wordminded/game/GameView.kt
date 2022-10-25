@@ -8,5 +8,5 @@ import com.cretihoy.wordminded.card.CardModel
 interface GameView: MvpView {
 
     @StateStrategyType(SkipStrategy::class)
-    fun showCards(letters: CardModel, tasks: CardModel)
+    fun showCards(letter: CardModel, task: CardModel)
 }
