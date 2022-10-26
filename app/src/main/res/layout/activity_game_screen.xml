@@ -7,46 +7,46 @@
     android:layout_height="match_parent"
     android:background="?colorOnPrimary"
     android:orientation="vertical"
-    android:padding="32dp">
+    android:padding="@dimen/bigPadding">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/margin"
         android:backgroundTint="?colorSecondary"
         android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="32dp">
+        app:cardCornerRadius="@dimen/radius">
 
         <TextView
             android:id="@+id/letter_top"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:padding="32dp"
+            android:padding="@dimen/bigPadding"
             android:rotation="180"
             android:textColor="?colorOnSecondary"
-            android:textSize="28sp"
+            android:textSize="@dimen/textBigSize"
             tools:text="@string/letter_1"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/margin"
         android:layout_weight="1"
         android:backgroundTint="?colorPrimary"
         android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="32dp">
+        app:cardCornerRadius="@dimen/radius">
 
         <TextView
             android:id="@+id/task_top"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:padding="32dp"
+            android:padding="@dimen/bigPadding"
             android:rotation="180"
             android:textColor="?colorOnSecondary"
-            android:textSize="18sp"
+            android:textSize="@dimen/textSmallSize"
             tools:text="@tools:sample/lorem/random"/>
 
     </androidx.cardview.widget.CardView>
@@ -54,20 +54,20 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/margin"
         android:layout_weight="1"
         android:backgroundTint="?colorPrimary"
         android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="32dp">
+        app:cardCornerRadius="@dimen/radius">
 
         <TextView
             android:id="@+id/task_bottom"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:padding="16dp"
+            android:padding="@dimen/smallPadding"
             android:textColor="?colorOnSecondary"
-            android:textSize="18sp"
+            android:textSize="@dimen/textSmallSize"
             tools:text="@tools:sample/lorem/random"/>
     </androidx.cardview.widget.CardView>
 
@@ -76,16 +76,16 @@
         android:layout_height="wrap_content"
         android:backgroundTint="?colorSecondary"
         android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="32dp">
+        app:cardCornerRadius="@dimen/radius">
 
         <TextView
             android:id="@+id/letter_bottom"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:padding="32dp"
+            android:padding="@dimen/bigPadding"
             android:textColor="?colorOnSecondary"
-            android:textSize="28sp"
+            android:textSize="@dimen/textBigSize"
             tools:text="@string/letter_1"/>
 
     </androidx.cardview.widget.CardView>
