@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Wordminded</string>
     <string name="start">Играть</string>
+    <string name="regulations">Правила</string>
+    <string name="setting">Настройки</string>
     <string name="letter_1">А</string>
     <string name="letter_2">Б</string>
     <string name="letter_3">В</string>
