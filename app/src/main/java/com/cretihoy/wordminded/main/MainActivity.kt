@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import androidx.cardview.widget.CardView
 import com.arellomobile.mvp.MvpActivity
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.cretihoy.wordminded.game.GameScreenActivity
@@ -14,7 +15,7 @@ const val TAG = "Apple"
 
 class MainActivity : MvpActivity(), MainView {
 
-    private val buttonPlay: Button by lazy { findViewById(id.button_play) }
+    private val cardPlay: CardView by lazy { findViewById(id.card_start_activity) }
 
     @InjectPresenter
     lateinit var presenter: MainPresenter
@@ -23,7 +24,7 @@ class MainActivity : MvpActivity(), MainView {
         super.onCreate(savedInstanceState)
         setContentView(layout.activity_start_screen)
 
-        buttonPlay.setOnClickListener {
+        cardPlay.setOnClickListener {
             Log.d(TAG, "Button Clicked with")
             presenter.onButtonClicked()
         }
