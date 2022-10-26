@@ -9,9 +9,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_start_activity"
-        android:layout_width="128dp"
-        android:layout_height="64dp"
-        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="?colorSecondary"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
@@ -22,11 +21,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="32dp"
             android:text="@string/start"
-            android:textColor="?colorOnSecondary"/>
+            android:textColor="?colorOnSecondary"
+            android:textSize="18sp"/>
 
     </androidx.cardview.widget.CardView>
 
