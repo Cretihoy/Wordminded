@@ -1,90 +1,85 @@
 <resources>
-    <string name="app_name">Соображарий</string>
-    <string name="app_start">Играть</string>
-    <string name="app_regulations">Правила</string>
-    <string name="app_settings">Настройки</string>
+    <string name="app_name">Wordminded</string>
+    <string name="app_start">Start</string>
+    <string name="app_regulations">Regulations</string>
+    <string name="app_settings">Setting</string>
+    <string name="letter_1">A</string>
+    <string name="letter_2">B</string>
+    <string name="letter_3">C</string>
+    <string name="letter_4">D</string>
+    <string name="letter_5">E</string>
+    <string name="letter_6">F</string>
+    <string name="letter_7">G</string>
+    <string name="letter_8">H</string>
+    <string name="letter_9">I</string>
+    <string name="letter_10">J</string>
+    <string name="letter_11">K</string>
+    <string name="letter_12">L</string>
+    <string name="letter_13">M</string>
+    <string name="letter_14">N</string>
+    <string name="letter_15">O</string>
+    <string name="letter_16">P</string>
+    <string name="letter_17">Q</string>
+    <string name="letter_18">R</string>
+    <string name="letter_19">S</string>
+    <string name="letter_20">T</string>
+    <string name="letter_21">U</string>
+    <string name="letter_22">V</string>
+    <string name="letter_23">W</string>
+    <string name="letter_24">X</string>
+    <string name="letter_25">Y</string>
+    <string name="letter_26">Z</string>
 
-    <string-array name="letter_array">
-        <item>А</item>
-        <item>Б</item>
-        <item>В</item>
-        <item>Г</item>
-        <item>Д</item>
-        <item>Е,Ё</item>
-        <item>Ж</item>
-        <item>З</item>
-        <item>И,Й</item>
-        <item>К</item>
-        <item>Л</item>
-        <item>М</item>
-        <item>Н</item>
-        <item>О</item>
-        <item>П</item>
-        <item>Р</item>
-        <item>С</item>
-        <item>Т</item>
-        <item>У</item>
-        <item>Ф</item>
-        <item>Х</item>
-        <item>Ц</item>
-        <item>Ч</item>
-        <item>Ш,Щ</item>
-        <item>Э,Ю</item>
-        <item>Я</item>
-    </string-array>
-
-    <string-array name="task_array">
-        <item>Мужское имя</item>
-        <item>Наречние</item>
-        <item>Аббревиатура</item>
-        <item>Ругательное слово (уберите эту карту, если играете с детьми)</item>
-        <item>Вещь, которую можно сделать из металла</item>
-        <item>На что вы можете посмотреть прямо сейчас</item>
-        <item>Связано с войной (можно называть имена собственные)</item>
-        <item>Можно увидеть в школе или институте</item>
-        <item>Слово, в котором есть "ь"</item>
-        <item>Профессия</item>
-        <item>Связано со спортом (можно называть имена собственные)</item>
-        <item>Страна</item>
-        <item>Можно положить в карман</item>
-        <item>Техническое устройство</item>
-        <item>Бренд</item>
-        <item>Знаменитая личность (фамилия, псевдоним, прозвище)</item>
-        <item>Произведение (фильм, книга, песня)</item>
-        <item>Можно коллекционировать</item>
-        <item>Вещь, которую запрещено проносить в самолет</item>
-        <item>Животное</item>
-        <item>Растение</item>
-        <item>Вещество, материал</item>
-        <item>Вещь, которую можно сделать из древесины</item>
-        <item>Связано с музыкой (можно называть имена собственные)</item>
-        <item>Связано с игрушками и играми (можно называть имена собственные)</item>
-        <item>Продается в супермаркете</item>
-        <item>Не стоит давать детям</item>
-        <item>Вещь дороже миллиона рублей</item>
-        <item>Слово, в котором эта буква встречается дважды</item>
-        <item>Слово из шести букв</item>
-        <item>Женское имя</item>
-        <item>Вымышленный персонаж</item>
-        <item>Абстрактное понятие (нельзя потрогать)</item>
-        <item>Напиток</item>
-        <item>Часть тела человека или животного</item>
-        <item>Можно сломать или испортить руками</item>
-        <item>Вещь, которую могли изготовить 1000 лет назад</item>
-        <item>Слово не начинается, а заканчивается на эту букву</item>
-        <item>Вещь, которая не могла существовать 100 лет назад</item>
-        <item>Вещь, которой нет у вашей семьи</item>
-        <item>Вещь дешевле 100 рублей</item>
-        <item>Гора, река, озеро или море</item>
-        <item>Весит больше тонны</item>
-        <item>Вещь, которая может служить для преступления</item>
-        <item>Вещь, которая есть у вашей семьи</item>
-        <item>Можно увидеть в больнице</item>
-        <item>Одежда</item>
-        <item>Тоньше сантиметра</item>
-        <item>Еда</item>
-        <item>Может быть красного цвета</item>
-        <item>Город</item>
-        <item>Можно увидеть в деревне</item>
-    </string-array>
+    <string name="task_1">Male name</string>
+    <string name="task_2">Adverb</string>
+    <string name="task_3">Abbreviation</string>
+    <string name="task_4">Swear Word (remove this card if playing with children)</string>
+    <string name="task_5">Thing that can be made out of metal</string>
+    <string name="task_6">What can you see right now</string>
+    <string name="task_7">Associated with the war (you can call proper names)</string>
+    <string name="task_8">Can be seen at school or institute</string>
+    <string name="task_9">word ending in "y"</string>
+    <string name="task_10">Profession</string>
+    <string name="task_11">Associated with sports (you can give proper names)</string>
+    <string name="task_12">Country</string>
+    <string name="task_13">Can be put in your pocket</string>
+    <string name="task_14">Technical device</string>
+    <string name="task_15">Brand</string>
+    <string name="task_16">Famous person (surname, pseudonym, nickname)</string>
+    <string name="task_17">Work (film, book, song)</string>
+    <string name="task_18">Can be collectible</string>
+    <string name="task_19">Thing not allowed on an airplane</string>
+    <string name="task_20">Animal</string>
+    <string name="task_21">Plant</string>
+    <string name="task_22">Substance, material</string>
+    <string name="task_23">Thing that can be made from wood</string>
+    <string name="task_24">Associated with music (you can name proper names)</string>
+    <string name="task_25">Associated with toys and games (you can give proper names)</string>
+    <string name="task_26">Sold in a supermarket</string>
+    <string name="task_27">Should not be given to children</string>
+    <string name="task_28">A thing worth more than a million rubles</string>
+    <string name="task_29">Word in which this letter occurs twice</string>
+    <string name="task_30">six letter word</string>
+    <string name="task_31">Female name</string>
+    <string name="task_32">Fictional character</string>
+    <string name="task_33">Abstract concept (cannot be touched)</string>
+    <string name="task_34">Drink</string>
+    <string name="task_35">Part of the human or animal body</string>
+    <string name="task_36">Can be broken or damaged by hand</string>
+    <string name="task_37">A thing that could have been made 1000 years ago</string>
+    <string name="task_38">The word does not begin, but ends with this letter</string>
+    <string name="task_39">The thing that couldn\'t have existed 100 years Ago</string>
+    <string name="task_40">Something your family doesn\'t have</string>
+    <string name="task_41">Thing cheaper $100</string>
+    <string name="task_42">Mountain, river, lake or sea</string>
+    <string name="task_43">Weighs over a ton</string>
+    <string name="task_44">Thing that can serve for a crime</string>
+    <string name="task_45">Thing that your family has</string>
+    <string name="task_46">Can be seen in the hospital</string>
+    <string name="task_47">Clothing</string>
+    <string name="task_48">Thinner than a centimeter</string>
+    <string name="task_49">Food</string>
+    <string name="task_50">May be red</string>
+    <string name="task_51">City</string>
+    <string name="task_52">Can be seen in the village</string>
 </resources>
