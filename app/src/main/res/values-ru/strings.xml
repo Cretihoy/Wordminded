@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Соображарий</string>
     <string name="app_start">Играть</string>
-    <string name="app_regulations">Правила</string>
+    <string name="app_rules">Правила</string>
     <string name="app_settings">Настройки</string>
 
     <string name="letter_01">А</string>

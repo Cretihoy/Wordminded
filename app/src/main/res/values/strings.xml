@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Wordminded</string>
     <string name="app_start">Start</string>
-    <string name="app_regulations">Regulations</string>
+    <string name="app_rules">Rules</string>
     <string name="app_settings">Setting</string>
     <string name="letter_01">A</string>
     <string name="letter_02">B</string>
