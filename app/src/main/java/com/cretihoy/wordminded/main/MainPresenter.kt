@@ -6,7 +6,11 @@ import com.arellomobile.mvp.MvpPresenter
 @InjectViewState
 class MainPresenter : MvpPresenter<MainView>() {
 
-    fun onButtonClicked() {
+    fun onButtonPlayClicked() {
         viewState.openGameScreen()
+    }
+
+    fun onButtonRulesClicked() {
+        viewState.openRulesScreen()
     }
 }

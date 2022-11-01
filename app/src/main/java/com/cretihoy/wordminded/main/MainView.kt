@@ -8,4 +8,7 @@ interface MainView : MvpView {
 
     @StateStrategyType(SkipStrategy::class)
     fun openGameScreen()
+
+    @StateStrategyType(SkipStrategy::class)
+    fun openRulesScreen()
 }
