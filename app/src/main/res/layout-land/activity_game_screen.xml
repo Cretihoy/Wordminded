@@ -32,7 +32,7 @@
                 android:rotation="180"
                 android:textColor="?colorOnSecondary"
                 android:textSize="@dimen/textBigSize"
-                tools:text="@string/letter_1"/>
+                tools:text="@string/letter_01"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -98,7 +98,7 @@
                 android:padding="@dimen/bigPadding"
                 android:textColor="?colorOnSecondary"
                 android:textSize="@dimen/textBigSize"
-                tools:text="@string/letter_1"/>
+                tools:text="@string/letter_01"/>
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>
