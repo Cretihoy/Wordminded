@@ -57,7 +57,7 @@
             app:cardCornerRadius="@dimen/radius">
 
             <TextView
-                android:id="@+id/card_regulations_activity"
+                android:id="@+id/card_rules_activity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
