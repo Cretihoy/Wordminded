@@ -14,12 +14,15 @@
         android:theme="@style/Theme.Wordminded"
         tools:targetApi="32">
         <activity
-            android:name=".RulesActivity"
+            android:name=".SettingsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".RulesActivity"
+            android:exported="false" />
         <activity
             android:name=".game.GameScreenActivity"
             android:exported="false" />
