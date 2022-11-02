@@ -1,7 +1,6 @@
 package com.cretihoy.wordminded.game
 
 import android.os.Bundle
-import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.arellomobile.mvp.MvpActivity
@@ -41,5 +40,16 @@ class GameScreenActivity : MvpActivity(), GameView {
         taskTop.text = getString(task.content)
         letterTop.text = getString(letter.content)
         letterBottom.text = getString(letter.content)
+    }
+
+    override fun setOrientation(isHorizontal: Boolean) {
+        if (isHorizontal) {
+            topLinear.orientation = LinearLayout.HORIZONTAL
+            bottomLinear.orientation = LinearLayout.HORIZONTAL
+        } else {
+            topLinear.orientation = LinearLayout.VERTICAL
+            bottomLinear.orientation = LinearLayout.VERTICAL
+        }
+
     }
 }
