@@ -1,6 +1,7 @@
 package com.cretihoy.wordminded.game
 
 import android.os.Bundle
+import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.arellomobile.mvp.MvpActivity
@@ -17,7 +18,8 @@ class GameScreenActivity : MvpActivity(), GameView {
     private val letterTop: TextView by lazy { findViewById(R.id.letter_top) }
     private val taskBottom: TextView by lazy { findViewById(R.id.task_bottom) }
     private val letterBottom: TextView by lazy { findViewById(R.id.letter_bottom) }
-    private val gameScreen: LinearLayout by lazy { findViewById(R.id.game_screen) }
+    private val topLinear: LinearLayout by lazy { findViewById(R.id.top_linear) }
+    private val bottomLinear: LinearLayout by lazy { findViewById(R.id.bottom_linear) }
 
     @InjectPresenter
     lateinit var presenter: GamePresenter
@@ -26,7 +28,10 @@ class GameScreenActivity : MvpActivity(), GameView {
         super.onCreate(savedInstanceState)
         setContentView(layout.activity_game_screen)
 
-        gameScreen.setOnClickListener {
+        topLinear.setOnClickListener {
+            presenter.onScreenClicked()
+        }
+        bottomLinear.setOnClickListener {
             presenter.onScreenClicked()
         }
     }

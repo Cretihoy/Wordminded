@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/game_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?colorOnPrimary"
@@ -10,6 +9,7 @@
     android:padding="@dimen/bigPadding">
 
     <LinearLayout
+        android:id="@+id/top_linear"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="@dimen/margin"
@@ -58,6 +58,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/bottom_linear"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
