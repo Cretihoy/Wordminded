@@ -47,6 +47,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_rules_activity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin"
@@ -57,7 +58,6 @@
             app:cardCornerRadius="@dimen/radius">
 
             <TextView
-                android:id="@+id/card_rules_activity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -67,6 +67,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_settings_activity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -76,7 +77,6 @@
             app:cardCornerRadius="@dimen/radius">
 
             <TextView
-                android:id="@+id/card_settings_activity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
