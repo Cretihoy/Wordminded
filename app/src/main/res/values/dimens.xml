@@ -2,8 +2,9 @@
 <resources>
     <dimen name="textSmallSize">18sp</dimen>
     <dimen name="textBigSize">28sp</dimen>
-    <dimen name="bigPadding">32dp</dimen>
-    <dimen name="smallPadding">16dp</dimen>
+
+    <dimen name="bigPadding">16dp</dimen>
+    <dimen name="smallPadding">8dp</dimen>
+
     <dimen name="radius">32dp</dimen>
-    <dimen name="margin">16dp</dimen>
 </resources>
