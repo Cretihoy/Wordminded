@@ -13,4 +13,8 @@ class MainPresenter : MvpPresenter<MainView>() {
     fun onButtonRulesClicked() {
         viewState.openRulesScreen()
     }
+
+    fun onButtonSettingsClicked() {
+        viewState.openSettingsScreen()
+    }
 }

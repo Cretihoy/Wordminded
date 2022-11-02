@@ -9,11 +9,13 @@ import com.cretihoy.wordminded.game.GameScreenActivity
 import com.cretihoy.wordminded.R.id
 import com.cretihoy.wordminded.R.layout
 import com.cretihoy.wordminded.RulesActivity
+import com.cretihoy.wordminded.SettingsActivity
 
 class MainActivity : MvpActivity(), MainView {
 
     private val cardPlay: CardView by lazy { findViewById(id.card_start_activity) }
     private val cardRules: CardView by lazy { findViewById(id.card_rules_activity) }
+    private val cardSettings: CardView by lazy { findViewById(id.card_settings_activity) }
 
     @InjectPresenter
     lateinit var presenter: MainPresenter
@@ -28,6 +30,9 @@ class MainActivity : MvpActivity(), MainView {
         cardRules.setOnClickListener{
             presenter.onButtonRulesClicked()
         }
+        cardSettings.setOnClickListener{
+            presenter.onButtonSettingsClicked()
+        }
     }
 
     override fun openGameScreen() {
@@ -36,5 +41,9 @@ class MainActivity : MvpActivity(), MainView {
 
     override fun openRulesScreen() {
         startActivity(Intent(this, RulesActivity::class.java))
+    }
+
+    override fun openSettingsScreen() {
+        startActivity(Intent(this, SettingsActivity::class.java))
     }
 }

@@ -11,4 +11,7 @@ interface MainView : MvpView {
 
     @StateStrategyType(SkipStrategy::class)
     fun openRulesScreen()
+
+    @StateStrategyType(SkipStrategy::class)
+    fun openSettingsScreen()
 }
