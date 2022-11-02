@@ -13,19 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Wordminded"
         tools:targetApi="32">
-        <activity
-            android:name=".SettingsActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".RulesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".game.GameScreenActivity"
-            android:exported="false" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".RulesActivity" />
+        <activity android:name=".game.GameScreenActivity" />
         <activity
             android:name=".main.MainActivity"
             android:exported="true">
