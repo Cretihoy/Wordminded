@@ -31,7 +31,7 @@
             android:id="@+id/rules_text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginBottom="@dimen/smallPadding"
             android:backgroundTint="?colorPrimary"
             android:foreground="?android:attr/selectableItemBackground"
             app:cardCornerRadius="@dimen/radius">
@@ -44,14 +44,13 @@
                 android:paddingVertical="@dimen/smallPadding"
                 android:text="@string/rules_text1"
                 android:textColor="?colorOnSecondary" />
-
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/rules_text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginBottom="@dimen/smallPadding"
             android:backgroundTint="?colorSecondary"
             android:foreground="?android:attr/selectableItemBackground"
             app:cardCornerRadius="@dimen/radius">

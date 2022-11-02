@@ -10,17 +10,17 @@
     android:padding="@dimen/bigPadding"
     tools:context=".main.MainActivity">
 
-   <ImageView
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:layout_weight="1"
-       android:src="@drawable/logo"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/logo" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_start_activity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginBottom="@dimen/smallPadding"
         android:layout_weight="1"
         android:backgroundTint="?colorSecondary"
         android:clickable="true"
@@ -41,7 +41,7 @@
         android:id="@+id/card_rules_activity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginBottom="@dimen/smallPadding"
         android:layout_weight="1"
         android:backgroundTint="?colorPrimary"
         android:clickable="true"
@@ -52,8 +52,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="@string/app_rules"
             android:padding="@dimen/smallPadding"
+            android:text="@string/app_rules"
             android:textColor="?colorOnSecondary"
             android:textSize="@dimen/textBigSize" />
     </androidx.cardview.widget.CardView>
