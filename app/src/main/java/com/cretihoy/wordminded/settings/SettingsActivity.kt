@@ -1,11 +1,12 @@
-package com.cretihoy.wordminded
+package com.cretihoy.wordminded.settings
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SwitchCompat
+import com.arellomobile.mvp.MvpActivity
+import com.cretihoy.wordminded.R
 import com.cretihoy.wordminded.storage.Storage
 
-class SettingsActivity : AppCompatActivity() {
+class SettingsActivity : MvpActivity(), SettingsView {
 
     val switchButtonHorizontal: SwitchCompat by lazy { findViewById(R.id.switch_button_horizontal) }
 

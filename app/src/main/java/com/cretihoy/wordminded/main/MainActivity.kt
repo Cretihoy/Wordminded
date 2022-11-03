@@ -5,11 +5,11 @@ import android.os.Bundle
 import androidx.cardview.widget.CardView
 import com.arellomobile.mvp.MvpActivity
 import com.arellomobile.mvp.presenter.InjectPresenter
-import com.cretihoy.wordminded.game.GameScreenActivity
 import com.cretihoy.wordminded.R.id
 import com.cretihoy.wordminded.R.layout
 import com.cretihoy.wordminded.RulesActivity
-import com.cretihoy.wordminded.SettingsActivity
+import com.cretihoy.wordminded.game.GameScreenActivity
+import com.cretihoy.wordminded.settings.SettingsActivity
 
 class MainActivity : MvpActivity(), MainView {
 
@@ -27,10 +27,10 @@ class MainActivity : MvpActivity(), MainView {
         cardPlay.setOnClickListener {
             presenter.onButtonPlayClicked()
         }
-        cardRules.setOnClickListener{
+        cardRules.setOnClickListener {
             presenter.onButtonRulesClicked()
         }
-        cardSettings.setOnClickListener{
+        cardSettings.setOnClickListener {
             presenter.onButtonSettingsClicked()
         }
     }

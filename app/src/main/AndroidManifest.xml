@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Wordminded"
         tools:targetApi="32">
-        <activity android:name=".SettingsActivity" />
+        <activity android:name=".settings.SettingsActivity" />
         <activity android:name=".RulesActivity" />
         <activity android:name=".game.GameScreenActivity" />
         <activity

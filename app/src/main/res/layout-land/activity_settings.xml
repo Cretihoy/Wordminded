@@ -6,7 +6,7 @@
     android:background="?colorOnPrimary"
     android:orientation="horizontal"
     android:padding="@dimen/bigPadding"
-    tools:context=".SettingsActivity">
+    tools:context=".settings.SettingsActivity">
 
     <TextView
         android:id="@+id/settings_title"
@@ -22,9 +22,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -6,7 +6,7 @@
     android:background="?colorOnPrimary"
     android:orientation="vertical"
     android:padding="@dimen/bigPadding"
-    tools:context=".SettingsActivity">
+    tools:context=".settings.SettingsActivity">
 
     <TextView
         android:id="@+id/settings_title"
@@ -29,8 +29,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_gravity="center"
+            android:layout_weight="1"
             android:text="Кнопки горизонтально"
             android:textColor="?colorOnSecondary"
             android:textSize="@dimen/textSmallSize" />
@@ -51,9 +51,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:text="Увеличить шрифт"
-            android:layout_gravity="center"
             android:textColor="?colorOnSecondary"
             android:textSize="@dimen/textSmallSize" />
 
