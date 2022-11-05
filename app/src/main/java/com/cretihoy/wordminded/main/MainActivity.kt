@@ -5,11 +5,12 @@ import android.os.Bundle
 import androidx.cardview.widget.CardView
 import com.arellomobile.mvp.MvpActivity
 import com.arellomobile.mvp.presenter.InjectPresenter
+import com.cretihoy.wordminded.QuestionActivity
 import com.cretihoy.wordminded.R.id
 import com.cretihoy.wordminded.R.layout
 import com.cretihoy.wordminded.RulesActivity
-import com.cretihoy.wordminded.game.GameScreenActivity
 import com.cretihoy.wordminded.settings.SettingsActivity
+import com.cretihoy.wordminded.storage.Storage
 
 class MainActivity : MvpActivity(), MainView {
 
@@ -24,6 +25,15 @@ class MainActivity : MvpActivity(), MainView {
         super.onCreate(savedInstanceState)
         setContentView(layout.activity_start_screen)
 
+        initListeners()
+        initSettings()
+    }
+
+    private fun initSettings() {
+        Storage.loadSettings(this)
+    }
+
+    private fun initListeners() {
         cardPlay.setOnClickListener {
             presenter.onButtonPlayClicked()
         }
@@ -36,7 +46,7 @@ class MainActivity : MvpActivity(), MainView {
     }
 
     override fun openGameScreen() {
-        startActivity(Intent(this, GameScreenActivity::class.java))
+        startActivity(Intent(this, QuestionActivity::class.java))
     }
 
     override fun openRulesScreen() {

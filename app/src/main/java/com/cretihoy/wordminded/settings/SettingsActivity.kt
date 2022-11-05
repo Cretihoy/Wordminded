@@ -17,6 +17,11 @@ class SettingsActivity : MvpActivity(), SettingsView {
         initViews()
     }
 
+    override fun onStop() {
+        Storage.saveSettings(this)
+        super.onStop()
+    }
+
     private fun initViews() {
         switchButtonHorizontal.isChecked = Storage.isHorizontal
         switchButtonHorizontal.setOnCheckedChangeListener { _, isHorizontal ->
