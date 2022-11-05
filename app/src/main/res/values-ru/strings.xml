@@ -8,6 +8,9 @@
     <string name="rules_text3">Игру начинает любой игрок. Он нажимает на экран телефона. Появляются 2 карты. Игроки стараются как можно быстрее назвать слово, которое подходит под открытую категорию и начинается с открытой буквы.</string>
     <string name="app_settings">Настройки</string>
     <string name="settings_title">НАСТРОЙКИ</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="ready">Вы готовы?</string>
 
     <string name="letter_01">А</string>
     <string name="letter_02">Б</string>

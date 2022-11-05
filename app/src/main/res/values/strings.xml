@@ -8,6 +8,9 @@
     <string name="rules_text3">Any player starts the game. He clicks on the screen of the phone. 2 cards appear. Players try as quickly as possible to name a word that fits the open category and starts with an open letter.</string>
     <string name="app_settings">Setting</string>
     <string name="settings_title">SETTINGS</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ready">Are you ready?</string>
 
     <string name="letter_01">A</string>
     <string name="letter_02">B</string>
