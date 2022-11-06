@@ -11,15 +11,11 @@
 
     <TextView
         android:id="@+id/rules_title"
+        style="@style/Theme.Wordminded.Title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="2"
-        android:gravity="center"
-        android:padding="@dimen/bigPadding"
-        android:text="@string/rules_title"
-        android:textColor="?colorOnSecondary"
-        android:textSize="32sp"
-        android:textStyle="bold" />
+        android:text="@string/rules_title" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,11 +35,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
                 android:paddingHorizontal="@dimen/bigPadding"
                 android:paddingVertical="@dimen/smallPadding"
-                android:text="@string/rules_text1"
-                android:textColor="?colorOnSecondary" />
+                android:text="@string/rules_text1" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -58,13 +52,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
                 android:paddingHorizontal="@dimen/bigPadding"
                 android:paddingVertical="@dimen/smallPadding"
-                android:text="@string/rules_text2"
-                android:textColor="?colorOnSecondary" />
+                android:text="@string/rules_text2" />
         </androidx.cardview.widget.CardView>
-
 
         <androidx.cardview.widget.CardView
             android:id="@+id/rules_text3"
@@ -78,11 +69,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
                 android:paddingHorizontal="@dimen/bigPadding"
                 android:paddingVertical="@dimen/smallPadding"
-                android:text="@string/rules_text3"
-                android:textColor="?colorOnSecondary" />
+                android:text="@string/rules_text3" />
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 </LinearLayout>
