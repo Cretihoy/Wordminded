@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/start_screen"
     android:layout_width="match_parent"
@@ -16,56 +15,21 @@
         android:layout_weight="1"
         android:src="@drawable/logo" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_start_activity"
+    <Button
+        style="@style/Theme.Wordminded.ButtonSecondary"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/smallPadding"
-        android:layout_weight="1"
-        android:backgroundTint="?colorSecondary"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="@dimen/radius">
+        android:layout_height="wrap_content"
+        android:text="@string/app_start" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/app_start"
-            android:textSize="@dimen/textBigSize" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_rules_activity"
+    <Button
+        style="@style/Theme.Wordminded.ButtonPrimary"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/smallPadding"
-        android:layout_weight="1"
-        android:backgroundTint="?colorPrimary"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="@dimen/radius">
+        android:layout_height="wrap_content"
+        android:text="@string/app_rules" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/app_rules"
-            android:textSize="@dimen/textBigSize" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_settings_activity"
+    <Button
+        style="@style/Theme.Wordminded.ButtonSecondary"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:backgroundTint="?colorSecondary"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="@dimen/radius">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/app_settings"
-            android:textSize="@dimen/textBigSize" />
-    </androidx.cardview.widget.CardView>
+        android:layout_height="wrap_content"
+        android:text="@string/app_settings" />
 </LinearLayout>
