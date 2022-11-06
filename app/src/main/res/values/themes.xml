@@ -47,8 +47,19 @@
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
         <item name="cardCornerRadius">@dimen/radius</item>
     </style>
-    
+
     <style name="Theme.Wordminded.Button" parent="Theme.Wordminded">
-        <item name="android:background"> @drawable/button</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:textSize">@dimen/textBigSize</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="Theme.Wordminded.ButtonPrimary" parent="Theme.Wordminded.Button">
+        <item name="android:background">@drawable/button_primary_background</item>
+    </style>
+
+    <style name="Theme.Wordminded.ButtonSecondary" parent="Theme.Wordminded.Button">
+        <item name="android:background">@drawable/button_secondary_background</item>
     </style>
 </resources>
