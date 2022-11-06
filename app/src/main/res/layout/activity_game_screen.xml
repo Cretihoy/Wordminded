@@ -19,19 +19,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="?colorSecondary"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="@dimen/radius">
+            android:backgroundTint="?colorSecondary">
 
             <TextView
                 android:id="@+id/letter_top"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:padding="@dimen/bigPadding"
                 android:rotation="180"
-                android:textColor="?colorOnSecondary"
-                android:textSize="@dimen/textSmallSize"
                 tools:text="@string/letter_01" />
         </androidx.cardview.widget.CardView>
 
@@ -42,20 +36,13 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="?colorPrimary"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="@dimen/radius">
+            android:layout_weight="1">
 
             <TextView
                 android:id="@+id/task_top"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:padding="@dimen/bigPadding"
                 android:rotation="180"
-                android:textColor="?colorOnSecondary"
-                android:textSize="@dimen/textSmallSize"
                 tools:text="@tools:sample/lorem/random" />
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -75,18 +62,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="?colorPrimary"
-            android:foreground="?android:attr/selectableItemBackground"
             app:cardCornerRadius="@dimen/radius">
 
             <TextView
                 android:id="@+id/task_bottom"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:padding="@dimen/smallPadding"
-                android:textColor="?colorOnSecondary"
-                android:textSize="@dimen/textSmallSize"
                 tools:text="@tools:sample/lorem/random" />
         </androidx.cardview.widget.CardView>
 
@@ -98,20 +79,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="?colorSecondary"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="@dimen/radius">
+            android:backgroundTint="?colorSecondary">
 
             <TextView
                 android:id="@+id/letter_bottom"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:padding="@dimen/bigPadding"
-                android:textColor="?colorOnSecondary"
-                android:textSize="@dimen/textSmallSize"
                 tools:text="@string/letter_01" />
-
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 </LinearLayout>
