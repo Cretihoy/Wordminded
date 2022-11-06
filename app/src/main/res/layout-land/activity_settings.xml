@@ -10,15 +10,13 @@
 
     <TextView
         android:id="@+id/settings_title"
+        style="@style/Theme.Wordminded.Title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
         android:padding="@dimen/bigPadding"
-        android:text="@string/settings_title"
-        android:textColor="?colorOnSecondary"
-        android:textSize="32sp"
-        android:textStyle="bold" />
+        android:text="@string/settings_title" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,12 +33,10 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Кнопки горизонтально"
-                android:textColor="?colorOnSecondary"
-                android:textSize="@dimen/textSmallSize" />
+                android:text="Кнопки горизонтально" />
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switch_button_horizontal"
@@ -57,20 +53,17 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:text="Увеличить шрифт"
-                android:textColor="?colorOnSecondary"
-                android:textSize="@dimen/textSmallSize" />
+                android:text="Увеличить шрифт" />
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switch_big_size_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center" />
-
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
