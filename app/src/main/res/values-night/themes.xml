@@ -1,6 +1,6 @@
 <resources>
-    <style name="Theme.Wordminded" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
+    <style name="Theme.Wordminded" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/darkBlue</item>
         <item name="colorPrimaryVariant">@color/lightBlue</item>
         <item name="colorOnPrimary">@color/black</item>
@@ -9,6 +9,8 @@
         <item name="colorOnSecondary">@color/white</item>
         <item name="android:statusBarColor">?attr/colorOnPrimary</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:textViewStyle">@style/Theme.Wordminded.TextView</item>
+        <item name="cardViewStyle">@style/Theme.Wordminded.CardView</item>
     </style>
 
     <style name="Theme.Wordminded.Dialog" parent="Theme.MaterialComponents.DayNight.Dialog">
@@ -22,5 +24,7 @@
         <item name="colorOnSecondary">@color/white</item>
         <item name="android:statusBarColor">?attr/colorOnPrimary</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:textViewStyle">@style/Theme.Wordminded.TextView</item>
+        <item name="cardViewStyle">@style/Theme.Wordminded.CardView</item>
     </style>
 </resources>
