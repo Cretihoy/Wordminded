@@ -7,4 +7,6 @@
     <dimen name="smallPadding">16dp</dimen>
 
     <dimen name="radius">32dp</dimen>
+
+    <dimen name="size_settings_button">48dp</dimen>
 </resources>
