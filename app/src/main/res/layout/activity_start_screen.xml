@@ -16,6 +16,7 @@
         android:src="@drawable/logo" />
 
     <Button
+        android:id="@+id/button_start_activity"
         style="@style/Theme.Wordminded.ButtonSecondary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,6 +24,7 @@
         android:layout_marginBottom="@dimen/smallPadding" />
 
     <Button
+        android:id="@+id/button_rules_activity"
         style="@style/Theme.Wordminded.ButtonPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,6 +32,7 @@
         android:layout_marginBottom="@dimen/smallPadding" />
 
     <Button
+        android:id="@+id/button_settings_activity"
         style="@style/Theme.Wordminded.ButtonSecondary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
