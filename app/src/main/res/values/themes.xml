@@ -52,7 +52,6 @@
         <item name="backgroundTint">@null</item>
         <item name="android:textColor">?attr/colorOnSecondary</item>
         <item name="android:textSize">@dimen/textBigSize</item>
-        <item name="android:layout_marginBottom">16dp</item>
     </style>
 
     <style name="Theme.Wordminded.ButtonPrimary" parent="Theme.Wordminded.Button">
