@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -18,41 +17,23 @@
         android:text="@string/ready" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/question_yes_button"
+        <Button
+            style="@style/Theme.Wordminded.ButtonPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="?colorPrimary"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="@dimen/radius">
+            android:layout_marginEnd="@dimen/smallPadding"
+            android:text="@string/yes"
+            android:textSize="@dimen/textSmallSize" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="?colorPrimary"
-                android:text="@string/yes" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/question_no_button"
+        <Button
+            style="@style/Theme.Wordminded.ButtonSecondary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/smallPadding"
-            android:backgroundTint="?colorSecondary"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="@dimen/radius">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="?colorSecondary"
-                android:paddingHorizontal="@dimen/bigPadding"
-                android:paddingVertical="@dimen/smallPadding"
-                android:text="@string/no" />
-        </androidx.cardview.widget.CardView>
+            android:text="@string/no"
+            android:textSize="@dimen/textSmallSize" />
     </LinearLayout>
 </LinearLayout>

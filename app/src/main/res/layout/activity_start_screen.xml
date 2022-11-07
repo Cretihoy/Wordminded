@@ -19,13 +19,15 @@
         style="@style/Theme.Wordminded.ButtonSecondary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/app_start" />
+        android:text="@string/app_start"
+        android:layout_marginBottom="@dimen/smallPadding" />
 
     <Button
         style="@style/Theme.Wordminded.ButtonPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/app_rules" />
+        android:text="@string/app_rules"
+        android:layout_marginBottom="@dimen/smallPadding" />
 
     <Button
         style="@style/Theme.Wordminded.ButtonSecondary"
