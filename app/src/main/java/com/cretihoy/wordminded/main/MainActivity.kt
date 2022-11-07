@@ -2,7 +2,7 @@ package com.cretihoy.wordminded.main
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.cardview.widget.CardView
+import android.widget.Button
 import com.arellomobile.mvp.MvpActivity
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.cretihoy.wordminded.QuestionActivity
@@ -14,9 +14,9 @@ import com.cretihoy.wordminded.storage.Storage
 
 class MainActivity : MvpActivity(), MainView {
 
-    private val cardPlay: CardView by lazy { findViewById(id.card_start_activity) }
-    private val cardRules: CardView by lazy { findViewById(id.card_rules_activity) }
-    private val cardSettings: CardView by lazy { findViewById(id.card_settings_activity) }
+    private val buttonPlay: Button by lazy { findViewById(id.button_start_activity) }
+    private val buttonRules: Button by lazy { findViewById(id.button_rules_activity) }
+    private val buttonSettings: Button by lazy { findViewById(id.button_settings_activity) }
 
     @InjectPresenter
     lateinit var presenter: MainPresenter
@@ -34,13 +34,13 @@ class MainActivity : MvpActivity(), MainView {
     }
 
     private fun initListeners() {
-        cardPlay.setOnClickListener {
+        buttonPlay.setOnClickListener {
             presenter.onButtonPlayClicked()
         }
-        cardRules.setOnClickListener {
+        buttonRules.setOnClickListener {
             presenter.onButtonRulesClicked()
         }
-        cardSettings.setOnClickListener {
+        buttonSettings.setOnClickListener {
             presenter.onButtonSettingsClicked()
         }
     }
