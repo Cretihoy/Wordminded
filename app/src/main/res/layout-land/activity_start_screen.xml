@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:gravity="center"
         android:orientation="vertical">
 
         <Button
@@ -24,6 +25,8 @@
             style="@style/Theme.Wordminded.ButtonSecondary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/smallPadding"
+            android:padding="@dimen/smallPadding"
             android:text="@string/app_start" />
 
         <Button
@@ -31,6 +34,8 @@
             style="@style/Theme.Wordminded.ButtonPrimary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/smallPadding"
+            android:padding="@dimen/smallPadding"
             android:text="@string/app_rules" />
 
         <Button
@@ -38,6 +43,7 @@
             style="@style/Theme.Wordminded.ButtonSecondary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="@dimen/smallPadding"
             android:text="@string/app_settings" />
     </LinearLayout>
 </LinearLayout>

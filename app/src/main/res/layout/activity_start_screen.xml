@@ -21,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/smallPadding"
+        android:padding="@dimen/smallPadding"
         android:text="@string/app_start" />
 
     <Button
@@ -29,6 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/smallPadding"
+        android:padding="@dimen/smallPadding"
         android:text="@string/app_rules" />
 
     <Button
@@ -36,5 +38,6 @@
         style="@style/Theme.Wordminded.ButtonSecondary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="@dimen/smallPadding"
         android:text="@string/app_settings" />
 </LinearLayout>
