@@ -11,6 +11,10 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="ready">Are you ready?</string>
+    <string name="card_orientation">Change card orientation</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="font_size">Font size</string>
 
     <string name="letter_01">A</string>
     <string name="letter_02">B</string>
