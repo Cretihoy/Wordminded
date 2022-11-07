@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:text="Кнопки горизонтально" />
+            android:text="@string/card_orientation" />
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/switch_button_horizontal"
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:text="Увеличить шрифт" />
+            android:text="@string/font_size" />
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/switch_big_size_text"
