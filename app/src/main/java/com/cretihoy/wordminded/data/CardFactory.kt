@@ -1,4 +1,4 @@
-package com.cretihoy.wordminded.card
+package com.cretihoy.wordminded.data
 
 import com.cretihoy.wordminded.R.string
 
