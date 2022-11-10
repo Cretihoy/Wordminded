@@ -1,43 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/start_screen"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?colorOnPrimary"
-    android:orientation="vertical"
-    android:padding="@dimen/bigPadding"
-    tools:context=".presentation.main.MainActivity">
+<layout>
 
-    <ImageView
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/start_screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:src="@drawable/logo" />
+        android:background="?colorOnPrimary"
+        android:orientation="vertical"
+        android:padding="@dimen/bigPadding"
+        tools:context=".presentation.main.MainActivity">
 
-    <Button
-        android:id="@+id/button_start_activity"
-        style="@style/Theme.Wordminded.ButtonSecondary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/smallPadding"
-        android:padding="@dimen/smallPadding"
-        android:text="@string/app_start" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/logo" />
 
-    <Button
-        android:id="@+id/button_rules_activity"
-        style="@style/Theme.Wordminded.ButtonPrimary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/smallPadding"
-        android:padding="@dimen/smallPadding"
-        android:text="@string/app_rules" />
+        <Button
+            android:id="@+id/button_start_activity"
+            style="@style/Theme.Wordminded.ButtonSecondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/smallPadding"
+            android:padding="@dimen/smallPadding"
+            android:text="@string/app_start" />
 
-    <Button
-        android:id="@+id/button_settings_activity"
-        style="@style/Theme.Wordminded.ButtonSecondary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/smallPadding"
-        android:text="@string/app_settings" />
-</LinearLayout>
+        <Button
+            android:id="@+id/button_rules_activity"
+            style="@style/Theme.Wordminded.ButtonPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/smallPadding"
+            android:padding="@dimen/smallPadding"
+            android:text="@string/app_rules" />
+
+        <Button
+            android:id="@+id/button_settings_activity"
+            style="@style/Theme.Wordminded.ButtonSecondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/smallPadding"
+            android:text="@string/app_settings" />
+    </LinearLayout>
+</layout>
