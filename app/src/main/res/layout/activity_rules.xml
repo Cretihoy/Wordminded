@@ -1,73 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/rules_root"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?colorOnPrimary"
-    android:orientation="vertical"
-    android:padding="@dimen/bigPadding"
-    tools:context=".presentation.RulesActivity">
+<layout>
 
-    <TextView
-        android:id="@+id/rules_title"
-        style="@style/Theme.Wordminded.Title"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/rules_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:tag="title"
-        android:text="@string/rules_title" />
+        android:background="?colorOnPrimary"
+        android:orientation="vertical"
+        android:padding="@dimen/bigPadding"
+        tools:context=".presentation.RulesActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:orientation="vertical">
+        <TextView
+            android:id="@+id/rules_title"
+            style="@style/Theme.Wordminded.Title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:tag="title"
+            android:text="@string/rules_title" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/rules_text1"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/smallPadding"
-            android:backgroundTint="?colorPrimary"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="@dimen/radius">
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/rules_text1" />
-        </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rules_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/smallPadding"
+                android:backgroundTint="?colorPrimary"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/radius">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/rules_text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/smallPadding"
-            android:backgroundTint="?colorSecondary"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="@dimen/radius">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/rules_text1" />
+            </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/rules_text2" />
-        </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rules_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/smallPadding"
+                android:backgroundTint="?colorSecondary"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/radius">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/rules_text3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="?colorPrimary"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="@dimen/radius"
-            app:layout_constraintTop_toBottomOf="@id/rules_title">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/rules_text2" />
+            </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/rules_text3" />
-        </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rules_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="?colorPrimary"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/radius"
+                app:layout_constraintTop_toBottomOf="@id/rules_title">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/rules_text3" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</layout>
