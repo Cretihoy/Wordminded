@@ -1,7 +1,7 @@
 package com.cretihoy.wordminded.presentation.game
 
 import android.os.Bundle
-import android.view.ViewGroup
+import android.view.View
 import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
 import com.arellomobile.mvp.presenter.InjectPresenter
@@ -12,7 +12,7 @@ import com.cretihoy.wordminded.presentation.base.BaseActivity
 
 class GameScreenActivity : BaseActivity(), GameView {
 
-    override val rootView: ViewGroup by lazy { findViewById(R.id.game_root) }
+    override val rootView: View by lazy { binding.root }
     private lateinit var binding: ActivityGameScreenBinding
 
     @InjectPresenter
@@ -20,6 +20,7 @@ class GameScreenActivity : BaseActivity(), GameView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_game_screen)
 
         binding.topLinear.setOnClickListener {
