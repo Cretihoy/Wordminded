@@ -2,12 +2,12 @@ package com.cretihoy.wordminded.presentation.main
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.LinearLayout
+import android.view.View
+import androidx.databinding.DataBindingUtil
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.cretihoy.wordminded.R
-import com.cretihoy.wordminded.R.layout
 import com.cretihoy.wordminded.data.Storage
+import com.cretihoy.wordminded.databinding.ActivityStartScreenBinding
 import com.cretihoy.wordminded.presentation.QuestionActivity
 import com.cretihoy.wordminded.presentation.RulesActivity
 import com.cretihoy.wordminded.presentation.base.BaseActivity
@@ -15,17 +15,16 @@ import com.cretihoy.wordminded.presentation.settings.SettingsActivity
 
 class MainActivity : BaseActivity(), MainView {
 
-    override val rootView: LinearLayout by lazy { findViewById(R.id.start_screen) }
-    private val buttonPlay: Button by lazy { findViewById(R.id.button_start_activity) }
-    private val buttonRules: Button by lazy { findViewById(R.id.button_rules_activity) }
-    private val buttonSettings: Button by lazy { findViewById(R.id.button_settings_activity) }
+    override val rootView: View by lazy { binding.root }
+    private lateinit var binding: ActivityStartScreenBinding
 
     @InjectPresenter
     lateinit var presenter: MainPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(layout.activity_start_screen)
+
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_start_screen)
 
         initListeners()
         initSettings()
@@ -36,13 +35,13 @@ class MainActivity : BaseActivity(), MainView {
     }
 
     private fun initListeners() {
-        buttonPlay.setOnClickListener {
+        binding.buttonStartActivity.setOnClickListener {
             presenter.onButtonPlayClicked()
         }
-        buttonRules.setOnClickListener {
+        binding.buttonRulesActivity.setOnClickListener {
             presenter.onButtonRulesClicked()
         }
-        buttonSettings.setOnClickListener {
+        binding.buttonSettingsActivity.setOnClickListener {
             presenter.onButtonSettingsClicked()
         }
     }
