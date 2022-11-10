@@ -1,13 +1,13 @@
-package com.cretihoy.wordminded.game
+package com.cretihoy.wordminded.presentation.game
 
 import com.arellomobile.mvp.InjectViewState
-import com.arellomobile.mvp.MvpPresenter
-import com.cretihoy.wordminded.card.CardFactory.getRandomLetter
-import com.cretihoy.wordminded.card.CardFactory.getRandomTask
-import com.cretihoy.wordminded.storage.Storage
+import com.cretihoy.wordminded.data.CardFactory.getRandomLetter
+import com.cretihoy.wordminded.data.CardFactory.getRandomTask
+import com.cretihoy.wordminded.data.Storage
+import com.cretihoy.wordminded.presentation.base.BasePresenter
 
 @InjectViewState
-class GamePresenter : MvpPresenter<GameView>() {
+class GamePresenter : BasePresenter<GameView>() {
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
