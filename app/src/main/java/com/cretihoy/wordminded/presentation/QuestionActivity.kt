@@ -1,13 +1,16 @@
-package com.cretihoy.wordminded
+package com.cretihoy.wordminded.presentation
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.ViewGroup
 import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
-import com.cretihoy.wordminded.game.GameScreenActivity
+import com.cretihoy.wordminded.R
+import com.cretihoy.wordminded.presentation.base.BaseActivity
+import com.cretihoy.wordminded.presentation.game.GameScreenActivity
 
-class QuestionActivity : AppCompatActivity() {
+class QuestionActivity : BaseActivity() {
 
+    override val rootView: ViewGroup by lazy { findViewById(R.id.root_view) }
     private val yesButton: Button by lazy { findViewById(R.id.question_yes_button) }
     private val noButton: Button by lazy { findViewById(R.id.question_no_button) }
 
