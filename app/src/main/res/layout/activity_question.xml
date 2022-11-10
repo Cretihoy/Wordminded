@@ -1,43 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/root_view"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@drawable/card_background"
-    android:orientation="vertical"
-    android:padding="@dimen/bigPadding"
-    tools:context=".presentation.QuestionActivity">
+<layout>
 
-    <TextView
-        android:id="@+id/question_title"
-        style="@style/Theme.Wordminded.TextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/smallPadding"
-        android:gravity="center"
-        android:text="@string/ready" />
-
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/root_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:background="@drawable/card_background"
+        android:orientation="vertical"
+        android:padding="@dimen/bigPadding"
+        tools:context=".presentation.QuestionActivity">
 
-        <Button
-            android:id="@+id/question_yes_button"
-            style="@style/Theme.Wordminded.ButtonPrimary"
+        <TextView
+            android:id="@+id/question_title"
+            style="@style/Theme.Wordminded.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/smallPadding"
+            android:gravity="center"
+            android:text="@string/ready" />
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/smallPadding"
-            android:text="@string/yes"
-            android:textSize="@dimen/textSmallSize" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/question_no_button"
-            style="@style/Theme.Wordminded.ButtonSecondary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/no"
-            android:textSize="@dimen/textSmallSize" />
+            <Button
+                android:id="@+id/question_yes_button"
+                style="@style/Theme.Wordminded.ButtonPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/smallPadding"
+                android:text="@string/yes"
+                android:textSize="@dimen/textSmallSize" />
+
+            <Button
+                android:id="@+id/question_no_button"
+                style="@style/Theme.Wordminded.ButtonSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                android:textSize="@dimen/textSmallSize" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</layout>
