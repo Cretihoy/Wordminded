@@ -1,22 +1,24 @@
-package com.cretihoy.wordminded.main
+package com.cretihoy.wordminded.presentation.main
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import com.arellomobile.mvp.MvpActivity
+import android.widget.LinearLayout
 import com.arellomobile.mvp.presenter.InjectPresenter
-import com.cretihoy.wordminded.QuestionActivity
-import com.cretihoy.wordminded.R.id
+import com.cretihoy.wordminded.R
 import com.cretihoy.wordminded.R.layout
-import com.cretihoy.wordminded.RulesActivity
-import com.cretihoy.wordminded.settings.SettingsActivity
-import com.cretihoy.wordminded.storage.Storage
+import com.cretihoy.wordminded.data.Storage
+import com.cretihoy.wordminded.presentation.QuestionActivity
+import com.cretihoy.wordminded.presentation.RulesActivity
+import com.cretihoy.wordminded.presentation.base.BaseActivity
+import com.cretihoy.wordminded.presentation.settings.SettingsActivity
 
-class MainActivity : MvpActivity(), MainView {
+class MainActivity : BaseActivity(), MainView {
 
-    private val buttonPlay: Button by lazy { findViewById(id.button_start_activity) }
-    private val buttonRules: Button by lazy { findViewById(id.button_rules_activity) }
-    private val buttonSettings: Button by lazy { findViewById(id.button_settings_activity) }
+    override val rootView: LinearLayout by lazy { findViewById(R.id.start_screen) }
+    private val buttonPlay: Button by lazy { findViewById(R.id.button_start_activity) }
+    private val buttonRules: Button by lazy { findViewById(R.id.button_rules_activity) }
+    private val buttonSettings: Button by lazy { findViewById(R.id.button_settings_activity) }
 
     @InjectPresenter
     lateinit var presenter: MainPresenter

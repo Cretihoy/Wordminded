@@ -1,10 +1,10 @@
-package com.cretihoy.wordminded.main
+package com.cretihoy.wordminded.presentation.main
 
 import com.arellomobile.mvp.InjectViewState
-import com.arellomobile.mvp.MvpPresenter
+import com.cretihoy.wordminded.presentation.base.BasePresenter
 
 @InjectViewState
-class MainPresenter : MvpPresenter<MainView>() {
+class MainPresenter : BasePresenter<MainView>() {
 
     fun onButtonPlayClicked() {
         viewState.openGameScreen()
