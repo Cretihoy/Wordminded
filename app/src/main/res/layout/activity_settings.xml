@@ -1,79 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/settings_root"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?colorOnPrimary"
-    android:orientation="vertical"
-    android:padding="@dimen/bigPadding"
-    tools:context=".presentation.settings.SettingsActivity">
-
-    <TextView
-        android:id="@+id/settings_title"
-        style="@style/Theme.Wordminded.Title"
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/settings_root"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:background="?colorOnPrimary"
+        android:orientation="vertical"
         android:padding="@dimen/bigPadding"
-        android:tag="title"
-        android:text="@string/settings_title" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+        tools:context=".presentation.settings.SettingsActivity">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/settings_title"
+            style="@style/Theme.Wordminded.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/bigPadding"
+            android:tag="title"
+            android:text="@string/settings_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/card_orientation" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_button_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="1"
-            android:text="@string/card_orientation" />
+            android:orientation="horizontal">
 
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/switch_button_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/font_size" />
+
+            <Button
+                android:id="@+id/button_minus_settings"
+                style="@style/Theme.Wordminded.ButtonSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/size_settings_button"
+                android:text="@string/minus"
+                android:textSize="@dimen/textSmallSize" />
+
+            <TextView
+                android:id="@+id/font_size_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/smallPadding"
+                tools:text="32" />
+
+            <Button
+                android:id="@+id/button_plus_settings"
+                style="@style/Theme.Wordminded.ButtonPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/size_settings_button"
+                android:text="@string/plus"
+                android:textSize="@dimen/textSmallSize" />
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/font_size" />
-
-        <Button
-            android:id="@+id/button_minus_settings"
-            style="@style/Theme.Wordminded.ButtonSecondary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minWidth="@dimen/size_settings_button"
-            android:text="@string/minus"
-            android:textSize="@dimen/textSmallSize" />
-
-        <TextView
-            android:id="@+id/font_size_settings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/smallPadding"
-            tools:text="32" />
-
-        <Button
-            android:id="@+id/button_plus_settings"
-            style="@style/Theme.Wordminded.ButtonPrimary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minWidth="@dimen/size_settings_button"
-            android:text="@string/plus"
-            android:textSize="@dimen/textSmallSize" />
-    </LinearLayout>
-</LinearLayout>
+</layout>
