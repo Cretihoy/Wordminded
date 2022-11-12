@@ -1,3 +1,11 @@
+buildscript {
+    ext {
+        compose_ui_version = '1.1.1'
+        navVersion = '2.5.1'
+        hiltVersion = '2.43.2'
+        hiltNavigationVersion = '1.0.0'
+    }
+}
 plugins {
     id 'com.android.application' version '7.2.1' apply false
     id 'com.android.library' version '7.2.1' apply false
