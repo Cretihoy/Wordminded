@@ -29,7 +29,7 @@
         <activity android:name=".presentation.RulesActivity" />
         <activity android:name=".presentation.game.GameScreenActivity" />
         <activity
-            android:name=".presentation.main.MainActivity"
+            android:name=".presentation.menu.MenuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.cretihoy.wordminded.presentation.main
+package com.cretihoy.wordminded.presentation.menu
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,13 +13,13 @@ import com.cretihoy.wordminded.presentation.RulesActivity
 import com.cretihoy.wordminded.presentation.base.BaseActivity
 import com.cretihoy.wordminded.presentation.settings.SettingsActivity
 
-class MainActivity : BaseActivity(), MainView {
+class MenuActivity : BaseActivity(), MenView {
 
     override val rootView: View by lazy { binding.root }
     private lateinit var binding: ActivityStartScreenBinding
 
     @InjectPresenter
-    lateinit var presenter: MainPresenter
+    lateinit var presenter: MenuPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

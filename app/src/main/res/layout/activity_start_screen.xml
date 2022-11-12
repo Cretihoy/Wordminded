@@ -9,7 +9,7 @@
         android:background="?colorOnPrimary"
         android:orientation="vertical"
         android:padding="@dimen/bigPadding"
-        tools:context=".presentation.main.MainActivity">
+        tools:context=".presentation.menu.MenuActivity">
 
         <ImageView
             android:layout_width="match_parent"
