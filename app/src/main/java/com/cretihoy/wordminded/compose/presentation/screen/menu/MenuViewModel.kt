@@ -6,4 +6,12 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MenuViewModel
-@Inject constructor() : ViewModel()
+@Inject constructor(
+    private val factory: MenuModelFactory
+) : ViewModel() {
+
+    val imageModel by lazy { factory.getImageModel() }
+    val startButtonModel by lazy { factory.getStartButtonModel() }
+    val rulesButtonModel by lazy { factory.getRulesButtonModel() }
+    val settingsButtonModel by lazy { factory.getSettingsButtonModel() }
+}
