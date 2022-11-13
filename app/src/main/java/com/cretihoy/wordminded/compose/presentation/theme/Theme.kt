@@ -1,4 +1,4 @@
-package com.cretihoy.wordminded.compose.ui.theme
+package com.cretihoy.wordminded.compose.presentation.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
