@@ -1,4 +1,4 @@
-package com.cretihoy.wordminded.presentation.game
+package com.cretihoy.wordminded.compose.presentation.screen.game
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
