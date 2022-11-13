@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import com.cretihoy.wordminded.compose.ui.theme.WordmindedTheme
+import com.cretihoy.wordminded.compose.presentation.theme.WordmindedTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
