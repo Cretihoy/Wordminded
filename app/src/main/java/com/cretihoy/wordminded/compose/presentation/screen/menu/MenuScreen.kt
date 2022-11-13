@@ -1,4 +1,4 @@
-package com.cretihoy.wordminded.presentation.menu
+package com.cretihoy.wordminded.compose.presentation.screen.menu
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable

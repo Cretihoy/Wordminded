@@ -1,4 +1,4 @@
-package com.cretihoy.wordminded.presentation.game
+package com.cretihoy.wordminded.compose.presentation.screen.game
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
