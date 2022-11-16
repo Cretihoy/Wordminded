@@ -1,7 +1,5 @@
 package com.cretihoy.wordminded.compose.presentation.components.button
 
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
@@ -16,18 +14,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.cretihoy.wordminded.R.string
 import com.cretihoy.wordminded.compose.presentation.theme.Shapes
-import com.cretihoy.wordminded.compose.presentation.theme.spacingMedium
 
 @Composable
 fun ButtonView(
-    model: ButtonModel? = null
+    model: ButtonModel? = null,
+    modifier: Modifier = Modifier
 ) {
     model?.let {
         Button(
             onClick = it.action,
-            modifier = Modifier
-                .sizeIn(minWidth = 48.dp, minHeight = 48.dp)
-                .fillMaxWidth(),
+            modifier = modifier
+                .sizeIn(minWidth = 48.dp, minHeight = 48.dp),
             colors = ButtonDefaults.buttonColors(
                 backgroundColor = if (it.isSecondary)
                     colors.secondary
@@ -39,7 +36,6 @@ fun ButtonView(
         ) {
             it.textAttr?.let { text ->
                 Text(
-                    modifier = Modifier.padding(spacingMedium),
                     text = stringResource(id = text),
                     color = Color.White,
                     fontSize = 18.sp
