@@ -14,32 +14,32 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.cretihoy.wordminded.R
-import com.cretihoy.wordminded.compose.presentation.theme.spacingMedium
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
+import com.cretihoy.wordminded.compose.presentation.theme.spacingMedium
 
 @Composable
 fun TextView(
     model: TextModel? = null,
     modifier: Modifier = Modifier
 ) {
-    model?.let {
+    model?.textAttr?.let {
         Box(
             modifier = modifier
                 .padding(spacingMedium)
                 .fillMaxWidth()
         ) {
             Text(
-                modifier = if (it.isTitle)
+                modifier = if (model.isTitle)
                     Modifier.align(Alignment.Center)
                 else
                     Modifier,
-                text = if (it.isTitle)
-                    stringResource(id = R.string.app_rules).uppercase()
+                text = if (model.isTitle)
+                    stringResource(id = it).uppercase()
                 else
-                    stringResource(id = R.string.app_rules),
+                    stringResource(id = it),
                 color = colors.onSecondary,
-                fontSize = if (it.isTitle) 28.sp else 18.sp,
-                fontWeight = if (it.isTitle)
+                fontSize = if (model.isTitle) 28.sp else 18.sp,
+                fontWeight = if (model.isTitle)
                     FontWeight.Bold
                 else
                     FontWeight.Normal

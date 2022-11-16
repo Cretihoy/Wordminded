@@ -1,8 +1,8 @@
 package com.cretihoy.wordminded.compose.presentation.screen.rules
 
 import com.cretihoy.wordminded.R
-import com.cretihoy.wordminded.compose.presentation.components.textBlock.TextBlockModel
 import com.cretihoy.wordminded.compose.presentation.components.text.TextModel
+import com.cretihoy.wordminded.compose.presentation.components.textBlock.TextBlockModel
 import javax.inject.Inject
 
 class RulesModelFactory

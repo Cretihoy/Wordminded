@@ -8,8 +8,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
+import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 
 @Composable
 fun GameScreen(

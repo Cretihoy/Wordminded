@@ -1,7 +1,6 @@
 package com.cretihoy.wordminded.compose.presentation.screen.game
 
 import androidx.lifecycle.ViewModel
-import com.cretihoy.wordminded.compose.presentation.screen.menu.MenuModelFactory
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
