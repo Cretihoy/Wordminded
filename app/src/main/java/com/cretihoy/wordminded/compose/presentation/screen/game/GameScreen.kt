@@ -2,6 +2,7 @@ package com.cretihoy.wordminded.compose.presentation.screen.game
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -28,13 +29,13 @@ private fun ScreenContent(
             .padding(32.dp)
             .fillMaxSize()
     ) {
-        ButtonView(viewModel?.topTask)
+        ButtonView(viewModel?.topTask, Modifier.fillMaxWidth())
         SpacerView()
-        ButtonView(viewModel?.topLetter)
+        ButtonView(viewModel?.topLetter, Modifier.fillMaxWidth())
         SpacerView()
-        ButtonView(viewModel?.bottomTask)
+        ButtonView(viewModel?.bottomTask, Modifier.fillMaxWidth())
         SpacerView()
-        ButtonView(viewModel?.bottomLetter)
+        ButtonView(viewModel?.bottomLetter, Modifier.fillMaxWidth())
     }
 }
 

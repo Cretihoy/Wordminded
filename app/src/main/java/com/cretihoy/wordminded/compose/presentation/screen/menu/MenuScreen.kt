@@ -2,15 +2,16 @@ package com.cretihoy.wordminded.compose.presentation.screen.menu
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 import com.cretihoy.wordminded.compose.presentation.components.image.ImageView
-import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 
 @Composable
 fun MenuScreen(
@@ -34,11 +35,11 @@ private fun ScreenContent(
             modifier = Modifier.weight(1f)
         )
         SpacerView()
-        ButtonView(viewModel?.startButtonModel)
+        ButtonView(viewModel?.startButtonModel, Modifier.fillMaxWidth())
         SpacerView()
-        ButtonView(viewModel?.rulesButtonModel)
+        ButtonView(viewModel?.rulesButtonModel, Modifier.fillMaxWidth())
         SpacerView()
-        ButtonView(viewModel?.settingsButtonModel)
+        ButtonView(viewModel?.settingsButtonModel, Modifier.fillMaxWidth())
     }
 }
 
