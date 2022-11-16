@@ -1,4 +1,4 @@
-package com.cretihoy.wordminded.compose.presentation.view
+package com.cretihoy.wordminded.compose.presentation.components.textBlock
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

@@ -8,9 +8,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.cretihoy.wordminded.compose.presentation.view.SpacerView
-import com.cretihoy.wordminded.compose.presentation.view.TextBlockView
-import com.cretihoy.wordminded.compose.presentation.view.TextView
+import com.cretihoy.wordminded.compose.presentation.components.SpacerView
+import com.cretihoy.wordminded.compose.presentation.components.textBlock.TextBlockView
+import com.cretihoy.wordminded.compose.presentation.components.text.TextView
 
 @Composable
 fun RulesScreen(

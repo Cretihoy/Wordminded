@@ -1,4 +1,4 @@
-package com.cretihoy.wordminded.compose.presentation.view
+package com.cretihoy.wordminded.compose.presentation.components.text
 
 data class TextModel(
     val textAttr: Int? = null,
