@@ -6,4 +6,11 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SettingsViewModel
-@Inject constructor() : ViewModel()
+@Inject constructor(
+    private val factory: SettingsModelFactory
+) : ViewModel() {
+
+    val settingsTitle by lazy { factory.getTitleSettingsModel() }
+    val orientationSettingsSwitch by lazy { factory.getOrientationSwitchSettingsModel() }
+    val counterModel by lazy { factory.getCounterModel() }
+}
