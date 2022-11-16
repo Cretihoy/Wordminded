@@ -1,4 +1,4 @@
-package com.cretihoy.wordminded.compose.presentation.view
+package com.cretihoy.wordminded.compose.presentation.components.image
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxWidth

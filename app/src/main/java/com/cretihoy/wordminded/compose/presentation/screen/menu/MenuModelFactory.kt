@@ -1,8 +1,8 @@
 package com.cretihoy.wordminded.compose.presentation.screen.menu
 
 import com.cretihoy.wordminded.R
-import com.cretihoy.wordminded.compose.presentation.view.ButtonModel
-import com.cretihoy.wordminded.compose.presentation.view.ImageModel
+import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
+import com.cretihoy.wordminded.compose.presentation.components.image.ImageModel
 import javax.inject.Inject
 
 class MenuModelFactory
