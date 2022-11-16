@@ -1,6 +1,6 @@
 package com.cretihoy.wordminded.compose.presentation.screen.game
 
-import com.cretihoy.wordminded.compose.presentation.view.ButtonModel
+import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
 import javax.inject.Inject
 
 class GameModelFactory
