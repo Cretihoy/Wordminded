@@ -33,7 +33,7 @@ fun ButtonView(
                     colors.secondary
                 else
                     colors.primary,
-                contentColor = colors.onPrimary,
+                contentColor = colors.onPrimary
             ),
             shape = Shapes.medium,
         ) {
