@@ -1,4 +1,4 @@
-package com.cretihoy.wordminded.compose.presentation.view
+package com.cretihoy.wordminded.compose.presentation.components.button
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -14,7 +14,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.cretihoy.wordminded.R
+import com.cretihoy.wordminded.R.string
 import com.cretihoy.wordminded.compose.presentation.theme.Shapes
 import com.cretihoy.wordminded.compose.presentation.theme.spacingMedium
 
@@ -53,7 +53,7 @@ fun ButtonView(
 @Preview(showBackground = true)
 fun PreviewButton() {
     val model = ButtonModel(
-        textAttr = R.string.app_start,
+        textAttr = string.app_start,
         isSecondary = true
     )
     ButtonView(model)
