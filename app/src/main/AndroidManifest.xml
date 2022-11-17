@@ -4,6 +4,7 @@
     package="com.cretihoy.wordminded">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,9 +15,9 @@
         android:theme="@style/Theme.Wordminded"
         tools:targetApi="32">
         <activity
-            android:name=".compose.presentation.navigation.MainActivity"
+            android:name=".compose.MainActivity"
             android:exported="true"
-            android:label="Wordminded Compose">
+            android:label="WCompose">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
