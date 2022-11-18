@@ -17,5 +17,5 @@ class GameViewModel
 
     fun onClick() {
         factory.reloadTasks()
-    } // blah blah
+    }
 }
