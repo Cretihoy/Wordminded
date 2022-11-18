@@ -21,24 +21,36 @@ fun GameScreen(
             .padding(32.dp)
             .fillMaxSize()
     ) {
-        ButtonView(viewModel.topLetter,
+        ButtonView(
+            viewModel.topLetter,
             Modifier
                 .fillMaxWidth()
-                .weight(1f))
+                .weight(1f),
+            clickAction = { viewModel.onClick() }
+        )
         SpacerView()
-        ButtonView(viewModel.topTask,
+        ButtonView(
+            viewModel.topTask,
             Modifier
                 .fillMaxWidth()
-                .weight(1f))
+                .weight(1f),
+            clickAction = { viewModel.onClick() }
+        )
         SpacerView()
-        ButtonView(viewModel.bottomTask,
+        ButtonView(
+            viewModel.bottomTask,
             Modifier
                 .fillMaxWidth()
-                .weight(1f))
+                .weight(1f),
+            clickAction = { viewModel.onClick() }
+        )
         SpacerView()
-        ButtonView(viewModel.bottomLetter,
+        ButtonView(
+            viewModel.bottomLetter,
             Modifier
                 .fillMaxWidth()
-                .weight(1f))
+                .weight(1f),
+            clickAction = { viewModel.onClick() }
+        )
     }
 }

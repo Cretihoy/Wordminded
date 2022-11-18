@@ -8,8 +8,8 @@ class GameModelFactory
     private val factory: QuestionFactory
 ) {
 
-    val task = factory.getRandomTask()
-    val letter = factory.getRandomLetter()
+    var task = factory.getRandomTask()
+    var letter = factory.getRandomLetter()
 
     fun getLetterTopButtonModel(): ButtonModel {
         return ButtonModel(
@@ -37,5 +37,10 @@ class GameModelFactory
         return ButtonModel(
             textAttr = letter
         )
+    }
+
+    fun reloadTasks() {
+        task = factory.getRandomTask()
+        letter = factory.getRandomLetter()
     }
 }
