@@ -36,7 +36,7 @@ fun CounterView(
             }
             SpacerView(Modifier.weight(1f))
             model.leftButton?.let { buttonModel ->
-                ButtonView(buttonModel)
+                ButtonView(model = buttonModel)
             }
             model.value?.let { value ->
                 Text(
@@ -47,7 +47,7 @@ fun CounterView(
                 )
             }
             model.rightButton?.let { buttonModel ->
-                ButtonView(buttonModel)
+                ButtonView(model = buttonModel)
             }
         }
     }
