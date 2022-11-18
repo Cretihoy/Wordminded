@@ -32,9 +32,3 @@ private fun ScreenContent(
         CounterView(viewModel?.counterModel)
     }
 }
-
-@Preview(showBackground = true)
-@Composable
-private fun PreviewScreenContent() {
-
-}

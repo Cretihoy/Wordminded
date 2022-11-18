@@ -38,9 +38,3 @@ private fun ScreenContent(
         TextBlockView(viewModel?.rulesThree)
     }
 }
-
-@Composable
-@Preview(showBackground = true)
-private fun PreviewScreenContent() {
-    ScreenContent()
-}
