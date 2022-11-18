@@ -36,22 +36,4 @@ class SettingsModelFactory
             value = 18
         )
     }
-
-    fun getFontMinusButtonSettingsModel(): ButtonModel {
-        return ButtonModel(
-            textAttr = R.string.minus
-        )
-    }
-
-    fun getFontSizeSettingsModel(): TextModel {
-        return TextModel(
-            textAttr = R.string.yes,
-        )
-    }
-
-    fun getFontPlusButtonSettingsModel(): ButtonModel {
-        return ButtonModel(
-            textAttr = R.string.plus
-        )
-    }
 }
