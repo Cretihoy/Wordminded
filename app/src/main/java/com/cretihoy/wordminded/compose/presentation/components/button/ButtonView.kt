@@ -18,11 +18,12 @@ import com.cretihoy.wordminded.compose.presentation.theme.Shapes
 @Composable
 fun ButtonView(
     model: ButtonModel? = null,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    clickAction: () -> Unit = {}
 ) {
     model?.let {
         Button(
-            onClick = it.action,
+            onClick = clickAction,
             modifier = modifier
                 .sizeIn(minWidth = 48.dp, minHeight = 48.dp),
             colors = ButtonDefaults.buttonColors(
