@@ -1,5 +1,7 @@
 package com.cretihoy.wordminded.compose.presentation.screen.game
 
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
 import javax.inject.Inject
 
@@ -8,8 +10,8 @@ class GameModelFactory
     private val factory: QuestionFactory
 ) {
 
-    var task = factory.getRandomTask()
-    var letter = factory.getRandomLetter()
+    var task: MutableState<Int?> = mutableStateOf(null)
+    var letter: MutableState<Int?> = mutableStateOf(null)
 
     fun getLetterTopButtonModel(): ButtonModel {
         return ButtonModel(
@@ -40,7 +42,7 @@ class GameModelFactory
     }
 
     fun reloadTasks() {
-        task = factory.getRandomTask()
-        letter = factory.getRandomLetter()
+        task.value = factory.getRandomTask()
+        letter.value = factory.getRandomLetter()
     }
 }

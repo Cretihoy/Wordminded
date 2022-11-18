@@ -6,6 +6,7 @@ import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
@@ -13,7 +14,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.cretihoy.wordminded.R.string
+import com.cretihoy.wordminded.R
 import com.cretihoy.wordminded.compose.presentation.theme.Shapes
 
 @Composable
@@ -37,7 +38,7 @@ fun ButtonView(
             ),
             shape = Shapes.medium,
         ) {
-            it.textAttr?.let { text ->
+            it.textAttr.value?.let { text ->
                 Text(
                     text = stringResource(id = text),
                     color = Color.White,
@@ -52,7 +53,7 @@ fun ButtonView(
 @Preview(showBackground = true)
 fun PreviewButton() {
     val model = ButtonModel(
-        textAttr = string.app_start,
+        textAttr = mutableStateOf(R.string.app_start),
         isSecondary = true
     )
     ButtonView(model)

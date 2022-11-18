@@ -1,5 +1,6 @@
 package com.cretihoy.wordminded.compose.presentation.screen.menu
 
+import androidx.compose.runtime.mutableStateOf
 import com.cretihoy.wordminded.R
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
 import com.cretihoy.wordminded.compose.presentation.components.image.ImageModel
@@ -16,20 +17,20 @@ class MenuModelFactory
 
     fun getStartButtonModel(): ButtonModel {
         return ButtonModel(
-            textAttr = R.string.app_start,
+            textAttr = mutableStateOf(R.string.app_start),
             isSecondary = true
         )
     }
 
     fun getRulesButtonModel(): ButtonModel {
         return ButtonModel(
-            textAttr = R.string.app_rules
+            textAttr = mutableStateOf(R.string.app_rules)
         )
     }
 
     fun getSettingsButtonModel(): ButtonModel {
         return ButtonModel(
-            textAttr = R.string.app_settings,
+            textAttr = mutableStateOf(R.string.app_settings),
             isSecondary = true
         )
     }

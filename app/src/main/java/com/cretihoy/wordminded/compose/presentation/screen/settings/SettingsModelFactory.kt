@@ -1,5 +1,6 @@
 package com.cretihoy.wordminded.compose.presentation.screen.settings
 
+import androidx.compose.runtime.mutableStateOf
 import com.cretihoy.wordminded.R
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
 import com.cretihoy.wordminded.compose.presentation.components.counter.CounterModel
@@ -27,11 +28,11 @@ class SettingsModelFactory
         return CounterModel(
             textAttr = R.string.font_size,
             leftButton = ButtonModel(
-                textAttr = R.string.minus,
+                textAttr = mutableStateOf(R.string.minus),
                 isSecondary = true
             ),
             rightButton = ButtonModel(
-                textAttr = R.string.plus
+                textAttr = mutableStateOf(R.string.plus)
             ),
             value = 18
         )

@@ -22,7 +22,7 @@ fun GameScreen(
             .fillMaxSize()
     ) {
         ButtonView(
-            viewModel.topLetter,
+            viewModel.topLetter.value,
             Modifier
                 .fillMaxWidth()
                 .weight(1f),
@@ -30,7 +30,7 @@ fun GameScreen(
         )
         SpacerView()
         ButtonView(
-            viewModel.topTask,
+            viewModel.topTask.value,
             Modifier
                 .fillMaxWidth()
                 .weight(1f),
@@ -38,7 +38,7 @@ fun GameScreen(
         )
         SpacerView()
         ButtonView(
-            viewModel.bottomTask,
+            viewModel.bottomTask.value,
             Modifier
                 .fillMaxWidth()
                 .weight(1f),
@@ -46,7 +46,7 @@ fun GameScreen(
         )
         SpacerView()
         ButtonView(
-            viewModel.bottomLetter,
+            viewModel.bottomLetter.value,
             Modifier
                 .fillMaxWidth()
                 .weight(1f),
