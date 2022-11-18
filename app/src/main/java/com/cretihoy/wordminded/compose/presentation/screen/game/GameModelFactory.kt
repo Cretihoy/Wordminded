@@ -11,16 +11,18 @@ class GameModelFactory
     val task = factory.getRandomTask()
     val letter = factory.getRandomLetter()
 
-    fun getTaskTopButtonModel(): ButtonModel {
+    fun getLetterTopButtonModel(): ButtonModel {
         return ButtonModel(
-            textAttr = task,
-            isSecondary = true
+            textAttr = letter,
+            isRotated = true
         )
     }
 
-    fun getLetterTopButtonModel(): ButtonModel {
+    fun getTaskTopButtonModel(): ButtonModel {
         return ButtonModel(
-            textAttr = letter
+            textAttr = task,
+            isSecondary = true,
+            isRotated = true
         )
     }
 
