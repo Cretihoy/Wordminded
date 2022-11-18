@@ -6,24 +6,19 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 import com.cretihoy.wordminded.compose.presentation.components.image.ImageView
+import com.cretihoy.wordminded.extensions.openGameScreen
+import com.cretihoy.wordminded.extensions.openRulesScreen
+import com.cretihoy.wordminded.extensions.openSettingsScreen
 
 @Composable
 fun MenuScreen(
     navController: NavHostController,
     viewModel: MenuViewModel
-) {
-    ScreenContent(viewModel)
-}
-
-@Composable
-private fun ScreenContent(
-    viewModel: MenuViewModel? = null
 ) {
     Column(
         modifier = Modifier
@@ -31,20 +26,26 @@ private fun ScreenContent(
             .fillMaxSize()
     ) {
         ImageView(
-            model = viewModel?.imageModel,
+            model = viewModel.imageModel,
             modifier = Modifier.weight(1f)
         )
         SpacerView()
-        ButtonView(viewModel?.startButtonModel, Modifier.fillMaxWidth())
+        ButtonView(
+            viewModel.startButtonModel,
+            Modifier.fillMaxWidth(),
+            clickAction = { navController.openGameScreen() }
+        )
         SpacerView()
-        ButtonView(viewModel?.rulesButtonModel, Modifier.fillMaxWidth())
+        ButtonView(
+            viewModel.rulesButtonModel,
+            Modifier.fillMaxWidth(),
+            clickAction = { navController.openRulesScreen() }
+        )
         SpacerView()
-        ButtonView(viewModel?.settingsButtonModel, Modifier.fillMaxWidth())
+        ButtonView(
+            viewModel.settingsButtonModel,
+            Modifier.fillMaxWidth(),
+            clickAction = { navController.openSettingsScreen() }
+        )
     }
-}
-
-@Composable
-@Preview(showBackground = true)
-private fun PreviewScreenContent() {
-    ScreenContent()
 }
