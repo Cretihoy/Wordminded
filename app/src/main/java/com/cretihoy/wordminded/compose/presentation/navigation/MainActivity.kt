@@ -1,4 +1,4 @@
-package com.cretihoy.wordminded.compose
+package com.cretihoy.wordminded.compose.presentation.navigation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

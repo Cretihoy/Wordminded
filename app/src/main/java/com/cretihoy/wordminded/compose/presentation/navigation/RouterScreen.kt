@@ -1,10 +1,14 @@
-package com.cretihoy.wordminded.compose
+package com.cretihoy.wordminded.compose.presentation.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.cretihoy.wordminded.compose.presentation.navigation.NavRoutes.GameNavRoute
+import com.cretihoy.wordminded.compose.presentation.navigation.NavRoutes.MenuNavRoute
+import com.cretihoy.wordminded.compose.presentation.navigation.NavRoutes.RulesNavRoute
+import com.cretihoy.wordminded.compose.presentation.navigation.NavRoutes.SettingsNavRoute
 import com.cretihoy.wordminded.compose.presentation.screen.game.GameScreen
 import com.cretihoy.wordminded.compose.presentation.screen.game.GameViewModel
 import com.cretihoy.wordminded.compose.presentation.screen.menu.MenuScreen
@@ -19,10 +23,10 @@ fun RouterScreen() {
     val navController = rememberNavController()
     NavHost(
         navController = navController,
-        startDestination = NavRoutes.MenuNavRoute.route,
+        startDestination = MenuNavRoute.route,
     ) {
 
-        composable(NavRoutes.MenuNavRoute.route) {
+        composable(MenuNavRoute.route) {
             val viewModel = hiltViewModel<MenuViewModel>()
             MenuScreen(
                 navController = navController,
@@ -30,7 +34,7 @@ fun RouterScreen() {
             )
         }
 
-        composable(NavRoutes.GameNavRoute.route) {
+        composable(GameNavRoute.route) {
             val viewModel = hiltViewModel<GameViewModel>()
             GameScreen(
                 navController = navController,
@@ -38,7 +42,7 @@ fun RouterScreen() {
             )
         }
 
-        composable(NavRoutes.RulesNavRoute.route) {
+        composable(RulesNavRoute.route) {
             val viewModel = hiltViewModel<RulesViewModel>()
             RulesScreen(
                 navController = navController,
@@ -46,7 +50,7 @@ fun RouterScreen() {
             )
         }
 
-        composable(NavRoutes.SettingsNavRoute.route) {
+        composable(SettingsNavRoute.route) {
             val viewModel = hiltViewModel<SettingsViewModel>()
             SettingsScreen(
                 navController = navController,

@@ -1,4 +1,4 @@
-package com.cretihoy.wordminded.compose
+package com.cretihoy.wordminded.compose.presentation.navigation
 
 sealed class NavRoutes(val route: String) {
 
