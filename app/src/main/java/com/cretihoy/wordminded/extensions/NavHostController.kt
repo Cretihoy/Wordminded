@@ -1,7 +1,7 @@
 package com.cretihoy.wordminded.extensions
 
 import androidx.navigation.NavHostController
-import com.cretihoy.wordminded.compose.NavRoutes
+import com.cretihoy.wordminded.compose.presentation.navigation.NavRoutes
 
 fun NavHostController.openGameScreen() {
     this.navigate(NavRoutes.GameNavRoute.route)
