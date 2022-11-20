@@ -9,11 +9,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
-import com.cretihoy.wordminded.R
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
-import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 import com.cretihoy.wordminded.compose.presentation.theme.spacingSmall
 
@@ -51,16 +48,4 @@ fun CounterView(
             }
         }
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun PreviewCounterView() {
-    val model = CounterModel(
-        textAttr = R.string.app_name,
-        leftButton = ButtonModel(textAttr = R.string.minus),
-        rightButton = ButtonModel(textAttr = R.string.plus),
-        value = 0
-    )
-    CounterView(model)
 }
