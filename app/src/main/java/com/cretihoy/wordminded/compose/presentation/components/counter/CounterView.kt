@@ -17,7 +17,9 @@ import com.cretihoy.wordminded.compose.presentation.theme.spacingSmall
 @Composable
 fun CounterView(
     model: CounterModel? = null,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    actionPlus: () -> Unit = {},
+    actionMinus: () -> Unit = {}
 ) {
     Row(
         modifier = modifier.fillMaxWidth(),
@@ -33,18 +35,22 @@ fun CounterView(
             }
             SpacerView(Modifier.weight(1f))
             model.leftButton?.let { buttonModel ->
-                ButtonView(model = buttonModel)
-            }
-            model.value?.let { value ->
-                Text(
-                    modifier = Modifier.padding(spacingSmall),
-                    text = value.toString(),
-                    color = MaterialTheme.colors.onSecondary,
-                    fontSize = model.fontSize.value.sp
+                ButtonView(
+                    model = buttonModel,
+                    clickAction = actionMinus
                 )
             }
+            Text(
+                modifier = Modifier.padding(spacingSmall),
+                text = model.fontSize.value.toInt().toString(),
+                color = MaterialTheme.colors.onSecondary,
+                fontSize = model.fontSize.value.sp
+            )
             model.rightButton?.let { buttonModel ->
-                ButtonView(model = buttonModel)
+                ButtonView(
+                    model = buttonModel,
+                    clickAction = actionPlus
+                )
             }
         }
     }

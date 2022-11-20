@@ -41,8 +41,7 @@ class SettingsModelFactory
             rightButton = ButtonModel(
                 fontSize = storage.fontSize,
                 textAttr = mutableStateOf(R.string.plus)
-            ),
-            value = 18
+            )
         )
     }
 }
