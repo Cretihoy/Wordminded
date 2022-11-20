@@ -17,6 +17,6 @@ abstract class BaseActivity : MvpActivity(), BaseView {
 
     override fun onResume() {
         super.onResume()
-        rootView.setFontSize(Storage.fontSize)
+//        rootView.setFontSize(Storage.fontSize)
     }
 }

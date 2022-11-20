@@ -51,6 +51,6 @@ class SettingsActivity : BaseActivity(), SettingsView {
     }
 
     override fun setFontSize(fontSize: Float) {
-        binding.root.setFontSize(Storage.fontSize)
+//        binding.root.setFontSize(Storage.fontSize)
     }
 }

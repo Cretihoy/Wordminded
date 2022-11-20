@@ -10,15 +10,12 @@ private const val IS_HORIZONTAL_KEY = "isHorizontal"
 private const val FONT_SIZE_KEY = "fontSize"
 
 class Storage
-@Inject constructor(
-    private val activity: Activity
-) {
+@Inject constructor() {
 
     var fontSize = mutableStateOf(18f)
     var isHorizontal = mutableStateOf(false)
 
-    // todo: activity: Activity here if its not working
-    fun loadSettings() {
+    fun loadSettings(activity: Activity) {
         val preferences = activity.getSharedPreferences(PREFERENCES_KEY, Context.MODE_PRIVATE)
         isHorizontal.value = preferences.getBoolean(IS_HORIZONTAL_KEY, false)
         fontSize.value = preferences.getFloat(FONT_SIZE_KEY, 18f)

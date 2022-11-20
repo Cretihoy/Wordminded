@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -52,10 +53,17 @@ fun TextView(
 @Composable
 fun PreviewTextView() {
     Column {
-        val title = TextModel(textAttr = R.string.app_rules)
+        val title = TextModel(
+            mutableStateOf(18f),
+            textAttr = R.string.app_rules
+        )
         TextView(title)
         SpacerView()
-        val regular = TextModel(textAttr = R.string.app_settings, isTitle = true)
+        val regular =
+            TextModel(
+                mutableStateOf(18f),
+                textAttr = R.string.app_settings, isTitle = true
+            )
         TextView(regular)
     }
 }

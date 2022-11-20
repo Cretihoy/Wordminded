@@ -16,7 +16,7 @@ class GamePresenter : BasePresenter<GameView>() {
     }
 
     private fun setupScreen() {
-        viewState.setOrientation(Storage.isHorizontal)
+//        viewState.setOrientation(Storage.isHorizontal)
     }
 
     fun onScreenClicked() {

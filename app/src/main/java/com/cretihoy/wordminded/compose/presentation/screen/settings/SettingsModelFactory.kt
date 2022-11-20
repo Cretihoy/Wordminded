@@ -6,13 +6,17 @@ import com.cretihoy.wordminded.compose.presentation.components.button.ButtonMode
 import com.cretihoy.wordminded.compose.presentation.components.counter.CounterModel
 import com.cretihoy.wordminded.compose.presentation.components.switch.SwitchModel
 import com.cretihoy.wordminded.compose.presentation.components.text.TextModel
+import com.cretihoy.wordminded.data.Storage
 import javax.inject.Inject
 
 class SettingsModelFactory
-@Inject constructor() {
+@Inject constructor(
+    private val storage: Storage
+) {
 
     fun getTitleSettingsModel(): TextModel {
         return TextModel(
+            fontSize = storage.fontSize,
             textAttr = R.string.settings_title,
             isTitle = true
         )

@@ -3,13 +3,17 @@ package com.cretihoy.wordminded.compose.presentation.screen.rules
 import com.cretihoy.wordminded.R
 import com.cretihoy.wordminded.compose.presentation.components.text.TextModel
 import com.cretihoy.wordminded.compose.presentation.components.textBlock.TextBlockModel
+import com.cretihoy.wordminded.data.Storage
 import javax.inject.Inject
 
 class RulesModelFactory
-@Inject constructor() {
+@Inject constructor(
+    private val storage: Storage
+) {
 
     fun getTitleRulesModel(): TextModel {
         return TextModel(
+            fontSize = storage.fontSize,
             textAttr = R.string.rules_title,
             isTitle = true
         )

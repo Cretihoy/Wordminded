@@ -10,27 +10,27 @@ class SettingPresenter : BasePresenter<SettingsView>() {
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
-        viewState.setChecked(Storage.isHorizontal)
-        viewState.showFontSize(Storage.fontSize)
+//        viewState.setChecked(Storage.isHorizontal)
+//        viewState.showFontSize(Storage.fontSize)
     }
 
     fun onSwitchChecked(checked: Boolean) {
-        Storage.isHorizontal = checked
+//        Storage.isHorizontal = checked
     }
 
     fun onPlusButtonClicked() {
-        Storage.fontSize++
-        viewState.showFontSize(Storage.fontSize)
-        viewState.setFontSize(Storage.fontSize)
+//        Storage.fontSize++
+//        viewState.showFontSize(Storage.fontSize)
+//        viewState.setFontSize(Storage.fontSize)
     }
 
     fun onMinusButtonClicked() {
-        Storage.fontSize--
-        viewState.showFontSize(Storage.fontSize)
-        viewState.setFontSize(Storage.fontSize)
+//        Storage.fontSize--
+//        viewState.showFontSize(Storage.fontSize)
+//        viewState.setFontSize(Storage.fontSize)
     }
 
     fun saveSettings(activity: Activity) {
-        Storage.saveSettings(activity)
+//        Storage.saveSettings(activity)
     }
 }

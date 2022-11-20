@@ -31,7 +31,7 @@ class MenuActivity : BaseActivity(), MenView {
     }
 
     private fun initSettings() {
-        Storage.loadSettings(this)
+//        Storage.loadSettings(this)
     }
 
     private fun initListeners() {
