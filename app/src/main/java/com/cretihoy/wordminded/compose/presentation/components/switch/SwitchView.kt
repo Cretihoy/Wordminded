@@ -6,6 +6,7 @@ import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.Switch
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -27,7 +28,7 @@ fun SwitchView(
             Text(
                 text = stringResource(id = it),
                 color = colors.onSecondary,
-                fontSize = 18.sp
+                fontSize = model.fontSize.value.sp
             )
             SpacerView(Modifier.weight(1f))
             Switch(
@@ -42,6 +43,7 @@ fun SwitchView(
 @Composable
 fun PreviewSwitchView() {
     val model = SwitchModel(
+        fontSize = mutableStateOf(18f),
         textAttr = R.string.card_orientation,
         isChecked = true
     )

@@ -21,12 +21,14 @@ class RulesModelFactory
 
     fun getOneRulesModel(): TextBlockModel {
         return TextBlockModel(
+            fontSize = storage.fontSize,
             textAttr = R.string.rules_text1,
         )
     }
 
     fun getTwoRules2Model(): TextBlockModel {
         return TextBlockModel(
+            fontSize = storage.fontSize,
             textAttr = R.string.rules_text2,
             isSecondary = true
         )
@@ -34,6 +36,7 @@ class RulesModelFactory
 
     fun getThreeRules3Model(): TextBlockModel {
         return TextBlockModel(
+            fontSize = storage.fontSize,
             textAttr = R.string.rules_text3,
         )
     }

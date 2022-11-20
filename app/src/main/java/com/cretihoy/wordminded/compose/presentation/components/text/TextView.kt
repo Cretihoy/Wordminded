@@ -39,7 +39,11 @@ fun TextView(
                 else
                     stringResource(id = it),
                 color = colors.onSecondary,
-                fontSize = if (model.isTitle) 28.sp else 18.sp,
+                fontSize = if (model.isTitle) {
+                    (model.fontSize.value * 2).sp
+                } else {
+                    model.fontSize.value.sp
+                },
                 fontWeight = if (model.isTitle)
                     FontWeight.Bold
                 else

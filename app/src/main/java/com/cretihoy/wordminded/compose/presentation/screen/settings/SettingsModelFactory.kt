@@ -24,18 +24,22 @@ class SettingsModelFactory
 
     fun getOrientationSwitchSettingsModel(): SwitchModel {
         return SwitchModel(
+            fontSize = storage.fontSize,
             textAttr = R.string.card_orientation
         )
     }
 
     fun getCounterModel(): CounterModel {
         return CounterModel(
+            fontSize = storage.fontSize,
             textAttr = R.string.font_size,
             leftButton = ButtonModel(
+                fontSize = storage.fontSize,
                 textAttr = mutableStateOf(R.string.minus),
                 isSecondary = true
             ),
             rightButton = ButtonModel(
+                fontSize = storage.fontSize,
                 textAttr = mutableStateOf(R.string.plus)
             ),
             value = 18

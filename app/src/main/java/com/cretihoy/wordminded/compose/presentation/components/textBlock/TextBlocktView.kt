@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -33,7 +34,7 @@ fun TextBlockView(
                         .padding(spacingMedium),
                     text = stringResource(id = text),
                     color = Color.White,
-                    fontSize = 18.sp,
+                    fontSize = model.fontSize.value.sp,
                     textAlign = TextAlign.Justify
                 )
             }
@@ -45,6 +46,7 @@ fun TextBlockView(
 @Preview(showBackground = true)
 fun PreviewTextBlock() {
     val model = TextBlockModel(
+        fontSize = mutableStateOf(18f),
         textAttr = R.string.rules_text1,
         isSecondary = true
     )

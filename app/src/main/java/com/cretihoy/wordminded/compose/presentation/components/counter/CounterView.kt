@@ -28,7 +28,7 @@ fun CounterView(
                 Text(
                     text = stringResource(id = text),
                     color = MaterialTheme.colors.onSecondary,
-                    fontSize = 18.sp
+                    fontSize = model.fontSize.value.sp
                 )
             }
             SpacerView(Modifier.weight(1f))
@@ -40,7 +40,7 @@ fun CounterView(
                     modifier = Modifier.padding(spacingSmall),
                     text = value.toString(),
                     color = MaterialTheme.colors.onSecondary,
-                    fontSize = 18.sp
+                    fontSize = model.fontSize.value.sp
                 )
             }
             model.rightButton?.let { buttonModel ->

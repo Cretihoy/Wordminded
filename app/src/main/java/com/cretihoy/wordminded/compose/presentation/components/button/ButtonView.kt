@@ -42,7 +42,7 @@ fun ButtonView(
                 Text(
                     text = stringResource(id = text),
                     color = Color.White,
-                    fontSize = 18.sp
+                    fontSize = model.fontSize.value.sp
                 )
             }
         }
@@ -53,6 +53,7 @@ fun ButtonView(
 @Preview(showBackground = true)
 fun PreviewButton() {
     val model = ButtonModel(
+        fontSize = mutableStateOf(18f),
         textAttr = mutableStateOf(R.string.app_start),
         isSecondary = true
     )
