@@ -1,11 +1,47 @@
 package com.cretihoy.wordminded.compose.presentation.screen.settings
 
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment.Companion.CenterVertically
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.cretihoy.wordminded.compose.presentation.screen.game.GameViewModel
+import com.cretihoy.wordminded.compose.presentation.components.SpacerView
+import com.cretihoy.wordminded.compose.presentation.components.counter.CounterView
+import com.cretihoy.wordminded.compose.presentation.components.switch.SwitchView
+import com.cretihoy.wordminded.compose.presentation.components.text.TextView
+import com.cretihoy.wordminded.compose.presentation.theme.Shapes
 
 @Composable
 fun SettingsHorizontalScreen(
     navController: NavHostController,
     viewModel: SettingsViewModel
-) {}
+) {
+    Row(
+        modifier = Modifier
+            .padding(32.dp)
+            .fillMaxSize()
+    ) {
+        TextView(
+            viewModel.settingsTitle,
+            Modifier
+                .weight(1f)
+                .align(CenterVertically)
+        )
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .align(CenterVertically)
+        ) {
+            SwitchView(viewModel.orientationSettingsSwitch)
+            SpacerView()
+            CounterView(viewModel.counterModel)
+        }
+    }
+}
