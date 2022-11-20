@@ -1,4 +1,4 @@
-package com.cretihoy.wordminded.compose.presentation
+package com.cretihoy.wordminded.compose.presentation.components
 
 import android.content.res.Configuration
 import androidx.compose.runtime.Composable
