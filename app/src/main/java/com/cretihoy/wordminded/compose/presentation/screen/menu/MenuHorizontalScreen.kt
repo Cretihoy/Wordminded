@@ -29,11 +29,15 @@ fun MenuHorizontalScreen(
     ) {
         ImageView(
             model = viewModel.imageModel,
-            modifier = Modifier.weight(1f)
+            modifier = Modifier
+                .weight(1f)
+                .align(CenterVertically)
         )
-        Column(modifier = Modifier
-            .weight(1f)
-            .align(CenterVertically)) {
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .align(CenterVertically)
+        ) {
             ButtonView(
                 viewModel.startButtonModel,
                 Modifier.fillMaxWidth(),
