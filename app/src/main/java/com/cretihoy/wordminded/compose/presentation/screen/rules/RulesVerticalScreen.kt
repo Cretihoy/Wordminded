@@ -21,12 +21,12 @@ fun RulesVerticalScreen(
             .padding(32.dp)
             .fillMaxSize()
     ) {
-        TextView(viewModel?.rulesTitle, Modifier.weight(1f))
+        TextView(viewModel.rulesTitle, Modifier.weight(1f))
         SpacerView()
-        TextBlockView(viewModel?.rulesOne)
+        TextBlockView(viewModel.rulesOne)
         SpacerView()
-        TextBlockView(viewModel?.rulesTwo)
+        TextBlockView(viewModel.rulesTwo)
         SpacerView()
-        TextBlockView(viewModel?.rulesThree)
+        TextBlockView(viewModel.rulesThree)
     }
 }
