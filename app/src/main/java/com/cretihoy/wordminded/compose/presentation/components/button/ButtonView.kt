@@ -8,7 +8,6 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -27,7 +26,6 @@ fun ButtonView(
         Button(
             onClick = clickAction,
             modifier = modifier
-                .rotate(if (model.isRotated) 180f else 0f)
                 .sizeIn(minWidth = 48.dp, minHeight = 48.dp),
             colors = ButtonDefaults.buttonColors(
                 backgroundColor = if (it.isSecondary)
