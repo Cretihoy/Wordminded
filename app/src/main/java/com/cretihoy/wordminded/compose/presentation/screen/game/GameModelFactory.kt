@@ -3,6 +3,7 @@ package com.cretihoy.wordminded.compose.presentation.screen.game
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
+import com.cretihoy.wordminded.compose.presentation.components.gameside.GameSideModel
 import com.cretihoy.wordminded.data.Storage
 import javax.inject.Inject
 
@@ -15,35 +16,25 @@ class GameModelFactory
     var task: MutableState<Int?> = mutableStateOf(null)
     var letter: MutableState<Int?> = mutableStateOf(null)
 
-    fun getLetterTopButtonModel(): ButtonModel {
+    fun getGameSideModel(): GameSideModel {
+        return GameSideModel(
+            task = getTaskModel(),
+            letter = getLetterModel()
+        )
+    }
+
+    fun getLetterModel(): ButtonModel {
         return ButtonModel(
             fontSize = storage.fontSize,
             textAttr = letter,
-            isRotated = true
-        )
-    }
-
-    fun getTaskTopButtonModel(): ButtonModel {
-        return ButtonModel(
-            fontSize = storage.fontSize,
-            textAttr = task,
-            isSecondary = true,
-            isRotated = true
-        )
-    }
-
-    fun getTaskBottomButtonModel(): ButtonModel {
-        return ButtonModel(
-            fontSize = storage.fontSize,
-            textAttr = task,
             isSecondary = true
         )
     }
 
-    fun getLetterBottomButtonModel(): ButtonModel {
+    fun getTaskModel(): ButtonModel {
         return ButtonModel(
             fontSize = storage.fontSize,
-            textAttr = letter
+            textAttr = task,
         )
     }
 

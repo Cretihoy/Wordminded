@@ -11,10 +11,7 @@ class GameViewModel
     private val factory: GameModelFactory
 ) : ViewModel() {
 
-    val topTask = mutableStateOf(factory.getTaskTopButtonModel())
-    val topLetter = mutableStateOf(factory.getLetterTopButtonModel())
-    val bottomTask = mutableStateOf(factory.getTaskBottomButtonModel())
-    val bottomLetter = mutableStateOf(factory.getLetterBottomButtonModel())
+    val gameSide = mutableStateOf(factory.getGameSideModel())
 
     fun onClick() {
         factory.reloadTasks()
