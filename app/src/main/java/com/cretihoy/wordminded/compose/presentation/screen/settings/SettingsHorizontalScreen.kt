@@ -37,14 +37,7 @@ fun SettingsHorizontalScreen(
         ) {
             SwitchView(viewModel.orientationSettingsSwitch)
             SpacerView()
-            CounterView(
-                viewModel.counterModel,
-                actionPlus = {
-                    viewModel.onPlusButtonClicked()
-                }, actionMinus = {
-                    viewModel.onMinusButtonClicked()
-                }
-            )
+            CounterView(viewModel.counterModel)
         }
     }
 }

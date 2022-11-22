@@ -18,8 +18,7 @@ import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 @Composable
 fun SwitchView(
     model: SwitchModel? = null,
-    modifier: Modifier = Modifier,
-    action: (Boolean) -> Unit = {}
+    modifier: Modifier = Modifier
 ) {
     model?.textAttr?.let {
         Row(
@@ -34,10 +33,7 @@ fun SwitchView(
             SpacerView(Modifier.weight(1f))
             Switch(
                 checked = model.isChecked.value,
-                onCheckedChange = {
-                    model.isChecked.value = it
-                    action.invoke(it)
-                }
+                onCheckedChange = { model.isChecked.value = it }
             )
         }
     }

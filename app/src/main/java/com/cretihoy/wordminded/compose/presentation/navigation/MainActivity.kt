@@ -30,8 +30,8 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    override fun onPause() {
+    override fun onDestroy() {
         storage.saveSettings(this)
-        super.onPause()
+        super.onDestroy()
     }
 }
