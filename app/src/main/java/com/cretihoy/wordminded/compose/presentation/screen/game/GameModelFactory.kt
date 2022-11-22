@@ -19,7 +19,8 @@ class GameModelFactory
     fun getGameSideModel(): GameSideModel {
         return GameSideModel(
             task = getTaskModel(),
-            letter = getLetterModel()
+            letter = getLetterModel(),
+            isHorizontal = storage.isHorizontal
         )
     }
 

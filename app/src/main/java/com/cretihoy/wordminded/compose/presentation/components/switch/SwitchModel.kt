@@ -1,9 +1,10 @@
 package com.cretihoy.wordminded.compose.presentation.components.switch
 
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
 
 data class SwitchModel(
     val fontSize: MutableState<Float>,
     val textAttr: Int? = null,
-    var isChecked: Boolean = false,
+    var isChecked: MutableState<Boolean> = mutableStateOf(false)
 )

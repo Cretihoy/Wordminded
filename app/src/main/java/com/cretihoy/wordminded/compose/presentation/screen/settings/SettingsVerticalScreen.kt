@@ -20,13 +20,16 @@ fun SettingsVerticalScreen(
             .padding(spacingLarge)
     ) {
         TextView(viewModel.settingsTitle, Modifier.weight(1f))
-        SwitchView(viewModel.orientationSettingsSwitch)
+        SwitchView(viewModel.orientationSettingsSwitch,
+            action = { viewModel.onSwitchChanged(it) }
+        )
         CounterView(
             viewModel.counterModel,
             actionPlus = {
                 viewModel.onPlusButtonClicked()
             }, actionMinus = {
                 viewModel.onMinusButtonClicked()
-            })
+            }
+        )
     }
 }

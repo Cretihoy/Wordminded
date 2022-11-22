@@ -25,7 +25,8 @@ class SettingsModelFactory
     fun getOrientationSwitchSettingsModel(): SwitchModel {
         return SwitchModel(
             fontSize = storage.fontSize,
-            textAttr = R.string.card_orientation
+            textAttr = R.string.card_orientation,
+            isChecked = storage.isHorizontal
         )
     }
 
