@@ -19,7 +19,7 @@ fun CounterView(
     model: CounterModel? = null,
     modifier: Modifier = Modifier,
     actionPlus: () -> Unit = {},
-    actionMinus: () -> Unit = {}
+    actionMinus: () -> Unit = {},
 ) {
     Row(
         modifier = modifier.fillMaxWidth(),
