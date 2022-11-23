@@ -14,7 +14,9 @@ class MenuModelFactory
 
     fun getImageModel(): ImageModel {
         return ImageModel(
-            src = R.drawable.logo
+            src = R.drawable.logo,
+            srcAlt = R.drawable.logo_inverted,
+            isInverted = storage.isAltTheme
         )
     }
 
