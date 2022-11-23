@@ -12,7 +12,6 @@ import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.text.TextView
 import com.cretihoy.wordminded.compose.presentation.components.textBlock.TextBlockView
@@ -20,7 +19,6 @@ import com.cretihoy.wordminded.compose.presentation.theme.Shapes
 
 @Composable
 fun RulesHorizontalScreen(
-    navController: NavHostController,
     viewModel: RulesViewModel
 ) {
     Row(
@@ -37,9 +35,9 @@ fun RulesHorizontalScreen(
         Column(
             modifier = Modifier
                 .weight(1f)
+                .clip(shape = Shapes.large)
                 .align(Alignment.CenterVertically)
                 .verticalScroll(rememberScrollState())
-                .clip(shape = Shapes.large)
         ) {
             TextBlockView(viewModel.rulesOne)
             SpacerView()

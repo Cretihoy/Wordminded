@@ -12,5 +12,6 @@ class SettingsViewModel
 
     val settingsTitle by lazy { factory.getTitleSettingsModel() }
     val orientationSettingsSwitch by lazy { factory.getOrientationSwitchSettingsModel() }
+    val themeSettingsSwitch by lazy { factory.getThemeSwitchSettingsModel() }
     val counterModel by lazy { factory.getCounterModel() }
 }

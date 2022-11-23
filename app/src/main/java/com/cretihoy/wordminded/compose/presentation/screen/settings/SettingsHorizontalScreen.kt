@@ -8,7 +8,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.counter.CounterView
 import com.cretihoy.wordminded.compose.presentation.components.switch.SwitchView
@@ -16,7 +15,6 @@ import com.cretihoy.wordminded.compose.presentation.components.text.TextView
 
 @Composable
 fun SettingsHorizontalScreen(
-    navController: NavHostController,
     viewModel: SettingsViewModel
 ) {
     Row(
@@ -36,6 +34,8 @@ fun SettingsHorizontalScreen(
                 .align(CenterVertically)
         ) {
             SwitchView(viewModel.orientationSettingsSwitch)
+            SpacerView()
+            SwitchView(viewModel.themeSettingsSwitch)
             SpacerView()
             CounterView(viewModel.counterModel)
         }

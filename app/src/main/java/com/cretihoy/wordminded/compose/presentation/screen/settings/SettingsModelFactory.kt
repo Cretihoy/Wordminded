@@ -30,6 +30,14 @@ class SettingsModelFactory
         )
     }
 
+    fun getThemeSwitchSettingsModel(): SwitchModel {
+        return SwitchModel(
+            fontSize = storage.fontSize,
+            textAttr = R.string.app_theme,
+            isChecked = storage.isAltTheme
+        )
+    }
+
     fun getCounterModel(): CounterModel {
         return CounterModel(
             fontSize = storage.fontSize,
