@@ -11,5 +11,5 @@ class ThemeViewModel
     val storage: Storage
 ) : ViewModel() {
 
-    val isDark = storage.isHorizontal
+    val isAltTheme = storage.isAltTheme
 }
