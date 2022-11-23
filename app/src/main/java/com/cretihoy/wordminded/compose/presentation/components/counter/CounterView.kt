@@ -3,7 +3,7 @@ package com.cretihoy.wordminded.compose.presentation.components.counter
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -27,7 +27,7 @@ fun CounterView(
             model.textAttr?.let { text ->
                 Text(
                     text = stringResource(id = text),
-                    color = MaterialTheme.colors.onSecondary,
+                    color = colors.onSecondary,
                     fontSize = model.fontSize.value.sp
                 )
             }
@@ -41,7 +41,7 @@ fun CounterView(
             Text(
                 modifier = Modifier.padding(spacingSmall),
                 text = model.fontSize.value.toInt().toString(),
-                color = MaterialTheme.colors.onSecondary,
+                color = colors.onSecondary,
                 fontSize = model.fontSize.value.sp
             )
             model.rightButton?.let { buttonModel ->
