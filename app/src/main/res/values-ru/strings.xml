@@ -11,7 +11,8 @@
     <string name="yes">Да</string>
     <string name="no">Нет</string>
     <string name="ready">Вы готовы?</string>
-    <string name="card_orientation">Поменять ориентацию карт</string>
+    <string name="card_orientation">Сменить ориентацию карт</string>
+    <string name="app_theme">Сменить тему</string>
     <string name="plus">+</string>
     <string name="minus">-</string>
     <string name="font_size">Размер шрифта</string>
