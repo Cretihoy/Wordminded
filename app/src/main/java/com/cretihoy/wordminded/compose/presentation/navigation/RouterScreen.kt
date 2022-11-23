@@ -37,7 +37,6 @@ fun RouterScreen() {
         composable(GameNavRoute.route) {
             val viewModel = hiltViewModel<GameViewModel>()
             GameScreen(
-                navController = navController,
                 viewModel = viewModel
             )
         }
@@ -45,7 +44,6 @@ fun RouterScreen() {
         composable(RulesNavRoute.route) {
             val viewModel = hiltViewModel<RulesViewModel>()
             RulesScreen(
-                navController = navController,
                 viewModel = viewModel
             )
         }

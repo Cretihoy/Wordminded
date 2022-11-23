@@ -7,13 +7,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.gameside.GameSideView
 
 @Composable
 fun GameHorizontalScreen(
-    navController: NavHostController,
     viewModel: GameViewModel
 ) {
     Row(
