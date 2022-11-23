@@ -12,8 +12,9 @@ private const val FONT_SIZE_KEY = "fontSize"
 class Storage
 @Inject constructor() {
 
-    var fontSize = mutableStateOf(18f)
-    var isHorizontal = mutableStateOf(false)
+    val fontSize = mutableStateOf(18f)
+    val isHorizontal = mutableStateOf(false)
+    val isAltTheme = mutableStateOf(false)
 
     fun loadSettings(activity: Activity) {
         val preferences = activity.getSharedPreferences(PREFERENCES_KEY, Context.MODE_PRIVATE)
