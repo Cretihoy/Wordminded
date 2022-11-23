@@ -12,13 +12,11 @@ fun RulesScreen(
     RotateScreen(
         horizontal = {
             RulesHorizontalScreen(
-                navController = navController,
                 viewModel = viewModel
             )
         },
         vertical = {
             RulesVerticalScreen(
-                navController = navController,
                 viewModel = viewModel
             )
         }

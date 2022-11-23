@@ -6,14 +6,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.text.TextView
 import com.cretihoy.wordminded.compose.presentation.components.textBlock.TextBlockView
 
 @Composable
 fun RulesVerticalScreen(
-    navController: NavHostController,
     viewModel: RulesViewModel
 ) {
     Column(

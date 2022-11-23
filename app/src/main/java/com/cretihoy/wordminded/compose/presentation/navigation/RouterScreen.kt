@@ -53,7 +53,6 @@ fun RouterScreen() {
         composable(SettingsNavRoute.route) {
             val viewModel = hiltViewModel<SettingsViewModel>()
             SettingsScreen(
-                navController = navController,
                 viewModel = viewModel
             )
         }
