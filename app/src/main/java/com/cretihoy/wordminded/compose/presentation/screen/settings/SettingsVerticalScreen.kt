@@ -3,6 +3,7 @@ package com.cretihoy.wordminded.compose.presentation.screen.settings
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.counter.CounterView
@@ -18,7 +19,12 @@ fun SettingsVerticalScreen(
         Modifier
             .padding(spacingLarge)
     ) {
-        TextView(viewModel.settingsTitle, Modifier.weight(1f))
+        TextView(
+            viewModel.settingsTitle,
+            Modifier
+                .weight(1f)
+                .align(Alignment.CenterHorizontally)
+        )
         SwitchView(viewModel.orientationSettingsSwitch)
         SpacerView()
         SwitchView(viewModel.themeSettingsSwitch)
