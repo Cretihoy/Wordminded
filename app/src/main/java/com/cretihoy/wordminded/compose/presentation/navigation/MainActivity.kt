@@ -19,11 +19,11 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            storage.loadSettings(this)
             WordmindedTheme {
                 Surface(
                     color = MaterialTheme.colors.background
                 ) {
-                    storage.loadSettings(this)
                     RouterScreen()
                 }
             }
