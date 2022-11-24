@@ -91,6 +91,7 @@ object CardFactory {
             CardModel(content = string.task_52),
         )
     }
+
     fun getRandomLetter(): CardModel {
         val list = getLetter()
         list.shuffled()

@@ -1,5 +1,5 @@
 package com.cretihoy.wordminded.data
 
-data class CardModel (
+data class CardModel(
     val content: Int
 )
