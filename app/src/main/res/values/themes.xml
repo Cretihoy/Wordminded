@@ -9,8 +9,6 @@
         <item name="colorOnSecondary">@color/black</item>
         <item name="android:statusBarColor">?attr/colorOnPrimary</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:textViewStyle">@style/Theme.Wordminded.TextView</item>
-        <item name="cardViewStyle">@style/Theme.Wordminded.CardView</item>
     </style>
 
     <style name="Theme.Wordminded.Dialog" parent="Theme.MaterialComponents.DayNight.Dialog">
@@ -24,40 +22,5 @@
         <item name="colorOnSecondary">@color/black</item>
         <item name="android:statusBarColor">?attr/colorOnPrimary</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:textViewStyle">@style/Theme.Wordminded.TextView</item>
-        <item name="cardViewStyle">@style/Theme.Wordminded.CardView</item>
-    </style>
-
-    <style name="Theme.Wordminded.TextView" parent="Theme.Wordminded">
-        <item name="android:textSize">@dimen/textSmallSize</item>
-        <item name="android:textColor">?attr/colorOnSecondary</item>
-    </style>
-
-    <style name="Theme.Wordminded.Title" parent="Theme.Wordminded.TextView">
-        <item name="android:padding">@dimen/smallPadding</item>
-        <item name="android:textSize">@dimen/textBigSize</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:gravity">center</item>
-    </style>
-
-    <style name="Theme.Wordminded.CardView" parent="Theme.Wordminded">
-        <item name="android:backgroundTint">?attr/colorPrimary</item>
-        <item name="android:foreground">?android:attr/selectableItemBackground</item>
-        <item name="cardCornerRadius">@dimen/radius</item>
-        <item name="contentPadding">@dimen/smallPadding</item>
-    </style>
-
-    <style name="Theme.Wordminded.Button" parent="Theme.Wordminded">
-        <item name="backgroundTint">@null</item>
-        <item name="android:textColor">?attr/colorOnSecondary</item>
-        <item name="android:textSize">@dimen/textBigSize</item>
-    </style>
-
-    <style name="Theme.Wordminded.ButtonPrimary" parent="Theme.Wordminded.Button">
-        <item name="android:background">@drawable/button_primary_background</item>
-    </style>
-
-    <style name="Theme.Wordminded.ButtonSecondary" parent="Theme.Wordminded.Button">
-        <item name="android:background">@drawable/button_secondary_background</item>
     </style>
 </resources>
