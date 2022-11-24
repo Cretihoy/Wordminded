@@ -1,6 +1,7 @@
 package com.cretihoy.wordminded.compose.presentation.screen.rules
 
 import com.cretihoy.wordminded.R
+import com.cretihoy.wordminded.compose.presentation.components.image.ImageModel
 import com.cretihoy.wordminded.compose.presentation.components.text.TextModel
 import com.cretihoy.wordminded.compose.presentation.components.textBlock.TextBlockModel
 import com.cretihoy.wordminded.data.Storage
@@ -15,7 +16,12 @@ class RulesModelFactory
         return TextModel(
             fontSize = storage.fontSize,
             textAttr = R.string.rules_title,
-            isTitle = true
+            isTitle = true,
+            image = ImageModel(
+                src = R.drawable.logo,
+                srcAlt = R.drawable.logo_inverted,
+                isInverted = storage.isAltTheme
+            )
         )
     }
 

@@ -4,6 +4,7 @@ import androidx.compose.runtime.mutableStateOf
 import com.cretihoy.wordminded.R
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
 import com.cretihoy.wordminded.compose.presentation.components.counter.CounterModel
+import com.cretihoy.wordminded.compose.presentation.components.image.ImageModel
 import com.cretihoy.wordminded.compose.presentation.components.switch.SwitchModel
 import com.cretihoy.wordminded.compose.presentation.components.text.TextModel
 import com.cretihoy.wordminded.data.Storage
@@ -18,7 +19,12 @@ class SettingsModelFactory
         return TextModel(
             fontSize = storage.fontSize,
             textAttr = R.string.settings_title,
-            isTitle = true
+            isTitle = true,
+            image = ImageModel(
+                src = R.drawable.logo,
+                srcAlt = R.drawable.logo_inverted,
+                isInverted = storage.isAltTheme
+            )
         )
     }
 
