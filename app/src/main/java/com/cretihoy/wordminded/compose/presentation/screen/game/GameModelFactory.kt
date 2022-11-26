@@ -13,8 +13,8 @@ class GameModelFactory
     private val storage: Storage
 ) {
 
-    var task: MutableState<Int?> = mutableStateOf(null)
-    var letter: MutableState<Int?> = mutableStateOf(null)
+    var task: MutableState<Int?> = mutableStateOf(factory.getRandomTask())
+    var letter: MutableState<Int?> = mutableStateOf(factory.getRandomLetter())
 
     fun getGameSideModel(): GameSideModel {
         return GameSideModel(
