@@ -16,6 +16,7 @@
     <string name="plus">+</string>
     <string name="minus">-</string>
     <string name="font_size">Размер шрифта</string>
+    <string name="timer_dialog">Игра начнется через</string>
 
     <string name="letter_01">А</string>
     <string name="letter_02">Б</string>

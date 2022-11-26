@@ -20,6 +20,7 @@
     <string name="plus">+</string>
     <string name="minus">-</string>
     <string name="font_size">Font size</string>
+    <string name="timer_dialog">Game will start in</string>
 
     <string name="letter_01">A</string>
     <string name="letter_02">B</string>
