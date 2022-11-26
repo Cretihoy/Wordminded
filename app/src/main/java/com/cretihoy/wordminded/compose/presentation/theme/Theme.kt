@@ -8,6 +8,9 @@ import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
 
 private val LightColorPalette = lightColors(
+    background = White,
+    onBackground = Black,
+
     primary = LightBlue,
     primaryVariant = DarkBlue,
     onPrimary = White,
@@ -18,6 +21,9 @@ private val LightColorPalette = lightColors(
 )
 
 private val DarkColorPalette = darkColors(
+    background = Black,
+    onBackground = White,
+
     primary = DarkBlue,
     primaryVariant = LightBlue,
     onPrimary = Black,
