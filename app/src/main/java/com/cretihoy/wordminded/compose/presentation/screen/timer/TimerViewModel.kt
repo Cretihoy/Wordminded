@@ -33,7 +33,7 @@ class TimerViewModel
     fun loadGameScreen() {
 
         CoroutineScope(Dispatchers.Main).launch {
-            for (number in 3 downTo 0) {
+            for (number in 3 downTo 1) {
                 counterText.value = TextModel(
                     fontSize = storage.fontSize,
                     text = number.toString(),
