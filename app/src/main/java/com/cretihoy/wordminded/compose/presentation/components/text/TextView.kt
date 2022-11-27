@@ -3,7 +3,6 @@ package com.cretihoy.wordminded.compose.presentation.components.text
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.Text
@@ -28,13 +27,17 @@ fun TextView(
     model: TextModel? = null,
     modifier: Modifier = Modifier
 ) {
-    model?.textAttr?.let {
+    val textFromAttr = model?.textAttr?.let { stringResource(it) }
+    val text = model?.text ?: textFromAttr
+
+    text?.let {
         Box(
             modifier = modifier
-                .padding(spacingMedium)
-                .fillMaxWidth(), contentAlignment = Alignment.Center
+                .padding(spacingMedium),
+//                .fillMaxWidth(),
+            contentAlignment = Alignment.Center
         ) {
-            if (model.isTitle) {
+            if (model!!.isTitle) {
                 ImageView(
                     model = model.image,
                     modifier = Modifier
@@ -50,9 +53,9 @@ fun TextView(
                 else
                     Modifier,
                 text = if (model.isTitle)
-                    stringResource(id = it).uppercase()
+                    it.uppercase()
                 else
-                    stringResource(id = it),
+                    it,
                 color = colors.onSecondary,
                 fontSize = if (model.isTitle) {
                     (model.fontSize.value * 2).sp

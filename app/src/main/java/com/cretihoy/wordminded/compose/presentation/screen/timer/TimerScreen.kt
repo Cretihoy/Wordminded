@@ -7,15 +7,14 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme.colors
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavHostController
+import com.cretihoy.wordminded.compose.presentation.components.text.TextView
 import com.cretihoy.wordminded.compose.presentation.theme.Shapes
 import com.cretihoy.wordminded.compose.presentation.theme.spacingLarge
 import com.cretihoy.wordminded.extensions.openGameScreen
@@ -44,17 +43,20 @@ fun TimerScreen(
                 .background(colors.background)
                 .padding(spacingLarge)
         ) {
-            if (viewModel.currentNumber.value == null) {
+            if (viewModel.counterText.value == null) {
                 viewModel.loadGameScreen()
             }
-            Text(stringResource(viewModel.titleInt))
-            Text(viewModel.currentNumber.value.toString())
+            TextView(viewModel.titleModel)
+            TextView(
+                model = viewModel.counterText.value,
+                modifier = Modifier.align(Alignment.CenterHorizontally)
+            )
 
             if (viewModel.canIGoNow.value) {
                 navController.openGameScreen()
                 isShown.value = false
                 viewModel.canIGoNow.value = false
-                viewModel.currentNumber.value = null
+                viewModel.counterText.value = null
             }
         }
     }
