@@ -1,21 +1,24 @@
 <resources>
     <string name="app_name">Соображарий</string>
+
     <string name="app_start">Играть</string>
     <string name="app_rules">Правила</string>
+    <string name="app_settings">Настройки</string>
+
     <string name="rules_title">ПРАВИЛА</string>
+    <string name="settings_title">НАСТРОЙКИ</string>
+
     <string name="rules_text1">Соображарий – словесная игра для веселых компаний и семейных вечеров.</string>
     <string name="rules_text2">В игре «Соображарий» есть две колоды карт разного цвета: красный и синий. Карты синего цвета – категории ограничивающие поиск нужного слова. Колода красного цвета – на них изображены буквы, которые помогут найти нужное слово, так как с этих букв они и начинаются.</string>
     <string name="rules_text3">Игру начинает любой игрок. Он нажимает на экран телефона. Появляются 2 карты. Игроки стараются как можно быстрее назвать слово, которое подходит под открытую категорию и начинается с открытой буквы.</string>
-    <string name="app_settings">Настройки</string>
-    <string name="settings_title">НАСТРОЙКИ</string>
-    <string name="yes">Да</string>
-    <string name="no">Нет</string>
-    <string name="ready">Вы готовы?</string>
+
     <string name="card_orientation">Сменить ориентацию карт</string>
     <string name="app_theme">Сменить тему</string>
-    <string name="plus">+</string>
-    <string name="minus">-</string>
+    <string name="infinity_game">Бесконечная игра</string>
     <string name="font_size">Размер шрифта</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+
     <string name="timer_dialog">Игра начнется через</string>
 
     <string name="letter_01">А</string>
