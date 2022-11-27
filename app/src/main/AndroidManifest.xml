@@ -16,8 +16,7 @@
         tools:targetApi="32">
         <activity
             android:name=".compose.presentation.navigation.MainActivity"
-            android:exported="true"
-            android:label="WCompose">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
