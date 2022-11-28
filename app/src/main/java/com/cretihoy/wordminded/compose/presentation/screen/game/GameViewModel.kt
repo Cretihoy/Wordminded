@@ -16,4 +16,8 @@ class GameViewModel
     fun onClick() {
         factory.reloadTasks()
     }
+
+    init {
+        factory.startGame()
+    }
 }

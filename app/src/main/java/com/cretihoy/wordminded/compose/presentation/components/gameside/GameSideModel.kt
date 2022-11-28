@@ -7,5 +7,6 @@ import com.cretihoy.wordminded.compose.presentation.components.button.ButtonMode
 data class GameSideModel(
     val task: ButtonModel? = null,
     val letter: ButtonModel? = null,
-    val isHorizontal: MutableState<Boolean> = mutableStateOf(false)
+    val isHorizontal: MutableState<Boolean> = mutableStateOf(false),
+    val isInfinityGame: MutableState<Boolean> = mutableStateOf(false)
 )

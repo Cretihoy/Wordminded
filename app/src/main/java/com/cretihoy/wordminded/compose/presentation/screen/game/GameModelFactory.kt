@@ -13,14 +13,15 @@ class GameModelFactory
     private val storage: Storage
 ) {
 
-    var task: MutableState<Int?> = mutableStateOf(factory.getRandomTask())
-    var letter: MutableState<Int?> = mutableStateOf(factory.getRandomLetter())
+    private var task: MutableState<Int?> = mutableStateOf(factory.getRandomTask())
+    private var letter: MutableState<Int?> = mutableStateOf(factory.getRandomLetter())
 
     fun getGameSideModel(): GameSideModel {
         return GameSideModel(
             task = getTaskModel(),
             letter = getLetterModel(),
-            isHorizontal = storage.isHorizontal
+            isHorizontal = storage.isHorizontal,
+            isInfinityGame = storage.isInfinityGame
         )
     }
 
@@ -37,6 +38,11 @@ class GameModelFactory
             fontSize = storage.fontSize,
             textAttr = task,
         )
+    }
+
+    fun startGame() {
+        factory.resetLists()
+        reloadTasks()
     }
 
     fun reloadTasks() {

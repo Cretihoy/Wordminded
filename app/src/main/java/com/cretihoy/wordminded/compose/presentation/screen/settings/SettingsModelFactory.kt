@@ -48,7 +48,7 @@ class SettingsModelFactory
         return SwitchModel(
             fontSize = storage.fontSize,
             textAttr = R.string.infinity_game,
-            isChecked = storage.isAltTheme
+            isChecked = storage.isInfinityGame,
         )
     }
 
