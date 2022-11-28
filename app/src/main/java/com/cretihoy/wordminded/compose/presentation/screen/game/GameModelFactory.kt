@@ -24,7 +24,7 @@ class GameModelFactory
         )
     }
 
-    fun getLetterModel(): ButtonModel {
+    private fun getLetterModel(): ButtonModel {
         return ButtonModel(
             fontSize = storage.fontSize,
             textAttr = letter,
@@ -32,7 +32,7 @@ class GameModelFactory
         )
     }
 
-    fun getTaskModel(): ButtonModel {
+    private fun getTaskModel(): ButtonModel {
         return ButtonModel(
             fontSize = storage.fontSize,
             textAttr = task,
