@@ -1,11 +1,20 @@
 package com.cretihoy.wordminded.compose.presentation.screen.game
 
 import com.cretihoy.wordminded.R
+import com.cretihoy.wordminded.data.Storage
 import javax.inject.Inject
 
-class QuestionFactory @Inject constructor() {
+class QuestionFactory
+@Inject constructor(
+    private val storage: Storage
+) {
 
-    fun getLetterList(): List<Int> {
+    private val infinityLetterList = getLetterList()
+    private val infinityTaskList = getTaskList()
+    private var regularLetterList = (getLetterList() + getLetterList()).toMutableList()
+    private var regularTaskList = getTaskList().toMutableList()
+
+    private fun getLetterList(): List<Int> {
         return listOf(
             R.string.letter_01,
             R.string.letter_02,
@@ -36,7 +45,7 @@ class QuestionFactory @Inject constructor() {
         )
     }
 
-    fun getTaskList(): List<Int> {
+    private fun getTaskList(): List<Int> {
         return listOf(
             R.string.task_01,
             R.string.task_02,
@@ -93,13 +102,46 @@ class QuestionFactory @Inject constructor() {
         )
     }
 
-    fun getRandomLetter(): Int {
-        val list = getLetterList()
-        return list.random()
+    private fun getRandomInfinityTask(): Int {
+        return infinityTaskList.random()
     }
 
-    fun getRandomTask(): Int {
-        val list = getTaskList()
-        return list.random()
+    private fun getRandomInfinityLetter(): Int {
+        return infinityLetterList.random()
+    }
+
+    private fun getRandomRegularTask(): Int? {
+        val task: Int? = regularTaskList.randomOrNull()
+        val index = regularTaskList.indexOf(task)
+        if (index >= 0) regularTaskList.removeAt(index)
+        return task
+    }
+
+    private fun getRandomRegularLetter(): Int? {
+        val letter = regularLetterList.randomOrNull()
+        val index = regularLetterList.indexOf(letter)
+        if (index >= 0) regularLetterList.removeAt(index)
+        return letter
+    }
+
+    fun resetLists() {
+        regularLetterList = (getLetterList() + getLetterList()).toMutableList()
+        regularTaskList = getTaskList().toMutableList()
+    }
+
+    fun getRandomTask(): Int? {
+        return if (storage.isInfinityGame.value)
+            getRandomInfinityTask()
+        else
+            getRandomRegularTask()
+
+    }
+
+    fun getRandomLetter(): Int? {
+        return if (storage.isInfinityGame.value)
+            getRandomInfinityLetter()
+        else
+            getRandomRegularLetter()
+
     }
 }
