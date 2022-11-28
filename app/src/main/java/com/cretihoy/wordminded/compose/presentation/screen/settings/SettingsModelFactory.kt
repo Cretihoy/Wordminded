@@ -44,6 +44,14 @@ class SettingsModelFactory
         )
     }
 
+    fun getInfinityGameModel(): SwitchModel {
+        return SwitchModel(
+            fontSize = storage.fontSize,
+            textAttr = R.string.infinity_game,
+            isChecked = storage.isAltTheme
+        )
+    }
+
     fun getCounterModel(): CounterModel {
         return CounterModel(
             fontSize = storage.fontSize,

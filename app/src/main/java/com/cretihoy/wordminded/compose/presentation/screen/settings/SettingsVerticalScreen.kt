@@ -29,6 +29,8 @@ fun SettingsVerticalScreen(
         SpacerView()
         SwitchView(viewModel.themeSettingsSwitch)
         SpacerView()
+        SwitchView(viewModel.infinityGameSwitch)
+        SpacerView()
         CounterView(viewModel.counterModel)
     }
 }
