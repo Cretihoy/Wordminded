@@ -1,11 +1,13 @@
 package com.cretihoy.wordminded.compose.presentation.screen.settings
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
+import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 import com.cretihoy.wordminded.compose.presentation.components.counter.CounterView
 import com.cretihoy.wordminded.compose.presentation.components.switch.SwitchView
 import com.cretihoy.wordminded.compose.presentation.components.text.TextView
@@ -32,5 +34,11 @@ fun SettingsVerticalScreen(
         SwitchView(viewModel.infinityGameSwitch)
         SpacerView()
         CounterView(viewModel.counterModel)
+        SpacerView()
+        ButtonView(viewModel.resetSettings,
+            Modifier.fillMaxWidth(),
+            clickAction = {
+                viewModel.onResetSettingsClicked()
+            })
     }
 }

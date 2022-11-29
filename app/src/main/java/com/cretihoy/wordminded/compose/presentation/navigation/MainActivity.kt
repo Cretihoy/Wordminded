@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
     }
 
     override fun onPause() {
-        storage.saveSettings(this)
+        storage.saveSettings()
         super.onPause()
     }
 }

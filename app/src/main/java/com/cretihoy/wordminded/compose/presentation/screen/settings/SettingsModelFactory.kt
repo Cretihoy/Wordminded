@@ -67,4 +67,12 @@ class SettingsModelFactory
             )
         )
     }
+
+    fun getResetSettingsModel(): ButtonModel {
+        return ButtonModel(
+            fontSize = mutableStateOf(18f),
+            textAttr = mutableStateOf(R.string.reset_settings),
+            isSecondary = true
+        )
+    }
 }
