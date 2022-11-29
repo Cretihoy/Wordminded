@@ -9,8 +9,8 @@ class QuestionFactory
     private val storage: Storage
 ) {
 
-    private val infinityLetterList = getLetterList()
-    private val infinityTaskList = getTaskList()
+    private val infinityLetterList = getLetterList().toList()
+    private val infinityTaskList = getTaskList().toList()
     private var regularLetterList = (getLetterList() + getLetterList()).toMutableList()
     private var regularTaskList = getTaskList().toMutableList()
 
@@ -42,7 +42,7 @@ class QuestionFactory
             R.string.letter_24,
             R.string.letter_25,
             R.string.letter_26
-        )
+        ).shuffled()
     }
 
     private fun getTaskList(): List<Int> {
@@ -99,7 +99,7 @@ class QuestionFactory
             R.string.task_50,
             R.string.task_51,
             R.string.task_52,
-        )
+        ).shuffled()
     }
 
     private fun getRandomInfinityTask(): Int {
