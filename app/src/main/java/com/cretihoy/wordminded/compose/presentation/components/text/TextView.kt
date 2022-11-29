@@ -14,6 +14,7 @@ import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -34,7 +35,6 @@ fun TextView(
         Box(
             modifier = modifier
                 .padding(spacingMedium),
-//                .fillMaxWidth(),
             contentAlignment = Alignment.Center
         ) {
             if (model!!.isTitle) {
@@ -49,9 +49,9 @@ fun TextView(
             Text(
                 modifier = if (model.isTitle)
                     Modifier
-                        .align(Alignment.Center)
                 else
                     Modifier,
+                textAlign = TextAlign.Center,
                 text = if (model.isTitle)
                     it.uppercase()
                 else
