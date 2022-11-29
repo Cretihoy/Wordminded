@@ -7,11 +7,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 import com.cretihoy.wordminded.compose.presentation.components.text.TextView
 import com.cretihoy.wordminded.compose.presentation.screen.game.EndGameModel
+import com.cretihoy.wordminded.compose.presentation.theme.spacingMedium
 
 @Composable
 fun EndGameVerticalScreen(
@@ -20,7 +20,7 @@ fun EndGameVerticalScreen(
 ) {
     Column(
         modifier = Modifier
-            .padding(32.dp)
+            .padding(spacingMedium)
             .fillMaxSize()
     ) {
         TextView(

@@ -5,6 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import com.cretihoy.wordminded.R
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
 import com.cretihoy.wordminded.compose.presentation.components.gameside.GameSideModel
+import com.cretihoy.wordminded.compose.presentation.components.image.ImageModel
 import com.cretihoy.wordminded.compose.presentation.components.text.TextModel
 import com.cretihoy.wordminded.data.Storage
 import javax.inject.Inject
@@ -57,7 +58,12 @@ class GameModelFactory
             title = TextModel(
                 fontSize = storage.fontSize,
                 textAttr = R.string.game_end,
-                isTitle = true
+                isTitle = true,
+                image = ImageModel(
+                    src = R.drawable.logo,
+                    srcAlt = R.drawable.logo_inverted,
+                    isInverted = storage.isAltTheme
+                )
             ),
             button = ButtonModel(
                 fontSize = storage.fontSize,
