@@ -5,10 +5,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.cretihoy.wordminded.compose.presentation.navigation.NavRoutes.GameNavRoute
-import com.cretihoy.wordminded.compose.presentation.navigation.NavRoutes.MenuNavRoute
-import com.cretihoy.wordminded.compose.presentation.navigation.NavRoutes.RulesNavRoute
-import com.cretihoy.wordminded.compose.presentation.navigation.NavRoutes.SettingsNavRoute
+import com.cretihoy.wordminded.compose.presentation.navigation.NavRoutes.*
 import com.cretihoy.wordminded.compose.presentation.screen.game.GameScreen
 import com.cretihoy.wordminded.compose.presentation.screen.game.GameViewModel
 import com.cretihoy.wordminded.compose.presentation.screen.menu.MenuScreen
@@ -37,7 +34,8 @@ fun RouterScreen() {
         composable(GameNavRoute.route) {
             val viewModel = hiltViewModel<GameViewModel>()
             GameScreen(
-                viewModel = viewModel
+                viewModel = viewModel,
+                navController = navController
             )
         }
 

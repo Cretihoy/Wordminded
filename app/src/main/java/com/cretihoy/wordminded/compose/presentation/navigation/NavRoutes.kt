@@ -13,4 +13,7 @@ sealed class NavRoutes(val route: String) {
 
     //settings
     object SettingsNavRoute : NavRoutes("SettingsNavRote")
+
+    //endGame
+    object EndGameNavRoute : NavRoutes("EndGameNavRote")
 }
