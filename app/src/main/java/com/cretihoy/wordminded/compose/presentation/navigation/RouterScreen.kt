@@ -35,7 +35,6 @@ fun RouterScreen() {
             val viewModel = hiltViewModel<GameViewModel>()
             GameScreen(
                 viewModel = viewModel,
-                navController = navController
             )
         }
 
