@@ -2,8 +2,10 @@ package com.cretihoy.wordminded.compose.presentation.screen.game
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
+import com.cretihoy.wordminded.R
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
 import com.cretihoy.wordminded.compose.presentation.components.gameside.GameSideModel
+import com.cretihoy.wordminded.compose.presentation.components.text.TextModel
 import com.cretihoy.wordminded.data.Storage
 import javax.inject.Inject
 
@@ -49,4 +51,28 @@ class GameModelFactory
         task.value = factory.getRandomTask()
         letter.value = factory.getRandomLetter()
     }
+
+    fun getEndGameModel(): EndGameModel {
+        return EndGameModel(
+            title = TextModel(
+                fontSize = storage.fontSize,
+                textAttr = R.string.game_end,
+                isTitle = true
+            ),
+            description = TextModel(
+                fontSize = storage.fontSize,
+                textAttr = R.string.play_again
+            ),
+            button = ButtonModel(
+                fontSize = storage.fontSize,
+                textAttr = mutableStateOf(R.string.yes)
+            )
+        )
+    }
 }
+
+data class EndGameModel(
+    val title: TextModel,
+    val description: TextModel,
+    val button: ButtonModel
+)
