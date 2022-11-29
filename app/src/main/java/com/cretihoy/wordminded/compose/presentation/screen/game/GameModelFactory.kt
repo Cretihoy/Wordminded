@@ -59,13 +59,9 @@ class GameModelFactory
                 textAttr = R.string.game_end,
                 isTitle = true
             ),
-            description = TextModel(
-                fontSize = storage.fontSize,
-                textAttr = R.string.play_again
-            ),
             button = ButtonModel(
                 fontSize = storage.fontSize,
-                textAttr = mutableStateOf(R.string.yes)
+                textAttr = mutableStateOf(R.string.play_again)
             )
         )
     }
@@ -73,6 +69,5 @@ class GameModelFactory
 
 data class EndGameModel(
     val title: TextModel,
-    val description: TextModel,
     val button: ButtonModel
 )
