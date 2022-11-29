@@ -1,17 +1,17 @@
 package com.cretihoy.wordminded.compose.presentation.screen.settings
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
+import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 import com.cretihoy.wordminded.compose.presentation.components.counter.CounterView
 import com.cretihoy.wordminded.compose.presentation.components.switch.SwitchView
 import com.cretihoy.wordminded.compose.presentation.components.text.TextView
+import com.cretihoy.wordminded.compose.presentation.theme.spacingLarge
 
 @Composable
 fun SettingsHorizontalScreen(
@@ -19,7 +19,7 @@ fun SettingsHorizontalScreen(
 ) {
     Row(
         modifier = Modifier
-            .padding(32.dp)
+            .padding(end = spacingLarge)
             .fillMaxSize()
     ) {
         TextView(
@@ -32,6 +32,8 @@ fun SettingsHorizontalScreen(
             modifier = Modifier
                 .weight(1f)
                 .align(CenterVertically)
+                .padding(end = spacingLarge)
+                .verticalScroll(rememberScrollState())
         ) {
             SwitchView(viewModel.orientationSettingsSwitch)
             SpacerView()
@@ -40,6 +42,13 @@ fun SettingsHorizontalScreen(
             SwitchView(viewModel.infinityGameSwitch)
             SpacerView()
             CounterView(viewModel.counterModel)
+            SpacerView()
+            ButtonView(viewModel.resetSettings,
+                Modifier.fillMaxWidth(),
+                clickAction = {
+                    viewModel.onResetSettingsClicked()
+                })
+            SpacerView(Modifier.size(spacingLarge))
         }
     }
 }
