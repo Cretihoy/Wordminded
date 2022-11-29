@@ -14,7 +14,3 @@ fun NavHostController.openRulesScreen() {
 fun NavHostController.openSettingsScreen() {
     this.navigate(NavRoutes.SettingsNavRoute.route)
 }
-
-fun NavHostController.openEndGameScreen() {
-    this.navigate(NavRoutes.EndGameNavRoute.route)
-}
