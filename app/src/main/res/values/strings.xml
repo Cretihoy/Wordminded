@@ -21,7 +21,11 @@
     <string name="font_size">Font size</string>
     <string name="minus">-</string>
     <string name="plus">+</string>
-    <string name="reset_settings">Reset settings</string>
+
+    <string name="reset_settings_button">Reset settings</string>
+    <string name="reset_settings_text">Are you sure?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
     <string name="timer_dialog">Game will start in</string>
 
