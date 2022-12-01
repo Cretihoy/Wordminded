@@ -12,3 +12,14 @@ fun SpacerView(
 ) {
     Spacer(modifier.size(spacingMedium))
 }
+
+@Composable
+fun SpacerView(
+    from: Any?,
+    to: Any?,
+    modifier: Modifier = Modifier
+) {
+    if (from != null && to != null) {
+        Spacer(modifier.size(spacingMedium))
+    }
+}
