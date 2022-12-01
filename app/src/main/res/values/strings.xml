@@ -23,6 +23,7 @@
     <string name="plus">+</string>
 
     <string name="reset_settings_button">Reset settings</string>
+    <string name="manage_users_settings_button">Manage players</string>
     <string name="reset_settings_text">Are you sure?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>

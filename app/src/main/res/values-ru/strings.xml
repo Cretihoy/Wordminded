@@ -22,6 +22,7 @@
     <string name="minus">-</string>
     <string name="plus">+</string>
 
+    <string name="manage_users_settings_button">Управление игроками</string>
     <string name="reset_settings_button">Сбросить настройки</string>
     <string name="reset_settings_text">Вы уверены?</string>
     <string name="yes">Да</string>

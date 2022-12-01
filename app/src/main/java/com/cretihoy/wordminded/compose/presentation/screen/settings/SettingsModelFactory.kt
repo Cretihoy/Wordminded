@@ -82,7 +82,6 @@ class SettingsModelFactory
             title = TextModel(
                 fontSize = storage.fontSize,
                 textAttr = R.string.reset_settings_text,
-//                isTitle = true
             ),
             leftButton = ButtonModel(
                 fontSize = storage.fontSize,
@@ -93,6 +92,13 @@ class SettingsModelFactory
                 fontSize = storage.fontSize,
                 textAttr = mutableStateOf(R.string.yes)
             )
+        )
+    }
+
+    fun getManageUsersButtonModel(): ButtonModel {
+        return ButtonModel(
+            fontSize = mutableStateOf(18f),
+            textAttr = mutableStateOf(R.string.manage_users_settings_button)
         )
     }
 }

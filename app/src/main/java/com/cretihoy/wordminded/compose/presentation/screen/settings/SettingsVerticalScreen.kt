@@ -38,6 +38,12 @@ fun SettingsVerticalScreen(
             SpacerView()
             CounterView(viewModel.counterModel)
             SpacerView()
+            ButtonView(viewModel.manageUsersButtonModel,
+                Modifier.fillMaxWidth(),
+                clickAction = {
+                    viewModel.isShown.value = true
+                })
+            SpacerView(viewModel.manageUsersButtonModel, viewModel.resetSettingsButtonModel)
             ButtonView(viewModel.resetSettingsButtonModel,
                 Modifier.fillMaxWidth(),
                 clickAction = {

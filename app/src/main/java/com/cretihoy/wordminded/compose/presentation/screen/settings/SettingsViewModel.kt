@@ -19,6 +19,7 @@ class SettingsViewModel
     val themeSettingsSwitch by lazy { factory.getThemeSwitchSettingsModel() }
     val infinityGameSwitch by lazy { factory.getInfinityGameModel() }
     val counterModel by lazy { factory.getCounterModel() }
+    val manageUsersButtonModel by lazy { factory.getManageUsersButtonModel() }
     val resetSettingsButtonModel by lazy { factory.getResetSettingsModel() }
     val dialog by lazy { factory.getDialogModel() }
 
