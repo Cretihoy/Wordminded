@@ -4,6 +4,7 @@ import androidx.compose.runtime.mutableStateOf
 import com.cretihoy.wordminded.R
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
 import com.cretihoy.wordminded.compose.presentation.components.counter.CounterModel
+import com.cretihoy.wordminded.compose.presentation.components.dialog.DialogModel
 import com.cretihoy.wordminded.compose.presentation.components.image.ImageModel
 import com.cretihoy.wordminded.compose.presentation.components.switch.SwitchModel
 import com.cretihoy.wordminded.compose.presentation.components.text.TextModel
@@ -71,8 +72,27 @@ class SettingsModelFactory
     fun getResetSettingsModel(): ButtonModel {
         return ButtonModel(
             fontSize = mutableStateOf(18f),
-            textAttr = mutableStateOf(R.string.reset_settings),
+            textAttr = mutableStateOf(R.string.reset_settings_button),
             isSecondary = true
+        )
+    }
+
+    fun getDialogModel(): DialogModel {
+        return DialogModel(
+            title = TextModel(
+                fontSize = storage.fontSize,
+                textAttr = R.string.reset_settings_text,
+//                isTitle = true
+            ),
+            leftButton = ButtonModel(
+                fontSize = storage.fontSize,
+                textAttr = mutableStateOf(R.string.no),
+                isSecondary = true
+            ),
+            rightButton = ButtonModel(
+                fontSize = storage.fontSize,
+                textAttr = mutableStateOf(R.string.yes)
+            )
         )
     }
 }

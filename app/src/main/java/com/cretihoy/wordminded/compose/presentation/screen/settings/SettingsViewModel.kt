@@ -1,5 +1,6 @@
 package com.cretihoy.wordminded.compose.presentation.screen.settings
 
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.cretihoy.wordminded.data.Storage
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -12,12 +13,14 @@ class SettingsViewModel
     private val storage: Storage
 ) : ViewModel() {
 
+    val isShown = mutableStateOf(false)
     val settingsTitle by lazy { factory.getTitleSettingsModel() }
     val orientationSettingsSwitch by lazy { factory.getOrientationSwitchSettingsModel() }
     val themeSettingsSwitch by lazy { factory.getThemeSwitchSettingsModel() }
     val infinityGameSwitch by lazy { factory.getInfinityGameModel() }
     val counterModel by lazy { factory.getCounterModel() }
-    val resetSettings by lazy { factory.getResetSettingsModel() }
+    val resetSettingsButtonModel by lazy { factory.getResetSettingsModel() }
+    val dialog by lazy { factory.getDialogModel() }
 
     fun onResetSettingsClicked() {
         storage.resetSettings()
