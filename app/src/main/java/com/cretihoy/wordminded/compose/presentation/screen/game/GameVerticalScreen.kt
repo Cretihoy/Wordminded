@@ -6,10 +6,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
-import androidx.compose.ui.unit.dp
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.gameside.GameSideView
 import com.cretihoy.wordminded.compose.presentation.screen.end.EndGameScreen
+import com.cretihoy.wordminded.compose.presentation.theme.spacingLarge
 
 @Composable
 fun GameVerticalScreen(
@@ -17,7 +17,7 @@ fun GameVerticalScreen(
 ) {
     Column(
         modifier = Modifier
-            .padding(32.dp)
+            .padding(spacingLarge)
             .fillMaxSize()
     ) {
         if (viewModel.task?.value != null && viewModel.letter?.value != null) {

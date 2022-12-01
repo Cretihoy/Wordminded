@@ -6,10 +6,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.text.TextView
 import com.cretihoy.wordminded.compose.presentation.components.textBlock.TextBlockView
+import com.cretihoy.wordminded.compose.presentation.theme.spacingLarge
 
 @Composable
 fun RulesVerticalScreen(
@@ -17,7 +17,7 @@ fun RulesVerticalScreen(
 ) {
     Column(
         modifier = Modifier
-            .padding(32.dp)
+            .padding(spacingLarge)
             .fillMaxSize()
     ) {
         TextView(

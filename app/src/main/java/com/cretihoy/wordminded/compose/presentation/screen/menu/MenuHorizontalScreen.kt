@@ -4,7 +4,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
@@ -12,6 +11,7 @@ import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 import com.cretihoy.wordminded.compose.presentation.components.image.ImageView
 import com.cretihoy.wordminded.compose.presentation.screen.timer.TimerScreen
 import com.cretihoy.wordminded.compose.presentation.screen.timer.TimerViewModel
+import com.cretihoy.wordminded.compose.presentation.theme.spacingLarge
 import com.cretihoy.wordminded.extensions.openRulesScreen
 import com.cretihoy.wordminded.extensions.openSettingsScreen
 
@@ -23,7 +23,7 @@ fun MenuHorizontalScreen(
     Box {
         Row(
             modifier = Modifier
-                .padding(32.dp)
+                .padding(spacingLarge)
                 .fillMaxSize()
         ) {
             ImageView(

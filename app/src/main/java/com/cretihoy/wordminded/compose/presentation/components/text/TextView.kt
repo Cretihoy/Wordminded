@@ -15,11 +15,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.cretihoy.wordminded.R
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.image.ImageView
+import com.cretihoy.wordminded.compose.presentation.theme.spacingLarge
 
 @Composable
 fun TextView(
@@ -40,7 +40,7 @@ fun TextView(
                     modifier = Modifier
                         .fillMaxSize()
                         .scale(1.5f)
-                        .blur(32.dp)
+                        .blur(spacingLarge)
                 )
             }
             Text(
