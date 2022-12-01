@@ -3,7 +3,6 @@ package com.cretihoy.wordminded.compose.presentation.components.text
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -21,7 +20,6 @@ import androidx.compose.ui.unit.sp
 import com.cretihoy.wordminded.R
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.image.ImageView
-import com.cretihoy.wordminded.compose.presentation.theme.spacingMedium
 
 @Composable
 fun TextView(
@@ -33,8 +31,7 @@ fun TextView(
 
     text?.let {
         Box(
-            modifier = modifier
-                .padding(spacingMedium),
+            modifier = modifier,
             contentAlignment = Alignment.Center
         ) {
             if (model!!.isTitle) {
