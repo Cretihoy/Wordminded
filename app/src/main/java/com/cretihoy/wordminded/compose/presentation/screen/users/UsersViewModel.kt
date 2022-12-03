@@ -1,6 +1,6 @@
 package com.cretihoy.wordminded.compose.presentation.screen.users
 
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.cretihoy.wordminded.compose.presentation.components.user.UserModel
@@ -16,18 +16,20 @@ class UsersViewModel
 ) : ViewModel() {
 
     val titleModel by lazy { factory.getTitleModel() }
-    val userModelList = mutableStateOf(mutableListOf<UserModel>())
+    val users = mutableStateListOf<UserModel>()
     val newUserButtonModel by lazy { factory.getNewUserButtonModel() }
 
     fun addUser(name: String) {
         viewModelScope.launch {
-            repository.addUser(name)
+            val user = factory.getUserModel(name)
+            users.add(user)
+            repository.addUser(user)
         }
     }
 
     fun loadUsers() {
         viewModelScope.launch {
-            userModelList.value.addAll(repository.getUsers())
+            users.addAll(repository.getUsers())
         }
     }
 }

@@ -14,31 +14,6 @@ class UserModelFactory
     private val storage: Storage
 ) {
 
-    fun getUserModelList(): List<UserModel> {
-        return listOf(
-            UserModel(
-                nameButton = ButtonModel(
-                    fontSize = storage.fontSize,
-                    text = "Sashka"
-                ),
-                removeButton = ButtonModel(
-                    fontSize = storage.fontSize,
-                    textAttr = mutableStateOf(R.string.plus)
-                ),
-            ),
-             UserModel(
-                nameButton = ButtonModel(
-                    fontSize = storage.fontSize,
-                    text = "Ellie"
-                ),
-                removeButton = ButtonModel(
-                    fontSize = storage.fontSize,
-                    textAttr = mutableStateOf(R.string.plus)
-                ),
-            ),
-        )
-    }
-
     fun getNewUserButtonModel(): ButtonModel {
         return ButtonModel(
             fontSize = storage.fontSize,
@@ -59,4 +34,16 @@ class UserModelFactory
         )
     }
 
+    fun getUserModel(name: String): UserModel {
+        return UserModel(
+            nameButton = ButtonModel(
+                fontSize = storage.fontSize,
+                text = name
+            ),
+            removeButton = ButtonModel(
+                fontSize = storage.fontSize,
+                textAttr = mutableStateOf(R.string.plus)
+            )
+        )
+    }
 }

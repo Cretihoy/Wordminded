@@ -10,6 +10,14 @@ class UserMapper @Inject constructor(
     private val storage: Storage
 ) {
 
+    fun map(model: UserModel): User {
+        return User(
+            id = System.currentTimeMillis(),
+            name = model.nameButton.text.orEmpty(),
+            score = 1337
+        )
+    }
+
     fun map(user: User): UserModel {
         return UserModel(
             nameButton = ButtonModel(

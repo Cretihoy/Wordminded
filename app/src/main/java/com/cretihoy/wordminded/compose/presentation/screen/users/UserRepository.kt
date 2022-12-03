@@ -2,7 +2,6 @@ package com.cretihoy.wordminded.compose.presentation.screen.users
 
 import com.cretihoy.wordminded.compose.presentation.components.user.UserModel
 import com.cretihoy.wordminded.data.db.dao.UserDao
-import com.cretihoy.wordminded.data.db.entity.User
 import javax.inject.Inject
 
 class UserRepository @Inject constructor(
@@ -14,13 +13,8 @@ class UserRepository @Inject constructor(
         return database.getAll().map { mapper.map(it) }
     }
 
-    suspend fun addUser(name: String) {
-        database.add(
-            User(
-                id = System.currentTimeMillis(),
-                name = name,
-                score = 0,
-            )
-        )
+    suspend fun addUser(model: UserModel) {
+        val user = mapper.map(model)
+        database.add(user)
     }
 }

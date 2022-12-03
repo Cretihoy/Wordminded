@@ -19,7 +19,7 @@ import kotlin.random.Random
 fun UsersScreen(
     viewModel: UsersViewModel
 ) {
-    if (viewModel.userModelList.value.isEmpty()) {
+    if (viewModel.users.isEmpty()) {
         viewModel.loadUsers()
     }
     LazyColumn(
@@ -32,7 +32,7 @@ fun UsersScreen(
             TextView(viewModel.titleModel, modifier = Modifier.fillMaxWidth())
             SpacerView()
         }
-        items(viewModel.userModelList.value) {
+        items(viewModel.users) {
             UserView(it)
             SpacerView()
         }
