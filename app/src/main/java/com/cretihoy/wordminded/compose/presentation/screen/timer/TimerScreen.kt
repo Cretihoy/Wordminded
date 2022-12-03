@@ -16,18 +16,16 @@ fun TimerScreen(
     navController: NavHostController,
     modifier: Modifier
 ) {
-    val viewModel = hiltViewModel<TimerViewModel>()
     ModalView(
         isShown = isShown,
         modifier = modifier
     ) {
-
-            viewModel.loadGameScreen()
-
+        val viewModel = hiltViewModel<TimerViewModel>()
+        viewModel.loadGameScreen()
 
         TextView(viewModel.titleModel)
         TextView(
-            model = viewModel.counterText.value,
+            model = viewModel.counterModel.value,
             modifier = Modifier.align(Alignment.CenterHorizontally)
         )
 
@@ -35,7 +33,7 @@ fun TimerScreen(
             navController.openGameScreen()
             isShown.value = false
             viewModel.canIGoNow.value = false
-            viewModel.counterText.value = null
+            viewModel.counterModel.value = null
         }
     }
 }
