@@ -1,20 +1,19 @@
 package com.cretihoy.wordminded.compose.presentation.components.dialog
 
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.cretihoy.wordminded.R
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
+import com.cretihoy.wordminded.compose.presentation.components.modal.ModalView
 import com.cretihoy.wordminded.compose.presentation.components.text.TextModel
 import com.cretihoy.wordminded.compose.presentation.components.text.TextView
-import com.cretihoy.wordminded.compose.presentation.components.modal.ModalView
 import com.cretihoy.wordminded.compose.presentation.theme.minWidth
 
 @Composable
@@ -28,9 +27,10 @@ fun DialogView(
     model?.let {
         ModalView(
             isShown = isShown,
-            modifier = modifier
+            modifier = modifier,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            TextView(model.title, Modifier.fillMaxWidth())
+            TextView(model.title)
             SpacerView(model.title, model.description)
             TextView(model.description)
             SpacerView()

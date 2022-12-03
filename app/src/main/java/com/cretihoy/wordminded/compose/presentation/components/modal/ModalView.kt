@@ -2,8 +2,10 @@ package com.cretihoy.wordminded.compose.presentation.components.modal
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme.colors
@@ -23,7 +25,9 @@ import com.cretihoy.wordminded.compose.presentation.theme.spacingMedium
 fun ModalView(
     isShown: MutableState<Boolean>,
     modifier: Modifier = Modifier,
-    content: @Composable () -> Unit
+    verticalArrangement: Arrangement.Vertical = Arrangement.Top,
+    horizontalAlignment: Alignment.Horizontal = Alignment.Start,
+    content: @Composable ColumnScope.() -> Unit
 ) {
     if (isShown.value) {
         Box(
@@ -36,13 +40,15 @@ fun ModalView(
                     .alpha(0.1f)
                     .background(colors.onBackground))
             Column(
+                verticalArrangement = verticalArrangement,
+                horizontalAlignment = horizontalAlignment,
                 modifier = modifier
                     .padding(spacingMedium)
                     .clip(Shapes.large)
                     .background(colors.background)
                     .padding(spacingMedium)
             ) {
-                content.invoke()
+                content.invoke(this)
             }
         }
     }
@@ -51,13 +57,11 @@ fun ModalView(
 @Preview
 @Composable
 fun PreviewModalView() {
-    ModalView(
-        mutableStateOf(true),
-        content = {
-            Box(
-                modifier = Modifier
-                    .background(Color.Red)
-                    .fillMaxSize()
-            )
-        })
+    ModalView(mutableStateOf(true)) {
+        Box(
+            modifier = Modifier
+                .background(Color.Red)
+                .fillMaxSize()
+        )
+    }
 }
