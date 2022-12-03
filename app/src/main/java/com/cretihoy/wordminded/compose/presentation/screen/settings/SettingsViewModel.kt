@@ -10,7 +10,7 @@ import javax.inject.Inject
 class SettingsViewModel
 @Inject constructor(
     private val factory: SettingsModelFactory,
-    private val storage: Storage
+    private val storage: Storage,
 ) : ViewModel() {
 
     val isShown = mutableStateOf(false)

@@ -1,21 +1,25 @@
 package com.cretihoy.wordminded.compose.presentation.screen.settings
 
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavHostController
 import com.cretihoy.wordminded.compose.presentation.components.RotateScreen
 
 @Composable
 fun SettingsScreen(
-    viewModel: SettingsViewModel
+    viewModel: SettingsViewModel,
+    navController: NavHostController
 ) {
     RotateScreen(
         horizontal = {
             SettingsHorizontalScreen(
-                viewModel = viewModel
+                viewModel = viewModel,
+                navController =navController
             )
         },
         vertical = {
             SettingsVerticalScreen(
-                viewModel = viewModel
+                viewModel = viewModel,
+                navController =navController
             )
         }
     )

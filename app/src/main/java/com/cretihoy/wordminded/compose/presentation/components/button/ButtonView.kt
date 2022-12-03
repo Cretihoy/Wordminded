@@ -40,15 +40,14 @@ fun ButtonView(
             ),
             shape = Shapes.medium,
         ) {
-            it.textAttr.value?.let { text ->
-                Text(
-                    modifier = Modifier.padding(spacingSmall),
-                    text = stringResource(id = text),
-                    color = colors.onSecondary,
-                    fontSize = model.fontSize.value.sp,
-                    textAlign = TextAlign.Center
-                )
-            }
+            val newText = it.text ?: stringResource(it.textAttr.value ?: 0)
+            Text(
+                modifier = Modifier.padding(spacingSmall),
+                text = newText,
+                color = colors.onSecondary,
+                fontSize = model.fontSize.value.sp,
+                textAlign = TextAlign.Center
+            )
         }
     }
 }

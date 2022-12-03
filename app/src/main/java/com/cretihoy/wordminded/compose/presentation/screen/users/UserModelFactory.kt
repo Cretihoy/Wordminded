@@ -5,12 +5,39 @@ import com.cretihoy.wordminded.R
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
 import com.cretihoy.wordminded.compose.presentation.components.image.ImageModel
 import com.cretihoy.wordminded.compose.presentation.components.text.TextModel
+import com.cretihoy.wordminded.compose.presentation.components.user.UserModel
 import com.cretihoy.wordminded.data.Storage
 import javax.inject.Inject
 
-class UserModelFactory @Inject constructor(
+class UserModelFactory
+@Inject constructor(
     private val storage: Storage
 ) {
+
+    fun getUserModelList(): List<UserModel> {
+        return listOf(
+            UserModel(
+                nameButton = ButtonModel(
+                    fontSize = storage.fontSize,
+                    text = "Sashka"
+                ),
+                removeButton = ButtonModel(
+                    fontSize = storage.fontSize,
+                    textAttr = mutableStateOf(R.string.plus)
+                ),
+            ),
+             UserModel(
+                nameButton = ButtonModel(
+                    fontSize = storage.fontSize,
+                    text = "Ellie"
+                ),
+                removeButton = ButtonModel(
+                    fontSize = storage.fontSize,
+                    textAttr = mutableStateOf(R.string.plus)
+                ),
+            ),
+        )
+    }
 
     fun getNewUserButtonModel(): ButtonModel {
         return ButtonModel(

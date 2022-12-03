@@ -4,6 +4,5 @@ import com.cretihoy.wordminded.compose.presentation.components.button.ButtonMode
 
 data class UserModel(
     val nameButton: ButtonModel,
-    val editButton: ButtonModel,
     val removeButton: ButtonModel
 )

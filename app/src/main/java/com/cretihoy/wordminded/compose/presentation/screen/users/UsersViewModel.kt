@@ -1,7 +1,6 @@
 package com.cretihoy.wordminded.compose.presentation.screen.users
 
 import androidx.lifecycle.ViewModel
-import com.cretihoy.wordminded.compose.presentation.components.user.UserModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -12,9 +11,8 @@ class UsersViewModel
 ) : ViewModel() {
 
     val titleModel by lazy { factory.getTitleModel() }
-    val userModelList = mutableListOf(listOf<UserModel>())
+    val userModelList by lazy { factory.getUserModelList() }
     val newUserButtonModel by lazy { factory.getNewUserButtonModel() }
-
 
 //    val db = Room.databaseBuilder(
 //        applicationContext,
