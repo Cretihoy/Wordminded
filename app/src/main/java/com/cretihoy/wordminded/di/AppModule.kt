@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.cretihoy.wordminded.data.Storage
 import com.cretihoy.wordminded.data.db.AppDatabase
+import com.cretihoy.wordminded.data.db.dao.UserDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,6 +15,14 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+
+    @Provides
+    @Singleton
+    fun provideDao(
+        db: AppDatabase
+    ): UserDao {
+        return db.userDao()
+    }
 
     @Provides
     @Singleton

@@ -13,11 +13,15 @@ import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 import com.cretihoy.wordminded.compose.presentation.components.text.TextView
 import com.cretihoy.wordminded.compose.presentation.components.user.UserView
 import com.cretihoy.wordminded.compose.presentation.theme.spacingLarge
+import kotlin.random.Random
 
 @Composable
 fun UsersScreen(
     viewModel: UsersViewModel
 ) {
+    if (viewModel.userModelList.value.isEmpty()) {
+        viewModel.loadUsers()
+    }
     LazyColumn(
         verticalArrangement = Arrangement.Bottom,
         contentPadding = PaddingValues(spacingLarge),
@@ -28,12 +32,19 @@ fun UsersScreen(
             TextView(viewModel.titleModel, modifier = Modifier.fillMaxWidth())
             SpacerView()
         }
-        items(viewModel.userModelList) {
+        items(viewModel.userModelList.value) {
             UserView(it)
             SpacerView()
         }
         item {
-            ButtonView(viewModel.newUserButtonModel, modifier = Modifier.fillMaxWidth())
+            ButtonView(
+                viewModel.newUserButtonModel,
+                modifier = Modifier.fillMaxWidth(),
+                clickAction = {
+                    val random = Random.nextInt(0, 100)
+                    viewModel.addUser("$random name")
+                    viewModel.loadUsers()
+                })
         }
     }
 }
