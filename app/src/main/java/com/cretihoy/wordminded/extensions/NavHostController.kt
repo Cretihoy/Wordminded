@@ -14,3 +14,7 @@ fun NavHostController.openRulesScreen() {
 fun NavHostController.openSettingsScreen() {
     this.navigate(NavRoutes.SettingsNavRoute.route)
 }
+
+fun NavHostController.openUsersScreen() {
+    this.navigate(NavRoutes.UsersNavRoute.route)
+}

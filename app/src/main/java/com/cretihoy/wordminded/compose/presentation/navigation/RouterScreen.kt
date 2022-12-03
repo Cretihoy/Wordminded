@@ -14,6 +14,8 @@ import com.cretihoy.wordminded.compose.presentation.screen.rules.RulesScreen
 import com.cretihoy.wordminded.compose.presentation.screen.rules.RulesViewModel
 import com.cretihoy.wordminded.compose.presentation.screen.settings.SettingsScreen
 import com.cretihoy.wordminded.compose.presentation.screen.settings.SettingsViewModel
+import com.cretihoy.wordminded.compose.presentation.screen.users.UsersScreen
+import com.cretihoy.wordminded.compose.presentation.screen.users.UsersViewModel
 
 @Composable
 fun RouterScreen() {
@@ -48,6 +50,13 @@ fun RouterScreen() {
         composable(SettingsNavRoute.route) {
             val viewModel = hiltViewModel<SettingsViewModel>()
             SettingsScreen(
+                viewModel = viewModel
+            )
+        }
+
+        composable(UsersNavRoute.route) {
+            val viewModel = hiltViewModel<UsersViewModel>()
+            UsersScreen(
                 viewModel = viewModel
             )
         }
