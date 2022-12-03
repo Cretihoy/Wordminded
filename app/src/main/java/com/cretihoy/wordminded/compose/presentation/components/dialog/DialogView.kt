@@ -62,11 +62,11 @@ fun PreviewDialog() {
         ),
         leftButton = ButtonModel(
             fontSize = mutableStateOf(18f),
-            textAttr = mutableStateOf(R.string.app_name),
+            text = "yes"
         ),
         rightButton = ButtonModel(
             fontSize = mutableStateOf(18f),
-            textAttr = mutableStateOf(R.string.app_name),
+            text = "no"
         ),
     )
     DialogView(isShown = mutableStateOf(true), model = model)
