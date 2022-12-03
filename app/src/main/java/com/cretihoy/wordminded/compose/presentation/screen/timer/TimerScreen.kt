@@ -27,7 +27,7 @@ fun TimerScreen(
 
         TextView(viewModel.titleModel)
         TextView(
-            model = viewModel.counterText.value,
+            model = viewModel.counterModel.value,
             modifier = Modifier.align(Alignment.CenterHorizontally)
         )
 
@@ -35,7 +35,7 @@ fun TimerScreen(
             navController.openGameScreen()
             isShown.value = false
             viewModel.canIGoNow.value = false
-            viewModel.counterText.value = null
+            viewModel.counterModel.value = null
         }
     }
 }

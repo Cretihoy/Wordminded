@@ -18,14 +18,14 @@ class TimerViewModel
 ) : ViewModel() {
 
     val titleModel = factory.getTitleModel()
-    val counterText: MutableState<TextModel?> = mutableStateOf(null)
+    val counterModel: MutableState<TextModel?> = mutableStateOf(null)
     val canIGoNow = mutableStateOf(false)
 
     fun loadGameScreen() {
-        if (counterText.value == null) {
+        if (counterModel.value == null) {
             CoroutineScope(Dispatchers.Main).launch {
                 for (number in 3 downTo 1) {
-                    counterText.value = factory.getCounterModel(number)
+                    counterModel.value = factory.getCounterModel(number)
                     delay(1000L)
                 }
                 canIGoNow.value = true
