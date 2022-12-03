@@ -3,27 +3,30 @@ package com.cretihoy.wordminded.data.db.dao
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Transaction
 import com.cretihoy.wordminded.data.db.entity.User
 
 @Dao
 interface UserDao {
 
+    @Transaction
     @Query("SELECT * FROM user")
-    fun getAll(): List<User>
+    suspend fun getAll(): List<User>
 
     @Query("SELECT * FROM user WHERE id == :id LIMIT 1")
-    fun getById(id: Long): User
+    suspend fun getById(id: Long): User
 
     @Query("SELECT * FROM user WHERE name LIKE :name LIMIT 1")
-    fun getByName(name: String): User
+    suspend fun getByName(name: String): User
 
-    @Insert
-    fun add(user: User)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun add(user: User)
 
-    @Insert
-    fun addList(vararg users: User)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun addList(vararg users: User)
 
     @Delete
-    fun remove(user: User)
+    suspend fun remove(user: User)
 }

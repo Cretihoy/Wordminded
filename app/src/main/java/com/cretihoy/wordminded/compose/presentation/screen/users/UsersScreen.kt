@@ -43,7 +43,6 @@ fun UsersScreen(
                 clickAction = {
                     val random = Random.nextInt(0, 100)
                     viewModel.addUser("$random name")
-                    viewModel.loadUsers()
                 })
         }
     }
