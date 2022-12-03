@@ -25,23 +25,21 @@ class TimerViewModel
         isTitle = false
     )
     val counterText: MutableState<TextModel?> = mutableStateOf(null)
-
-    //    val titleInt = R.string.timer_dialog
-//    val currentNumber = mutableStateOf<Int?>(null)
     val canIGoNow = mutableStateOf(false)
 
     fun loadGameScreen() {
-
-        CoroutineScope(Dispatchers.Main).launch {
-            for (number in 3 downTo 1) {
-                counterText.value = TextModel(
-                    fontSize = storage.fontSize,
-                    text = number.toString(),
-                    isTitle = true
-                )
-                delay(1000L)
+        if (counterText.value == null) {
+            CoroutineScope(Dispatchers.Main).launch {
+                for (number in 3 downTo 1) {
+                    counterText.value = TextModel(
+                        fontSize = storage.fontSize,
+                        text = number.toString(),
+                        isTitle = true
+                    )
+                    delay(1000L)
+                }
+                canIGoNow.value = true
             }
-            canIGoNow.value = true
         }
     }
 }
