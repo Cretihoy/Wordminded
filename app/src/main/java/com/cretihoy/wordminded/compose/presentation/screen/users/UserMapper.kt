@@ -11,10 +11,11 @@ class UserMapper @Inject constructor(
 ) {
 
     fun map(model: UserModel): User {
+        val name = model.nameButton.text.orEmpty()
         return User(
-            id = System.currentTimeMillis(),
-            name = model.nameButton.text.orEmpty(),
-            score = 1337
+            id = System.currentTimeMillis() + name.hashCode(),
+            name = name,
+            score = 0
         )
     }
 
@@ -22,11 +23,11 @@ class UserMapper @Inject constructor(
         return UserModel(
             nameButton = ButtonModel(
                 fontSize = storage.fontSize,
-                text = "${user.id} ${user.name} ${user.score}"
+                text = user.name
             ),
             removeButton = ButtonModel(
                 fontSize = storage.fontSize,
-                text = "Remove?"
+                text = "?"
             )
         )
     }
