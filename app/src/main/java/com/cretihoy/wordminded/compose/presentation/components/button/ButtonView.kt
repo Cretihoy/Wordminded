@@ -1,6 +1,7 @@
 package com.cretihoy.wordminded.compose.presentation.components.button
 
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
@@ -33,8 +34,8 @@ fun ButtonView(
             onClick = clickAction,
             modifier = modifier
                 .sizeIn(
-                    minWidth = 48.dp,
-                    minHeight = 48.dp
+                    minWidth = 56.dp,
+                    minHeight = 56.dp
                 ),
             colors = ButtonDefaults.buttonColors(
                 backgroundColor = if (it.isSecondary)
@@ -47,6 +48,7 @@ fun ButtonView(
             it.icon?.let { image ->
                 Icon(
                     imageVector = image,
+                    tint = colors.onSecondary,
                     contentDescription = EMPTY_STRING
                 )
             }

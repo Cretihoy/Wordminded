@@ -8,6 +8,8 @@ import com.cretihoy.wordminded.compose.presentation.components.input.InputModel
 import com.cretihoy.wordminded.compose.presentation.components.text.TextModel
 import com.cretihoy.wordminded.compose.presentation.components.user.UserModel
 import com.cretihoy.wordminded.compose.presentation.theme.EMPTY_STRING
+import com.cretihoy.wordminded.compose.presentation.theme.icAdd
+import com.cretihoy.wordminded.compose.presentation.theme.icCheck
 import com.cretihoy.wordminded.data.Storage
 import javax.inject.Inject
 
@@ -25,7 +27,7 @@ class UserModelFactory
             text = mutableStateOf(name),
             button = ButtonModel(
                 fontSize = storage.fontSize,
-                text = "x"
+                icon = icCheck
             )
         )
     }
@@ -33,7 +35,8 @@ class UserModelFactory
     fun getNewUserButtonModel(): ButtonModel {
         return ButtonModel(
             fontSize = storage.fontSize,
-            textAttr = mutableStateOf(R.string.plus)
+            icon = icAdd,
+            textAttr = mutableStateOf(R.string.add_new_user)
         )
     }
 
