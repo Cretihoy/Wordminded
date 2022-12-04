@@ -110,4 +110,6 @@
     <string name="task_51">Thinner than a centimeter</string>
     <string name="task_52">Human or animal body part</string>
     <string name="user_management">Players Management</string>
+    <string name="input_question">Name for new player</string>
+
 </resources>
