@@ -47,6 +47,7 @@ fun ButtonView(
             it.icon?.let { image ->
                 Icon(
                     imageVector = image,
+                    tint = colors.onSecondary,
                     contentDescription = EMPTY_STRING
                 )
             }
