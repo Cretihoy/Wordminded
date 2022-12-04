@@ -2,6 +2,7 @@ package com.cretihoy.wordminded.compose.presentation.screen.users
 
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
 import com.cretihoy.wordminded.compose.presentation.components.user.UserModel
+import com.cretihoy.wordminded.compose.presentation.theme.icDelete
 import com.cretihoy.wordminded.data.Storage
 import com.cretihoy.wordminded.data.db.entity.User
 import javax.inject.Inject
@@ -27,7 +28,8 @@ class UserMapper @Inject constructor(
             ),
             removeButton = ButtonModel(
                 fontSize = storage.fontSize,
-                text = "?"
+                icon = icDelete,
+                isSecondary = true
             )
         )
     }
