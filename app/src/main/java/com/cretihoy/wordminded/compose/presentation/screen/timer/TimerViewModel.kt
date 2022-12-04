@@ -6,12 +6,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.cretihoy.wordminded.compose.presentation.components.text.TextModel
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 private const val SECOND_IN_MILLS = 1000L
-private const val SECONDS = 3
+private const val SECONDS = 5
 
 @HiltViewModel
 class TimerViewModel
@@ -19,26 +20,28 @@ class TimerViewModel
     private val factory: TimerModelFactory
 ) : ViewModel() {
 
+    private var job: Job? = null
+
     val titleModel = factory.getTitleModel()
     val counterModel: MutableState<TextModel?> = mutableStateOf(null)
 
-    var isProgressNow = false
     val canGoNext = mutableStateOf(false)
 
-    fun loadGameScreen() {
-        viewModelScope.launch {
-            doCount()
+    fun loadGameScreen(isShown: MutableState<Boolean>) {
+        job = viewModelScope.launch {
+            if (isShown.value) {
+                doCount()
+            } else {
+                job?.cancel()
+            }
         }
     }
 
     private suspend fun doCount() {
-        if (!isProgressNow) {
-            isProgressNow = true
-            for (number in SECONDS downTo 1) {
-                counterModel.value = factory.getCounterModel(number)
-                delay(SECOND_IN_MILLS)
-            }
-            canGoNext.value = true
+        for (number in SECONDS downTo 1) {
+            counterModel.value = factory.getCounterModel(number)
+            delay(SECOND_IN_MILLS)
         }
+        canGoNext.value = true
     }
 }
