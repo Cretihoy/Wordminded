@@ -18,6 +18,10 @@ class UserModelFactory
 
     fun getInputModel(name: String = EMPTY_STRING): InputModel {
         return InputModel(
+            title = TextModel(
+                fontSize = storage.fontSize,
+                textAttr = R.string.input_question
+            ),
             text = mutableStateOf(name),
             button = ButtonModel(
                 fontSize = storage.fontSize,
