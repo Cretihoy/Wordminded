@@ -18,6 +18,7 @@ class UsersViewModel
     private val repository: UserRepository
 ) : ViewModel() {
 
+    val dialogModel by lazy { factory.getDialogModel() }
     val titleModel by lazy { factory.getTitleModel() }
     val users = mutableStateListOf<UserModel>()
     val newUserButtonModel by lazy { factory.getNewUserButtonModel() }
@@ -27,6 +28,7 @@ class UsersViewModel
     val editInputModel: MutableState<InputModel?> = mutableStateOf(null)
     val addingInputModel by lazy { factory.getAddingInputModel() }
 
+    val isDialogShown: MutableState<Boolean> = mutableStateOf(false)
     val isShownEdit = mutableStateOf(false)
     val isShownAdding = mutableStateOf(false)
 
@@ -44,10 +46,13 @@ class UsersViewModel
         }
     }
 
-    fun onRemoveClicked(it: UserModel) {
+    fun onRemoveClicked() {
         viewModelScope.launch {
-            repository.removeUser(it)
-            users.remove(it)
+            currentUser?.let { model ->
+                repository.removeUser(model)
+                users.remove(model)
+                isDialogShown.value = false
+            }
         }
     }
 

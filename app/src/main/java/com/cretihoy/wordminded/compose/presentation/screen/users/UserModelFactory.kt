@@ -3,6 +3,7 @@ package com.cretihoy.wordminded.compose.presentation.screen.users
 import androidx.compose.runtime.mutableStateOf
 import com.cretihoy.wordminded.R
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
+import com.cretihoy.wordminded.compose.presentation.components.dialog.DialogModel
 import com.cretihoy.wordminded.compose.presentation.components.image.ImageModel
 import com.cretihoy.wordminded.compose.presentation.components.input.InputModel
 import com.cretihoy.wordminded.compose.presentation.components.text.TextModel
@@ -66,6 +67,24 @@ class UserModelFactory
                 fontSize = storage.fontSize,
                 icon = icDelete,
                 isSecondary = true
+            )
+        )
+    }
+
+    fun getDialogModel(): DialogModel {
+        return DialogModel(
+            title = TextModel(
+                fontSize = storage.fontSize,
+                textAttr = R.string.reset_settings_text,
+            ),
+            leftButton = ButtonModel(
+                fontSize = storage.fontSize,
+                textAttr = mutableStateOf(R.string.no),
+                isSecondary = true
+            ),
+            rightButton = ButtonModel(
+                fontSize = storage.fontSize,
+                textAttr = mutableStateOf(R.string.yes)
             )
         )
     }

@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
+import com.cretihoy.wordminded.compose.presentation.components.dialog.DialogView
 import com.cretihoy.wordminded.compose.presentation.components.input.InputView
 import com.cretihoy.wordminded.compose.presentation.components.text.TextView
 import com.cretihoy.wordminded.compose.presentation.components.user.UserView
@@ -41,7 +42,8 @@ fun UsersScreen(
                         viewModel.onEditClicked(model)
                     },
                     removeAction = { model ->
-                        viewModel.onRemoveClicked(model)
+                        viewModel.isDialogShown.value = true
+                        viewModel.currentUser = model
                     }
                 )
                 SpacerView()
@@ -69,6 +71,16 @@ fun UsersScreen(
             model = viewModel.addingInputModel,
             action = { name ->
                 viewModel.addUser(name)
+            }
+        )
+        DialogView(
+            viewModel.isDialogShown,
+            model = viewModel.dialogModel,
+            leftClick = {
+                viewModel.isDialogShown.value = false
+            }, rightClick = {
+                viewModel.onRemoveClicked()
+
             }
         )
     }

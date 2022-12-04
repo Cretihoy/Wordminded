@@ -71,7 +71,7 @@ class SettingsModelFactory
 
     fun getResetSettingsModel(): ButtonModel {
         return ButtonModel(
-            fontSize = mutableStateOf(18f),
+            fontSize = storage.fontSize,
             textAttr = mutableStateOf(R.string.reset_settings_button),
             isSecondary = true
         )
@@ -97,7 +97,7 @@ class SettingsModelFactory
 
     fun getManageUsersButtonModel(): ButtonModel {
         return ButtonModel(
-            fontSize = mutableStateOf(18f),
+            fontSize = storage.fontSize,
             textAttr = mutableStateOf(R.string.manage_users_settings_button)
         )
     }
