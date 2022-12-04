@@ -38,7 +38,7 @@ fun MenuVerticalScreen(
             ButtonView(
                 viewModel.startButtonModel,
                 Modifier.fillMaxWidth(),
-                clickAction = { viewModel.isShown.value = true }
+                clickAction = { viewModel.isCounterShown.value = true }
             )
             SpacerView()
             ButtonView(
@@ -54,7 +54,7 @@ fun MenuVerticalScreen(
             )
         }
         TimerScreen(
-            isShown = viewModel.isShown,
+            isShown = viewModel.isCounterShown,
             navController = navController,
             modifier = Modifier
         )

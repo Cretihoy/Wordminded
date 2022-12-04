@@ -11,7 +11,7 @@ class MenuViewModel
     private val factory: MenuModelFactory
 ) : ViewModel() {
 
-    val isShown = mutableStateOf(false)
+    val isCounterShown = mutableStateOf(false)
     val imageModel by lazy { factory.getImageModel() }
     val startButtonModel by lazy { factory.getStartButtonModel() }
     val rulesButtonModel by lazy { factory.getRulesButtonModel() }
