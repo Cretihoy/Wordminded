@@ -111,6 +111,6 @@
     <string name="task_52">Human or animal body part</string>
     <string name="user_management">Players Management</string>
     <string name="input_question">Name for new player</string>
-    <string name="input_question_edit">New name for</string>
+    <string name="input_question_edit">New name for player</string>
     <string name="add_new_user">Add new user</string>
 </resources>
