@@ -18,8 +18,8 @@ class UserRepository @Inject constructor(
         database.add(user)
     }
 
-    suspend fun removeUser(it: UserModel) {
-        val user = mapper.map(it)
+    suspend fun removeUser(model: UserModel) {
+        val user = mapper.map(model)
         database.remove(user)
     }
 }

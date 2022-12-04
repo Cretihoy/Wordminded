@@ -1,9 +1,11 @@
 package com.cretihoy.wordminded.compose.presentation.screen.users
 
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.cretihoy.wordminded.compose.presentation.components.input.InputModel
 import com.cretihoy.wordminded.compose.presentation.components.user.UserModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -20,8 +22,12 @@ class UsersViewModel
     val users = mutableStateListOf<UserModel>()
     val newUserButtonModel by lazy { factory.getNewUserButtonModel() }
 
+    var currentUser: UserModel? = null
 
+    val editInputModel: MutableState<InputModel?> = mutableStateOf(null)
     val addingInputModel by lazy { factory.getAddingInputModel() }
+
+    val isShownEdit = mutableStateOf(false)
     val isShownAdding = mutableStateOf(false)
 
     fun addUser(name: String) {
@@ -42,6 +48,24 @@ class UsersViewModel
         viewModelScope.launch {
             repository.removeUser(it)
             users.remove(it)
+        }
+    }
+
+    fun onEditClicked(model: UserModel) {
+        currentUser = model
+        isShownEdit.value = true
+        editInputModel.value = factory.getAddingInputModel(model.nameButton.text.orEmpty())
+    }
+
+    fun onEditFinished(name: String) {
+        viewModelScope.launch {
+            currentUser?.let { model ->
+                val newButton = model.nameButton.copy(text = name)
+                val newModel = model.copy(nameButton = newButton)
+                users.remove(model)
+                users.add(newModel)
+                repository.addUser(newModel)
+            }
         }
     }
 }

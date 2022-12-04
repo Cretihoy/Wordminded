@@ -37,6 +37,9 @@ fun UsersScreen(
             items(viewModel.users) {
                 UserView(
                     model = it,
+                    editAction = { model ->
+                        viewModel.onEditClicked(model)
+                    },
                     removeAction = { model ->
                         viewModel.onRemoveClicked(model)
                     }
@@ -51,6 +54,15 @@ fun UsersScreen(
                         viewModel.isShownAdding.value = true
                     })
             }
+        }
+        viewModel.editInputModel.value?.let { model ->
+            InputView(
+                isShown = viewModel.isShownEdit,
+                model = model,
+                action = { name ->
+                    viewModel.onEditFinished(name)
+                }
+            )
         }
         InputView(
             isShown = viewModel.isShownAdding,
