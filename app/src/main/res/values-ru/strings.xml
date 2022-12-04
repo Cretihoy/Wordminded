@@ -112,6 +112,8 @@
     <string name="user_management">Управление игроками</string>
     <string name="input_question">Введите имя</string>
     <string name="who_are_play">Кто играет?</string>
+    <string name="go">Вперед!</string>
+
     <string name="input_question_edit">Новое имя для игрока</string>
     <string name="add_new_user">Добавить игрока</string>
 </resources>
