@@ -4,8 +4,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
@@ -15,6 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.cretihoy.wordminded.R
+import com.cretihoy.wordminded.compose.presentation.theme.EMPTY_STRING
 import com.cretihoy.wordminded.compose.presentation.theme.Shapes
 import com.cretihoy.wordminded.compose.presentation.theme.spacingSmall
 
@@ -24,7 +28,7 @@ fun ButtonView(
     modifier: Modifier = Modifier,
     clickAction: () -> Unit = {}
 ) {
-    model?.let {
+    model?.let { it ->
         Button(
             onClick = clickAction,
             modifier = modifier
@@ -40,14 +44,24 @@ fun ButtonView(
             ),
             shape = Shapes.medium,
         ) {
-            val newText = it.text ?: stringResource(it.textAttr.value ?: 0)
-            Text(
-                modifier = Modifier.padding(spacingSmall),
-                text = newText,
-                color = colors.onSecondary,
-                fontSize = model.fontSize.value.sp,
-                textAlign = TextAlign.Center
-            )
+            it.icon?.let { image ->
+                Icon(
+                    imageVector = image,
+                    contentDescription = EMPTY_STRING
+                )
+            }
+            it.textAttr.value
+                ?.let { textRes ->
+                    it.text ?: stringResource(textRes)
+                }?.let { text ->
+                    Text(
+                        modifier = Modifier.padding(spacingSmall),
+                        text = text,
+                        color = colors.onSecondary,
+                        fontSize = model.fontSize.value.sp,
+                        textAlign = TextAlign.Center
+                    )
+                }
         }
     }
 }
@@ -57,6 +71,7 @@ fun ButtonView(
 fun PreviewButton() {
     val model = ButtonModel(
         fontSize = mutableStateOf(18f),
+        icon = Icons.Default.Check,
         textAttr = mutableStateOf(R.string.app_start),
         isSecondary = true
     )
