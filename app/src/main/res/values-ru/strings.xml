@@ -110,7 +110,7 @@
     <string name="task_51">Тоньше сантиметра</string>
     <string name="task_52">Часть тела человека или животного</string>
     <string name="user_management">Управление игроками</string>
-    <string name="input_question">Имя нового игрока</string>
+    <string name="input_question">Введите имя</string>
     <string name="input_question_edit">Новое имя для игрока</string>
     <string name="add_new_user">Добавить игрока</string>
 </resources>
