@@ -37,7 +37,7 @@ fun UsersScreen(
             items(viewModel.users) {
                 UserView(
                     model = it,
-                    action = { model ->
+                    removeAction = { model ->
                         viewModel.onRemoveClicked(model)
                     }
                 )
