@@ -48,13 +48,13 @@ fun UsersScreen(
                     viewModel.newUserButtonModel,
                     modifier = Modifier.fillMaxWidth(),
                     clickAction = {
-                        viewModel.isShown.value = true
+                        viewModel.isShownAdding.value = true
                     })
             }
         }
         InputView(
-            isShown = viewModel.isShown,
-            model = viewModel.inputModel,
+            isShown = viewModel.isShownAdding,
+            model = viewModel.addingInputModel,
             action = { name ->
                 viewModel.addUser(name)
             }

@@ -19,8 +19,10 @@ class UsersViewModel
     val titleModel by lazy { factory.getTitleModel() }
     val users = mutableStateListOf<UserModel>()
     val newUserButtonModel by lazy { factory.getNewUserButtonModel() }
-    val inputModel by lazy { factory.getInputModel() }
-    val isShown = mutableStateOf(false)
+
+
+    val addingInputModel by lazy { factory.getAddingInputModel() }
+    val isShownAdding = mutableStateOf(false)
 
     fun addUser(name: String) {
         viewModelScope.launch {

@@ -19,13 +19,13 @@ class UserModelFactory
     private val storage: Storage
 ) {
 
-    fun getInputModel(name: String = EMPTY_STRING): InputModel {
+    fun getAddingInputModel(): InputModel {
         return InputModel(
             title = TextModel(
                 fontSize = storage.fontSize,
                 textAttr = R.string.input_question
             ),
-            text = mutableStateOf(name),
+            text = mutableStateOf(EMPTY_STRING),
             button = ButtonModel(
                 fontSize = storage.fontSize,
                 icon = icCheck
