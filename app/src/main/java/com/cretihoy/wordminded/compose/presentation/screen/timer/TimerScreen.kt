@@ -33,7 +33,7 @@ fun TimerScreen(
             navController.openGameScreen()
             isShown.value = false
             viewModel.canIGoNow.value = false
-            viewModel.counterModel.value = null
+            viewModel.isProgressNow = false
         }
     }
 }

@@ -21,10 +21,13 @@ class TimerViewModel
 
     val titleModel = factory.getTitleModel()
     val counterModel: MutableState<TextModel?> = mutableStateOf(null)
+
+    var isProgressNow = false
     val canIGoNow = mutableStateOf(false)
 
     fun loadGameScreen() {
-        if (counterModel.value == null) {
+        if (!isProgressNow) {
+            isProgressNow = true
             viewModelScope.launch {
                 for (number in SECONDS downTo 1) {
                     counterModel.value = factory.getCounterModel(number)
