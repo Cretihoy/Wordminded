@@ -40,8 +40,11 @@ fun MenuVerticalScreen(
                 viewModel.startButtonModel,
                 Modifier.fillMaxWidth(),
                 clickAction = {
-                    viewModel.isUsersShown.value = true
-//                    viewModel.isCounterShown.value = true
+                    if (!viewModel.isInfinityGame.value) {
+                        viewModel.isUsersShown.value = true
+                    } else {
+                        viewModel.isCounterShown.value = true
+                    }
                 }
             )
             SpacerView()
@@ -57,11 +60,18 @@ fun MenuVerticalScreen(
                 clickAction = { navController.openSettingsScreen() }
             )
         }
+        if (!viewModel.isInfinityGame.value) {
+            UserPickerView(
+                isShown = viewModel.isUsersShown,
+                action = {
+                    viewModel.isCounterShown.value = true
+                    viewModel.isUsersShown.value = false
+                })
+        }
         TimerScreen(
             isShown = viewModel.isCounterShown,
             navController = navController,
             modifier = Modifier
         )
-        UserPickerView(isShown = viewModel.isUsersShown)
     }
 }
