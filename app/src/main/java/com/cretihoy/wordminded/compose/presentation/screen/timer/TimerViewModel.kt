@@ -26,15 +26,19 @@ class TimerViewModel
     val canGoNext = mutableStateOf(false)
 
     fun loadGameScreen() {
+        viewModelScope.launch {
+            doCount()
+        }
+    }
+
+    private suspend fun doCount() {
         if (!isProgressNow) {
             isProgressNow = true
-            viewModelScope.launch {
-                for (number in SECONDS downTo 1) {
-                    counterModel.value = factory.getCounterModel(number)
-                    delay(SECOND_IN_MILLS)
-                }
-                canGoNext.value = true
+            for (number in SECONDS downTo 1) {
+                counterModel.value = factory.getCounterModel(number)
+                delay(SECOND_IN_MILLS)
             }
+            canGoNext.value = true
         }
     }
 }
