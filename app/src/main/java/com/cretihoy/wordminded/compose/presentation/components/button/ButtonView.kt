@@ -50,18 +50,16 @@ fun ButtonView(
                     contentDescription = EMPTY_STRING
                 )
             }
-            it.textAttr.value
-                ?.let { textRes ->
-                    it.text ?: stringResource(textRes)
-                }?.let { text ->
-                    Text(
-                        modifier = Modifier.padding(spacingSmall),
-                        text = text,
-                        color = colors.onSecondary,
-                        fontSize = model.fontSize.value.sp,
-                        textAlign = TextAlign.Center
-                    )
-                }
+            val text = it.text ?: it.textAttr.value?.let { stringResource(it) }
+            text?.let {
+                Text(
+                    modifier = Modifier.padding(spacingSmall),
+                    text = it,
+                    color = colors.onSecondary,
+                    fontSize = model.fontSize.value.sp,
+                    textAlign = TextAlign.Center
+                )
+            }
         }
     }
 }
