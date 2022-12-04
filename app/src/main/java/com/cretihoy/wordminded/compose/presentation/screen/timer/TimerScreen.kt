@@ -29,10 +29,10 @@ fun TimerScreen(
             modifier = Modifier.align(Alignment.CenterHorizontally)
         )
 
-        if (viewModel.canIGoNow.value) {
+        if (viewModel.canGoNext.value) {
             navController.openGameScreen()
             isShown.value = false
-            viewModel.canIGoNow.value = false
+            viewModel.canGoNext.value = false
             viewModel.isProgressNow = false
         }
     }

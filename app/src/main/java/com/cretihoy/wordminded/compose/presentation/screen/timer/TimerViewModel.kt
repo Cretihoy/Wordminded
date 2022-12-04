@@ -23,7 +23,7 @@ class TimerViewModel
     val counterModel: MutableState<TextModel?> = mutableStateOf(null)
 
     var isProgressNow = false
-    val canIGoNow = mutableStateOf(false)
+    val canGoNext = mutableStateOf(false)
 
     fun loadGameScreen() {
         if (!isProgressNow) {
@@ -33,7 +33,7 @@ class TimerViewModel
                     counterModel.value = factory.getCounterModel(number)
                     delay(SECOND_IN_MILLS)
                 }
-                canIGoNow.value = true
+                canGoNext.value = true
             }
         }
     }
