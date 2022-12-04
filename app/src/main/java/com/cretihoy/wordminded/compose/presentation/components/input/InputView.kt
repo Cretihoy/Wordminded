@@ -15,6 +15,7 @@ import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 import com.cretihoy.wordminded.compose.presentation.components.modal.ModalView
+import com.cretihoy.wordminded.compose.presentation.components.text.TextView
 import com.cretihoy.wordminded.compose.presentation.theme.EMPTY_STRING
 import com.cretihoy.wordminded.compose.presentation.theme.Shapes
 
@@ -25,6 +26,8 @@ fun InputView(
     action: (String) -> Unit = {}
 ) {
     ModalView(isShown = isShown) {
+        TextView(model.title)
+        SpacerView()
         Row {
             TextField(
                 modifier = Modifier
