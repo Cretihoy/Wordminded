@@ -20,7 +20,8 @@ import com.cretihoy.wordminded.compose.presentation.theme.Shapes
 @Composable
 fun InputView(
     isShown: MutableState<Boolean>,
-    model: InputModel
+    model: InputModel,
+    action: (String) -> Unit = {}
 ) {
     ModalView(isShown = isShown) {
         Row {
@@ -39,7 +40,14 @@ fun InputView(
                 }
             )
             SpacerView(model.text, model.button)
-            ButtonView(model.button)
+            ButtonView(
+                model = model.button,
+                clickAction = {
+                    if (model.text?.value.orEmpty().isNotEmpty()) {
+                        action.invoke(model.text?.value.orEmpty())
+                        isShown.value = false
+                    }
+                })
         }
     }
 }
