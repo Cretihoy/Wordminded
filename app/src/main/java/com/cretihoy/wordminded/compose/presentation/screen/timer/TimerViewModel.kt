@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 private const val SECOND_IN_MILLS = 1000L
-private const val SECONDS = 5
+private const val SECONDS = 3
 
 @HiltViewModel
 class TimerViewModel
