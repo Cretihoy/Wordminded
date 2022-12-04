@@ -10,6 +10,7 @@ import com.cretihoy.wordminded.compose.presentation.components.user.UserModel
 import com.cretihoy.wordminded.compose.presentation.theme.EMPTY_STRING
 import com.cretihoy.wordminded.compose.presentation.theme.icAdd
 import com.cretihoy.wordminded.compose.presentation.theme.icCheck
+import com.cretihoy.wordminded.compose.presentation.theme.icDelete
 import com.cretihoy.wordminded.data.Storage
 import javax.inject.Inject
 
@@ -55,13 +56,16 @@ class UserModelFactory
 
     fun getUserModel(name: String): UserModel {
         return UserModel(
+            id = System.currentTimeMillis() + name.hashCode(),
+            score = 0,
             nameButton = ButtonModel(
                 fontSize = storage.fontSize,
                 text = name
             ),
             removeButton = ButtonModel(
                 fontSize = storage.fontSize,
-                textAttr = mutableStateOf(R.string.plus)
+                icon = icDelete,
+                isSecondary = true
             )
         )
     }
