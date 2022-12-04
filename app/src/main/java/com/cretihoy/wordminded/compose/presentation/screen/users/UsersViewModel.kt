@@ -35,4 +35,12 @@ class UsersViewModel
             users.addAll(repository.getUsers())
         }
     }
+
+    fun onRemoveClicked(it: UserModel) {
+        viewModelScope.launch {
+            repository.removeUser(it)
+            users.remove(it)
+        }
+
+    }
 }

@@ -35,7 +35,12 @@ fun UsersScreen(
                 SpacerView()
             }
             items(viewModel.users) {
-                UserView(it)
+                UserView(
+                    model = it,
+                    action = { model ->
+                        viewModel.onRemoveClicked(model)
+                    }
+                )
                 SpacerView()
             }
             item {

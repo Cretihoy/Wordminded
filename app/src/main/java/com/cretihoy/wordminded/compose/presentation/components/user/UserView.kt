@@ -13,12 +13,15 @@ import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 
 @Composable
 fun UserView(
-    model: UserModel
+    model: UserModel,
+    action: (UserModel) -> Unit = {},
 ) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         ButtonView(model.nameButton, Modifier.weight(1f))
         SpacerView()
-        ButtonView(model.removeButton)
+        ButtonView(model.removeButton, clickAction = {
+            action.invoke(model)
+        })
     }
 }
 
@@ -26,6 +29,7 @@ fun UserView(
 @Composable
 fun PreviewUserView() {
     val model = UserModel(
+        id = 123,
         nameButton = ButtonModel(
             fontSize = mutableStateOf(18f),
             text = "Sashka"
