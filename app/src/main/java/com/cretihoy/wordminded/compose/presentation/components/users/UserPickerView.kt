@@ -1,15 +1,17 @@
 package com.cretihoy.wordminded.compose.presentation.components.users
 
 import androidx.compose.runtime.Composable
-import androidx.lifecycle.ViewModel
-import com.cretihoy.wordminded.compose.presentation.components.dialog.DialogView
+import androidx.compose.runtime.MutableState
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.cretihoy.wordminded.compose.presentation.components.modal.ModalView
 import com.cretihoy.wordminded.compose.presentation.components.text.TextView
-import com.cretihoy.wordminded.compose.presentation.screen.users.UsersViewModel
 
 @Composable
 fun UserPickerView(
-    viewModel: UserPickerViewModel
+    isShown: MutableState<Boolean>
 ) {
-    DialogView(isShown = viewModel.isShown)
-    TextView(viewModel.titleModel)
+    val viewModel = hiltViewModel<UserPickerViewModel>()
+    ModalView(isShown = isShown) {
+        TextView(viewModel.titleModel)
+    }
 }

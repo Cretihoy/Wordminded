@@ -12,6 +12,7 @@ import androidx.navigation.NavHostController
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 import com.cretihoy.wordminded.compose.presentation.components.image.ImageView
+import com.cretihoy.wordminded.compose.presentation.components.users.UserPickerView
 import com.cretihoy.wordminded.compose.presentation.screen.timer.TimerScreen
 import com.cretihoy.wordminded.compose.presentation.theme.spacingLarge
 import com.cretihoy.wordminded.extensions.openRulesScreen
@@ -38,7 +39,10 @@ fun MenuVerticalScreen(
             ButtonView(
                 viewModel.startButtonModel,
                 Modifier.fillMaxWidth(),
-                clickAction = { viewModel.isCounterShown.value = true }
+                clickAction = {
+                    viewModel.isUsersShown.value = true
+//                    viewModel.isCounterShown.value = true
+                }
             )
             SpacerView()
             ButtonView(
@@ -58,5 +62,6 @@ fun MenuVerticalScreen(
             navController = navController,
             modifier = Modifier
         )
+        UserPickerView(isShown = viewModel.isUsersShown)
     }
 }
