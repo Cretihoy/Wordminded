@@ -21,9 +21,7 @@ import com.cretihoy.wordminded.compose.presentation.theme.spacingLarge
 fun UsersScreen(
     viewModel: UsersViewModel
 ) {
-    if (viewModel.users.isEmpty()) {
-        viewModel.loadUsers()
-    }
+    viewModel.loadUsers()
     Box {
         LazyColumn(
             verticalArrangement = Arrangement.Bottom,

@@ -42,7 +42,7 @@ class UsersViewModel
 
     fun loadUsers() {
         viewModelScope.launch {
-            users.addAll(repository.getUsers())
+            if (users.isEmpty()) users.addAll(repository.getUsers())
         }
     }
 
