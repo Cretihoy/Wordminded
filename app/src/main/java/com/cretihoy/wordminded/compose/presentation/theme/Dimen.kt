@@ -2,6 +2,8 @@ package com.cretihoy.wordminded.compose.presentation.theme
 
 import androidx.compose.ui.unit.dp
 
+const val EMPTY_STRING = ""
+
 val spacingSmall = 8.dp
 val spacingMedium = 16.dp
 val spacingLarge = 32.dp
