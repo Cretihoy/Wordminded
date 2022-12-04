@@ -41,6 +41,5 @@ class UsersViewModel
             repository.removeUser(it)
             users.remove(it)
         }
-
     }
 }
