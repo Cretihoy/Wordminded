@@ -15,6 +15,7 @@ import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 import com.cretihoy.wordminded.compose.presentation.components.modal.ModalView
+import com.cretihoy.wordminded.compose.presentation.theme.EMPTY_STRING
 import com.cretihoy.wordminded.compose.presentation.theme.Shapes
 
 @Composable
@@ -45,6 +46,7 @@ fun InputView(
                 clickAction = {
                     if (model.text?.value.orEmpty().isNotEmpty()) {
                         action.invoke(model.text?.value.orEmpty())
+                        model.text?.value = EMPTY_STRING
                         isShown.value = false
                     }
                 })
