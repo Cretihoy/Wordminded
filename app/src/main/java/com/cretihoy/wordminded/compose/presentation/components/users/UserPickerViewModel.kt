@@ -31,10 +31,10 @@ class UserPickerViewModel
     }
 
     fun onUserClicked(user: UserModel) {
-        val isFullUsers = users.filter { it.nameButton.isSecondary }.size < MAX_PLAYERS
-        val isActivate = user.nameButton.isSecondary
+        val isNotFullUsers = users.filter { it.nameButton.isSecondary }.size < MAX_PLAYERS
+        val isDeactivate = user.nameButton.isSecondary
 
-        if (isFullUsers || isActivate) {
+        if (isNotFullUsers || isDeactivate) {
             val isSecondaryToggle = !user.nameButton.isSecondary
             val newButton = user.nameButton.copy(isSecondary = isSecondaryToggle)
             val newUser = user.copy(nameButton = newButton)
