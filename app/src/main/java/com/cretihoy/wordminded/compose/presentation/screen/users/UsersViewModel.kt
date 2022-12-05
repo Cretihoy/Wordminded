@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.cretihoy.wordminded.compose.presentation.components.input.InputModel
 import com.cretihoy.wordminded.compose.presentation.components.user.UserModel
+import com.cretihoy.wordminded.extensions.replace
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -67,8 +68,7 @@ class UsersViewModel
             currentUser?.let { model ->
                 val newButton = model.nameButton.copy(text = name)
                 val newModel = model.copy(nameButton = newButton)
-                users.remove(model)
-                users.add(newModel)
+                users.replace(model, newModel)
                 repository.addUser(newModel)
             }
         }
