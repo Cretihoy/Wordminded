@@ -3,45 +3,45 @@ package com.cretihoy.wordminded.compose.presentation.screen.timer
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
-import com.cretihoy.wordminded.R
+import androidx.lifecycle.viewModelScope
 import com.cretihoy.wordminded.compose.presentation.components.text.TextModel
-import com.cretihoy.wordminded.data.Storage
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+private const val SECOND_IN_MILLS = 1000L
+private const val SECONDS = 3
+
 @HiltViewModel
 class TimerViewModel
 @Inject constructor(
-    private val storage: Storage
+    private val factory: TimerModelFactory
 ) : ViewModel() {
 
-    val titleModel = TextModel(
-        fontSize = storage.fontSize,
-        textAttr = R.string.timer_dialog,
-        isTitle = false
-    )
-    val counterText: MutableState<TextModel?> = mutableStateOf(null)
+    private var job: Job? = null
 
-    //    val titleInt = R.string.timer_dialog
-//    val currentNumber = mutableStateOf<Int?>(null)
-    val canIGoNow = mutableStateOf(false)
+    val titleModel = factory.getTitleModel()
+    val counterModel: MutableState<TextModel?> = mutableStateOf(null)
 
-    fun loadGameScreen() {
+    val canGoNext = mutableStateOf(false)
 
-        CoroutineScope(Dispatchers.Main).launch {
-            for (number in 3 downTo 1) {
-                counterText.value = TextModel(
-                    fontSize = storage.fontSize,
-                    text = number.toString(),
-                    isTitle = true
-                )
-                delay(1000L)
+    fun loadGameScreen(isShown: MutableState<Boolean>) {
+        job = viewModelScope.launch {
+            if (isShown.value) {
+                doCount()
+            } else {
+                job?.cancel()
             }
-            canIGoNow.value = true
         }
+    }
+
+    private suspend fun doCount() {
+        for (number in SECONDS downTo 1) {
+            counterModel.value = factory.getCounterModel(number)
+            delay(SECOND_IN_MILLS)
+        }
+        canGoNext.value = true
     }
 }
