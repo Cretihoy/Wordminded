@@ -1,26 +1,32 @@
 package com.cretihoy.wordminded.compose.presentation.screen.end
 
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
-import com.cretihoy.wordminded.compose.presentation.components.RotateScreen
+import androidx.compose.ui.Modifier
+import com.cretihoy.wordminded.compose.presentation.components.SpacerView
+import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
+import com.cretihoy.wordminded.compose.presentation.components.rotate.RotateView
+import com.cretihoy.wordminded.compose.presentation.components.text.TextView
 import com.cretihoy.wordminded.compose.presentation.screen.game.EndGameModel
 
 @Composable
-fun EndGameScreen(
+fun EndGameVerticalScreen(
     model: EndGameModel,
     clickAction: () -> Unit = {}
 ) {
-    RotateScreen(
-        horizontal = {
-            EndGameHorizontalScreen(
-                model = model,
-                clickAction = clickAction
+    RotateView(
+        header = {
+            TextView(
+                model.title,
+                modifier = it
             )
         },
-        vertical = {
-            EndGameVerticalScreen(
-                model = model,
+        content = {
+            SpacerView()
+            ButtonView(
+                model = model.button,
+                modifier = Modifier.fillMaxWidth(),
                 clickAction = clickAction
             )
-        }
-    )
+        })
 }
