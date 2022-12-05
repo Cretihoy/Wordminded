@@ -2,7 +2,6 @@ package com.cretihoy.wordminded.compose.presentation.components.text
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -38,7 +37,6 @@ fun TextView(
                 ImageView(
                     model = model.image,
                     modifier = Modifier
-                        .fillMaxSize()
                         .scale(1.5f)
                         .blur(spacingLarge)
                 )
