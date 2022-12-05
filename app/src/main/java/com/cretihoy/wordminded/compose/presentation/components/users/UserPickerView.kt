@@ -38,7 +38,10 @@ fun UserPickerView(
             verticalArrangement = Arrangement.spacedBy(spacingMedium)
         ) {
             items(viewModel.users) {
-                UserView(model = it)
+                UserView(model = it,
+                    editAction = { model ->
+                        viewModel.onUserClicked(model)
+                    })
             }
         }
         SpacerView(viewModel.nextButtonModel, viewModel.users.firstOrNull())

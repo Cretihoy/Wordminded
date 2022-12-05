@@ -5,9 +5,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.cretihoy.wordminded.compose.presentation.components.user.UserModel
 import com.cretihoy.wordminded.compose.presentation.screen.users.UserRepository
+import com.cretihoy.wordminded.extensions.replace
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+
+private const val MAX_PLAYERS = 2
 
 @HiltViewModel
 class UserPickerViewModel
@@ -24,6 +27,18 @@ class UserPickerViewModel
     fun loadUsers() {
         viewModelScope.launch {
             if (users.isEmpty()) users.addAll(repository.getUsers())
+        }
+    }
+
+    fun onUserClicked(user: UserModel) {
+        val isFullUsers = users.filter { it.nameButton.isSecondary }.size < MAX_PLAYERS
+        val isActivate = user.nameButton.isSecondary
+
+        if (isFullUsers || isActivate) {
+            val isSecondaryToggle = !user.nameButton.isSecondary
+            val newButton = user.nameButton.copy(isSecondary = isSecondaryToggle)
+            val newUser = user.copy(nameButton = newButton)
+            users.replace(user, newUser)
         }
     }
 }
