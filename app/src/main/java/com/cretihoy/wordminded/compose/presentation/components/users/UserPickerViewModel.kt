@@ -20,13 +20,16 @@ class UserPickerViewModel
 ) : ViewModel() {
 
     val users = mutableStateListOf<UserModel>()
-
     val nextButtonModel by lazy { factory.getNextButtonModel() }
     val titleModel by lazy { factory.getTitleModel() }
 
-    fun loadUsers() {
+    fun loadUsers(isShown: Boolean) {
         viewModelScope.launch {
-            if (users.isEmpty()) users.addAll(repository.getUsers())
+            if (isShown) {
+                users.addAll(repository.getUsers())
+            } else {
+                users.clear()
+            }
         }
     }
 

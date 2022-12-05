@@ -23,12 +23,13 @@ fun UserPickerView(
     isShown: MutableState<Boolean>,
     action: () -> Unit
 ) {
+    val viewModel = hiltViewModel<UserPickerViewModel>()
+    viewModel.loadUsers(isShown.value)
+
     ModalView(
         isShown = isShown,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        val viewModel = hiltViewModel<UserPickerViewModel>()
-        viewModel.loadUsers()
 
         TextView(viewModel.titleModel)
         SpacerView(viewModel.titleModel, viewModel.users.firstOrNull())
