@@ -35,6 +35,7 @@ fun RotateView(
             content.invoke(
                 modifier = Modifier
                     .padding(horizontal = spacingLarge)
+                    .verticalScroll(rememberScrollState())
             )
         }
     } else {
