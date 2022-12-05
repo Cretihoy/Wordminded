@@ -1,14 +1,16 @@
 package com.cretihoy.wordminded.compose.presentation.screen.users
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 import com.cretihoy.wordminded.compose.presentation.components.dialog.DialogView
 import com.cretihoy.wordminded.compose.presentation.components.input.InputView
+import com.cretihoy.wordminded.compose.presentation.components.rotate.RotateView
 import com.cretihoy.wordminded.compose.presentation.components.text.TextView
 import com.cretihoy.wordminded.compose.presentation.components.user.UserView
 import com.cretihoy.wordminded.compose.presentation.theme.spacingLarge
@@ -21,38 +23,39 @@ fun UsersScreen(
         viewModel.loadUsers()
     }
     Box {
-        LazyColumn(
-            verticalArrangement = Arrangement.Bottom,
-            contentPadding = PaddingValues(spacingLarge),
-            modifier = Modifier
-                .fillMaxSize()
-        ) {
-            item {
-                TextView(viewModel.titleModel, modifier = Modifier.fillMaxWidth())
-                SpacerView()
-            }
-            items(viewModel.users) {
-                UserView(
-                    model = it,
-                    editAction = { model ->
-                        viewModel.onEditClicked(model)
-                    },
-                    removeAction = { model ->
-                        viewModel.isDialogShown.value = true
-                        viewModel.currentUser = model
-                    }
+        RotateView(
+            header = { modifier ->
+                TextView(
+                    model = viewModel.titleModel,
+                    modifier = modifier.fillMaxWidth()
                 )
-                SpacerView()
+            },
+            content = { modifier ->
+                Column(modifier = modifier) {
+                    SpacerView(Modifier.size(spacingLarge))
+                    for (it in viewModel.users) {
+                        UserView(
+                            model = it,
+                            editAction = { model ->
+                                viewModel.onEditClicked(model)
+                            },
+                            removeAction = { model ->
+                                viewModel.isDialogShown.value = true
+                                viewModel.currentUser = model
+                            }
+                        )
+                        SpacerView()
+                    }
+                    ButtonView(
+                        viewModel.newUserButtonModel,
+                        modifier = Modifier.fillMaxWidth(),
+                        clickAction = {
+                            viewModel.isShownAdding.value = true
+                        })
+                    SpacerView(Modifier.size(spacingLarge))
+                }
             }
-            item {
-                ButtonView(
-                    viewModel.newUserButtonModel,
-                    modifier = Modifier.fillMaxWidth(),
-                    clickAction = {
-                        viewModel.isShownAdding.value = true
-                    })
-            }
-        }
+        )
         viewModel.editInputModel.value?.let { model ->
             InputView(
                 isShown = viewModel.isShownEdit,
@@ -76,7 +79,6 @@ fun UsersScreen(
                 viewModel.isDialogShown.value = false
             }, rightClick = {
                 viewModel.onRemoveClicked()
-
             }
         )
     }
