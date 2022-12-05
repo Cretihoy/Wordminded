@@ -10,7 +10,7 @@ import com.cretihoy.wordminded.compose.presentation.screen.game.GameScreen
 import com.cretihoy.wordminded.compose.presentation.screen.game.GameViewModel
 import com.cretihoy.wordminded.compose.presentation.screen.menu.MenuScreen
 import com.cretihoy.wordminded.compose.presentation.screen.menu.MenuViewModel
-import com.cretihoy.wordminded.compose.presentation.screen.rules.RulesScreen
+import com.cretihoy.wordminded.compose.presentation.screen.rules.RulesVerticalScreen
 import com.cretihoy.wordminded.compose.presentation.screen.rules.RulesViewModel
 import com.cretihoy.wordminded.compose.presentation.screen.settings.SettingsScreen
 import com.cretihoy.wordminded.compose.presentation.screen.settings.SettingsViewModel
@@ -42,7 +42,7 @@ fun RouterScreen() {
 
         composable(RulesNavRoute.route) {
             val viewModel = hiltViewModel<RulesViewModel>()
-            RulesScreen(
+            RulesVerticalScreen(
                 viewModel = viewModel
             )
         }
