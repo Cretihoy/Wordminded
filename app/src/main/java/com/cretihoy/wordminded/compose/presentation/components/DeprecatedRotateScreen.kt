@@ -1,16 +1,11 @@
 package com.cretihoy.wordminded.compose.presentation.components
 
 import android.content.res.Configuration
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.compose.runtime.snapshotFlow
+import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalConfiguration
 
 @Composable
+@Deprecated("Replace it with RotateView later")
 fun RotateScreen(
     horizontal: @Composable () -> Unit,
     vertical: @Composable () -> Unit,
