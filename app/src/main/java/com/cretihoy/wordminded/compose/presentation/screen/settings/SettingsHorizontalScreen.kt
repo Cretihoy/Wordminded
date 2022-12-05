@@ -6,6 +6,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavHostController
 import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 import com.cretihoy.wordminded.compose.presentation.components.counter.CounterView
@@ -16,7 +17,8 @@ import com.cretihoy.wordminded.compose.presentation.theme.spacingLarge
 
 @Composable
 fun SettingsHorizontalScreen(
-    viewModel: SettingsViewModel
+    viewModel: SettingsViewModel,
+    navController: NavHostController
 ) {
     Box {
         Row(
