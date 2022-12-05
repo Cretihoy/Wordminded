@@ -49,7 +49,10 @@ fun UserPickerView(
         ButtonView(
             model = viewModel.nextButtonModel,
             modifier = Modifier.fillMaxWidth(),
-            clickAction = action
+            clickAction = {
+                viewModel.onNextClicked()
+                action.invoke()
+            }
         )
     }
 }

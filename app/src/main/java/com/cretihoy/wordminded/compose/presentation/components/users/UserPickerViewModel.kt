@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.cretihoy.wordminded.compose.presentation.components.user.UserModel
 import com.cretihoy.wordminded.compose.presentation.screen.users.UserRepository
+import com.cretihoy.wordminded.data.Storage
 import com.cretihoy.wordminded.extensions.replace
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -16,7 +17,8 @@ private const val MAX_PLAYERS = 2
 class UserPickerViewModel
 @Inject constructor(
     private val repository: UserRepository,
-    private val factory: UserPickerFactory
+    private val factory: UserPickerFactory,
+    private val storage: Storage
 ) : ViewModel() {
 
     val users = mutableStateListOf<UserModel>()
@@ -43,5 +45,11 @@ class UserPickerViewModel
             val newUser = user.copy(nameButton = newButton)
             users.replace(user, newUser)
         }
+    }
+
+    fun onNextClicked() {
+        val players = users.filter { it.nameButton.isSecondary }
+        storage.firstPlayer.value = players.firstOrNull()
+        storage.secondPlayer.value = players.lastOrNull()
     }
 }
