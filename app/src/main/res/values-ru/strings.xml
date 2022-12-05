@@ -27,6 +27,12 @@
     <string name="yes">Да</string>
     <string name="no">Нет</string>
 
+    <string name="manage_users_settings_button">Управление игроками</string>
+    <string name="user_management">Управление игроками</string>
+    <string name="input_question">Введите имя</string>
+    <string name="input_question_edit">Новое имя для игрока</string>
+    <string name="add_new_user">Добавить игрока</string>
+
     <string name="timer_dialog">Игра начнется через</string>
 
     <string name="letter_01">А</string>

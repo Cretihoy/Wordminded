@@ -27,6 +27,12 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
 
+    <string name="manage_users_settings_button">Manage players</string>
+    <string name="user_management">Players Management</string>
+    <string name="input_question">Enter the name</string>
+    <string name="input_question_edit">New name for player</string>
+    <string name="add_new_user">Add new user</string>
+
     <string name="timer_dialog">Game will start in</string>
 
     <string name="letter_01">A</string>
