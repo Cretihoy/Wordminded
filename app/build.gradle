@@ -78,4 +78,10 @@ dependencies {
 
     // Superellipse
     implementation 'com.github.racra:smooth-corner-rect-android-compose:v1.0.0'
+
+    // Room
+    implementation "androidx.room:room-runtime:$roomVersion"
+    annotationProcessor "androidx.room:room-compiler:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
 }
