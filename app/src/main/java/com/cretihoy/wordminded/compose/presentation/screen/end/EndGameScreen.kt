@@ -10,7 +10,7 @@ import com.cretihoy.wordminded.compose.presentation.components.text.TextView
 import com.cretihoy.wordminded.compose.presentation.screen.game.EndGameModel
 
 @Composable
-fun EndGameVerticalScreen(
+fun EndGameScreen(
     model: EndGameModel,
     clickAction: () -> Unit = {}
 ) {
