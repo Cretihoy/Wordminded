@@ -50,7 +50,7 @@ fun SwitchView(
 fun PreviewSwitchView() {
     val model = SwitchModel(
         fontSize = mutableStateOf(18f),
-        textAttr = R.string.card_orientation,
+        textAttr = R.string.settings_switch_change_orientation,
         isChecked = mutableStateOf(true)
     )
     SwitchView(model)

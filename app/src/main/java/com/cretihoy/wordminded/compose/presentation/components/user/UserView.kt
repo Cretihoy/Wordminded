@@ -43,7 +43,7 @@ fun PreviewUserView() {
         ),
         removeButton = ButtonModel(
             fontSize = mutableStateOf(18f),
-            textAttr = mutableStateOf(R.string.plus)
+            textAttr = mutableStateOf(R.string.settings_counter_plus)
         )
     )
     UserView(model)

@@ -46,7 +46,7 @@ fun TextBlockView(
 fun PreviewTextBlock() {
     val model = TextBlockModel(
         fontSize = mutableStateOf(18f),
-        textAttr = R.string.rules_text1,
+        textAttr = R.string.rules_text_one,
         isSecondary = true
     )
     TextBlockView(model)

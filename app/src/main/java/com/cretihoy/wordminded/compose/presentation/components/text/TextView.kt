@@ -72,14 +72,14 @@ fun PreviewTextView() {
     Column {
         val title = TextModel(
             mutableStateOf(18f),
-            textAttr = R.string.app_rules
+            textAttr = R.string.menu_rules_button
         )
         TextView(title)
         SpacerView()
         val regular =
             TextModel(
                 mutableStateOf(18f),
-                textAttr = R.string.app_settings, isTitle = true
+                textAttr = R.string.menu_settings_button, isTitle = true
             )
         TextView(regular)
     }

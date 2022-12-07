@@ -32,7 +32,7 @@ class SettingsModelFactory
     fun getOrientationSwitchSettingsModel(): SwitchModel {
         return SwitchModel(
             fontSize = storage.fontSize,
-            textAttr = R.string.card_orientation,
+            textAttr = R.string.settings_switch_change_orientation,
             isChecked = storage.isHorizontal
         )
     }
@@ -40,7 +40,7 @@ class SettingsModelFactory
     fun getThemeSwitchSettingsModel(): SwitchModel {
         return SwitchModel(
             fontSize = storage.fontSize,
-            textAttr = R.string.app_theme,
+            textAttr = R.string.settings_switch_change_theme,
             isChecked = storage.isAltTheme
         )
     }
@@ -48,7 +48,7 @@ class SettingsModelFactory
     fun getInfinityGameModel(): SwitchModel {
         return SwitchModel(
             fontSize = storage.fontSize,
-            textAttr = R.string.infinity_game,
+            textAttr = R.string.settings_switch_change_infinity,
             isChecked = storage.isInfinityGame,
         )
     }
@@ -56,15 +56,15 @@ class SettingsModelFactory
     fun getCounterModel(): CounterModel {
         return CounterModel(
             fontSize = storage.fontSize,
-            textAttr = R.string.font_size,
+            textAttr = R.string.settings_counter_change_font_size,
             leftButton = ButtonModel(
                 fontSize = storage.fontSize,
-                textAttr = mutableStateOf(R.string.minus),
+                textAttr = mutableStateOf(R.string.settings_counter_minus),
                 isSecondary = true
             ),
             rightButton = ButtonModel(
                 fontSize = storage.fontSize,
-                textAttr = mutableStateOf(R.string.plus)
+                textAttr = mutableStateOf(R.string.settings_counter_plus)
             )
         )
     }
@@ -72,7 +72,7 @@ class SettingsModelFactory
     fun getResetSettingsModel(): ButtonModel {
         return ButtonModel(
             fontSize = storage.fontSize,
-            textAttr = mutableStateOf(R.string.reset_settings_button),
+            textAttr = mutableStateOf(R.string.settings_button_reset),
             isSecondary = true
         )
     }
@@ -81,16 +81,16 @@ class SettingsModelFactory
         return DialogModel(
             title = TextModel(
                 fontSize = storage.fontSize,
-                textAttr = R.string.reset_settings_text,
+                textAttr = R.string.reset_settings_title,
             ),
             leftButton = ButtonModel(
                 fontSize = storage.fontSize,
-                textAttr = mutableStateOf(R.string.no),
+                textAttr = mutableStateOf(R.string.reset_settings_button_no),
                 isSecondary = true
             ),
             rightButton = ButtonModel(
                 fontSize = storage.fontSize,
-                textAttr = mutableStateOf(R.string.yes)
+                textAttr = mutableStateOf(R.string.reset_settings_button_yes)
             )
         )
     }
@@ -98,7 +98,7 @@ class SettingsModelFactory
     fun getManageUsersButtonModel(): ButtonModel {
         return ButtonModel(
             fontSize = storage.fontSize,
-            textAttr = mutableStateOf(R.string.manage_users_settings_button)
+            textAttr = mutableStateOf(R.string.settings_button_manage_users)
         )
     }
 }

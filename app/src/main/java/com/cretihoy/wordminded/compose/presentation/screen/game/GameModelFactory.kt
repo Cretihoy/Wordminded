@@ -57,7 +57,7 @@ class GameModelFactory
         return EndGameModel(
             title = TextModel(
                 fontSize = storage.fontSize,
-                textAttr = R.string.game_end,
+                textAttr = R.string.game_end_title,
                 isTitle = true,
                 image = ImageModel(
                     src = R.drawable.logo,
@@ -67,7 +67,7 @@ class GameModelFactory
             ),
             button = ButtonModel(
                 fontSize = storage.fontSize,
-                textAttr = mutableStateOf(R.string.play_again)
+                textAttr = mutableStateOf(R.string.game_end_button)
             )
         )
     }

@@ -71,7 +71,7 @@ fun PreviewButton() {
     val model = ButtonModel(
         fontSize = mutableStateOf(18f),
         icon = Icons.Default.Check,
-        textAttr = mutableStateOf(R.string.app_start),
+        textAttr = mutableStateOf(R.string.menu_start_button),
         isSecondary = true
     )
     ButtonView(model)

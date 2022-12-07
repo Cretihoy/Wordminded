@@ -23,7 +23,7 @@ class MenuModelFactory
     fun getStartButtonModel(): ButtonModel {
         return ButtonModel(
             fontSize = storage.fontSize,
-            textAttr = mutableStateOf(R.string.app_start),
+            textAttr = mutableStateOf(R.string.menu_start_button),
             isSecondary = true
         )
     }
@@ -31,14 +31,14 @@ class MenuModelFactory
     fun getRulesButtonModel(): ButtonModel {
         return ButtonModel(
             fontSize = storage.fontSize,
-            textAttr = mutableStateOf(R.string.app_rules)
+            textAttr = mutableStateOf(R.string.menu_rules_button)
         )
     }
 
     fun getSettingsButtonModel(): ButtonModel {
         return ButtonModel(
             fontSize = storage.fontSize,
-            textAttr = mutableStateOf(R.string.app_settings),
+            textAttr = mutableStateOf(R.string.menu_settings_button),
             isSecondary = true
         )
     }

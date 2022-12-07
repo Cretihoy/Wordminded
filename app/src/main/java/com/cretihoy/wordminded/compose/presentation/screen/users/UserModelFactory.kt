@@ -24,7 +24,7 @@ class UserModelFactory
         return InputModel(
             title = TextModel(
                 fontSize = storage.fontSize,
-                textAttr = R.string.input_question
+                textAttr = R.string.add_new_name_title
             ),
             text = mutableStateOf(name),
             button = ButtonModel(
@@ -38,14 +38,14 @@ class UserModelFactory
         return ButtonModel(
             fontSize = storage.fontSize,
             icon = icAdd,
-            textAttr = mutableStateOf(R.string.add_new_user)
+            textAttr = mutableStateOf(R.string.manage_users_button_add_new_name)
         )
     }
 
     fun getTitleModel(): TextModel {
         return TextModel(
             fontSize = storage.fontSize,
-            textAttr = R.string.user_management,
+            textAttr = R.string.manage_users_title,
             isTitle = true,
             image = ImageModel(
                 src = R.drawable.logo,
@@ -75,16 +75,16 @@ class UserModelFactory
         return DialogModel(
             title = TextModel(
                 fontSize = storage.fontSize,
-                textAttr = R.string.reset_settings_text,
+                textAttr = R.string.reset_settings_title,
             ),
             leftButton = ButtonModel(
                 fontSize = storage.fontSize,
-                textAttr = mutableStateOf(R.string.no),
+                textAttr = mutableStateOf(R.string.reset_settings_button_no),
                 isSecondary = true
             ),
             rightButton = ButtonModel(
                 fontSize = storage.fontSize,
-                textAttr = mutableStateOf(R.string.yes)
+                textAttr = mutableStateOf(R.string.reset_settings_button_yes)
             )
         )
     }

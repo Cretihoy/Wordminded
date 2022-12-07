@@ -1,37 +1,37 @@
 <resources>
     <string name="app_name">Wordminded</string>
 
-    <string name="app_start">Start</string>
-    <string name="app_rules">Rules</string>
-    <string name="app_settings">Settings</string>
+    <string name="menu_start_button">Start</string>
+    <string name="menu_rules_button">Rules</string>
+    <string name="menu_settings_button">Settings</string>
+
+    <string name="game_end_title">Game end</string>
+    <string name="game_end_button">Play again</string>
 
     <string name="rules_title">RULES</string>
+    <string name="rules_text_one">Wordminded is a play on words for cheerful companies &amp; family evenings.</string>
+    <string name="rules_text_two">The game "Wordminded" has two decks of cards of different colors: red and blue. Blue cards are categories that limit the search for the desired word. The deck is red - it shows letters that will help you find the right word, since they begin with these letters.</string>
+    <string name="rules_text_three">Any player starts the game. He clicks on the screen of the phone. 2 cards appear. Players try as quickly as possible to name a word that fits the open category and starts with an open letter.</string>
+
     <string name="settings_title">SETTINGS</string>
+    <string name="settings_switch_change_orientation">Change card orientation</string>
+    <string name="settings_switch_change_theme">Change theme</string>
+    <string name="settings_switch_change_infinity">Infinity game</string>
+    <string name="settings_counter_change_font_size">Font size</string>
+    <string name="settings_counter_minus">-</string>
+    <string name="settings_counter_plus">+</string>
+    <string name="settings_button_manage_users">Manage players</string>
+    <string name="settings_button_reset">Reset settings</string>
 
-    <string name="game_end">Game end</string>
-    <string name="play_again">Play again</string>
+    <string name="reset_settings_title">Are you sure?</string>
+    <string name="reset_settings_button_yes">Yes</string>
+    <string name="reset_settings_button_no">No</string>
 
-    <string name="rules_text1">Wordminded is a play on words for cheerful companies &amp; family evenings.</string>
-    <string name="rules_text2">The game "Wordminded" has two decks of cards of different colors: red and blue. Blue cards are categories that limit the search for the desired word. The deck is red - it shows letters that will help you find the right word, since they begin with these letters.</string>
-    <string name="rules_text3">Any player starts the game. He clicks on the screen of the phone. 2 cards appear. Players try as quickly as possible to name a word that fits the open category and starts with an open letter.</string>
+    <string name="manage_users_title">Players Management</string>
+    <string name="manage_users_button_add_new_name">Add new user</string>
 
-    <string name="card_orientation">Change card orientation</string>
-    <string name="app_theme">Change theme</string>
-    <string name="infinity_game">Infinity game</string>
-    <string name="font_size">Font size</string>
-    <string name="minus">-</string>
-    <string name="plus">+</string>
-
-    <string name="reset_settings_button">Reset settings</string>
-    <string name="reset_settings_text">Are you sure?</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
-
-    <string name="manage_users_settings_button">Manage players</string>
-    <string name="user_management">Players Management</string>
-    <string name="input_question">Enter the name</string>
-    <string name="input_question_edit">New name for player</string>
-    <string name="add_new_user">Add new user</string>
+    <string name="add_new_name_title">Enter the name</string>
+    <string name="add_new_name_edit">New name for player</string>
 
     <string name="timer_dialog">Game will start in</string>
 
