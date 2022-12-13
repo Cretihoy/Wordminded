@@ -4,25 +4,33 @@
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">true</item>
-        <item name="colorPrimary">@color/lightBlue</item>
-        <item name="colorPrimaryVariant">@color/darkBlue</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/lightRed</item>
-        <item name="colorSecondaryVariant">@color/darkRed</item>
-        <item name="colorOnSecondary">@color/black</item>
         <item name="windowNoTitle">true</item>
+
+
+        <item name="colorPrimary">@color/lightBlue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/darkBlue</item>
+
+        <item name="colorOnError">@color/lightYellow</item>
+
+        <item name="colorSecondary">@color/lightRed</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/darkRed</item>
+
     </style>
 
     <style name="Theme.Wordminded.Dialog" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="android:statusBarColor">?attr/colorOnPrimary</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="colorPrimary">@color/lightBlue</item>
-        <item name="colorPrimaryVariant">@color/darkBlue</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/lightRed</item>
-        <item name="colorSecondaryVariant">@color/darkRed</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <item name="android:statusBarColor">?attr/colorOnPrimary</item>
         <item name="windowNoTitle">true</item>
+
+        <item name="colorPrimary">@color/lightBlue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/darkBlue</item>
+
+        <item name="colorSecondary">@color/lightRed</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/darkRed</item>
     </style>
 </resources>
