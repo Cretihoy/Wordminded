@@ -35,6 +35,9 @@
 
     <string name="timer_dialog">Game will start in</string>
 
+    <string name="who_are_play">Who are play?</string>
+    <string name="go">Go!</string>
+
     <string name="letter_01">A</string>
     <string name="letter_02">B</string>
     <string name="letter_03">C</string>
