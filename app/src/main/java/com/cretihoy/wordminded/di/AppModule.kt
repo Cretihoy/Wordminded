@@ -2,6 +2,9 @@ package com.cretihoy.wordminded.di
 
 import android.content.Context
 import androidx.room.Room
+import com.cretihoy.wordminded.compose.presentation.screen.users.UserMapper
+import com.cretihoy.wordminded.compose.presentation.screen.users.UserModelFactory
+import com.cretihoy.wordminded.compose.presentation.screen.users.UserRepository
 import com.cretihoy.wordminded.data.Storage
 import com.cretihoy.wordminded.data.db.AppDatabase
 import com.cretihoy.wordminded.data.db.dao.UserDao
@@ -33,6 +36,20 @@ object AppModule {
             context,
             AppDatabase::class.java, "database-name"
         ).build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideRepository(
+        database: UserDao,
+        mapper: UserMapper,
+        factory: UserModelFactory
+    ): UserRepository {
+        return UserRepository(
+            database,
+            mapper,
+            factory
+        )
     }
 
     @Provides
