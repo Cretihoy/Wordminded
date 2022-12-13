@@ -11,6 +11,7 @@ import com.cretihoy.wordminded.compose.presentation.components.SpacerView
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonView
 import com.cretihoy.wordminded.compose.presentation.components.image.ImageView
 import com.cretihoy.wordminded.compose.presentation.components.rotate.RotateView
+import com.cretihoy.wordminded.compose.presentation.components.users.UserPickerView
 import com.cretihoy.wordminded.compose.presentation.screen.timer.TimerScreen
 import com.cretihoy.wordminded.compose.presentation.theme.spacingLarge
 import com.cretihoy.wordminded.extensions.openRulesScreen
@@ -21,6 +22,7 @@ fun MenuScreen(
     navController: NavHostController,
     viewModel: MenuViewModel
 ) {
+    viewModel.loadUsers()
     Box {
         RotateView(
             header = {
@@ -37,7 +39,13 @@ fun MenuScreen(
                     ButtonView(
                         viewModel.startButtonModel,
                         Modifier.fillMaxWidth(),
-                        clickAction = { viewModel.isShown.value = true }
+                        clickAction = {
+                            if (!viewModel.isInfinityGame.value && viewModel.users.size > 2) {
+                                viewModel.isUsersShown.value = true
+                            } else {
+                                viewModel.isCounterShown.value = true
+                            }
+                        }
                     )
                     SpacerView()
                     ButtonView(
@@ -55,8 +63,16 @@ fun MenuScreen(
                 }
             }
         )
+        if (!viewModel.isInfinityGame.value && viewModel.users.size > 2) {
+            UserPickerView(
+                isShown = viewModel.isUsersShown,
+                action = {
+                    viewModel.isCounterShown.value = true
+                    viewModel.isUsersShown.value = false
+                })
+        }
         TimerScreen(
-            isShown = viewModel.isShown,
+            isShown = viewModel.isCounterShown,
             navController = navController,
             modifier = Modifier
         )
