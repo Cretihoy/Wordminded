@@ -2,6 +2,7 @@ package com.cretihoy.wordminded.compose.presentation.components.text
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -41,27 +42,45 @@ fun TextView(
                         .blur(spacingLarge)
                 )
             }
-            Text(
-                modifier = if (model.isTitle)
-                    Modifier
-                else
-                    Modifier,
-                textAlign = TextAlign.Center,
-                text = if (model.isTitle)
-                    it.uppercase()
-                else
-                    it,
-                color = colors.onSecondary,
-                fontSize = if (model.isTitle) {
-                    (model.fontSize.value * 2).sp
-                } else {
-                    model.fontSize.value.sp
-                },
-                fontWeight = if (model.isTitle)
-                    FontWeight.Bold
-                else
-                    FontWeight.Normal
-            )
+            Row {
+                Text(
+                    textAlign = TextAlign.Center,
+                    text = if (model.isTitle)
+                        it.uppercase()
+                    else
+                        it,
+                    color = colors.onSecondary,
+                    fontSize = if (model.isTitle) {
+                        (model.fontSize.value * 2).sp
+                    } else {
+                        model.fontSize.value.sp
+                    },
+                    fontWeight = if (model.isTitle)
+                        FontWeight.Bold
+                    else
+                        FontWeight.Normal
+                )
+                model.value?.let {
+                    SpacerView(Modifier.weight(1f))
+                    Text(
+                        textAlign = TextAlign.Center,
+                        text = if (model.isTitle)
+                            it.uppercase()
+                        else
+                            it,
+                        color = colors.onSecondary,
+                        fontSize = if (model.isTitle) {
+                            (model.fontSize.value * 2).sp
+                        } else {
+                            model.fontSize.value.sp
+                        },
+                        fontWeight = if (model.isTitle)
+                            FontWeight.Bold
+                        else
+                            FontWeight.Normal
+                    )
+                }
+            }
         }
     }
 }
