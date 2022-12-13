@@ -2,8 +2,13 @@
 <resources>
     <color name="white">#FAFAFA</color>
     <color name="black">#333333</color>
-    <color name="darkBlue">#01579B</color>
-    <color name="darkRed">#B71C1C</color>
-    <color name="lightBlue">#40C4FF</color>
-    <color name="lightRed">#FF5252</color>
+
+    <color name="lightRed">#F78DA4</color>
+    <color name="darkRed">#9E2433</color>
+
+    <color name="lightBlue">#84E6FF</color>
+    <color name="darkBlue">#4091B4</color>
+
+    <color name="lightYellow">#F7EC6E</color>
+    <color name="darkYellow">#ACB139</color>
 </resources>
