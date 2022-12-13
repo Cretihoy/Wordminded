@@ -12,12 +12,14 @@ private val LightColorPalette = lightColors(
     onBackground = Black,
 
     primary = LightBlue,
-    primaryVariant = DarkBlue,
     onPrimary = White,
+    primaryVariant = DarkBlue,
+
+    onError = LightYellow,
 
     secondary = LightRed,
-    secondaryVariant = DarkRed,
-    onSecondary = Black
+    onSecondary = Black,
+    secondaryVariant = DarkRed
 )
 
 private val DarkColorPalette = darkColors(
@@ -25,12 +27,14 @@ private val DarkColorPalette = darkColors(
     onBackground = White,
 
     primary = DarkBlue,
-    primaryVariant = LightBlue,
     onPrimary = Black,
+    primaryVariant = LightBlue,
+
+    onError = DarkYellow,
 
     secondary = DarkRed,
-    secondaryVariant = LightRed,
-    onSecondary = White
+    onSecondary = White,
+    secondaryVariant = LightRed
 )
 
 @Composable
