@@ -2,7 +2,12 @@ package com.cretihoy.wordminded.compose.presentation.components.modal
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
@@ -22,6 +27,8 @@ fun ModalView(
     modifier: Modifier = Modifier,
     verticalArrangement: Arrangement.Vertical = Arrangement.Top,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
+    isCancelable: Boolean = true,
+    action: () -> Unit = {},
     content: @Composable ColumnScope.() -> Unit
 ) {
     if (isShown.value) {
@@ -30,7 +37,11 @@ fun ModalView(
         ) {
             Box(
                 modifier = Modifier
-                    .clickable { isShown.value = false }
+                    .clickable {
+                        if (isCancelable) {
+                            isShown.value = false
+                        }
+                    }
                     .fillMaxSize()
                     .alpha(0.1f)
                     .background(colors.onBackground))
@@ -40,6 +51,7 @@ fun ModalView(
                 modifier = modifier
                     .padding(spacingMedium)
                     .clip(Shapes.large)
+                    .clickable { action.invoke() }
                     .background(colors.background)
                     .padding(spacingMedium)
             ) {
