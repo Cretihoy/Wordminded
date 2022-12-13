@@ -4,7 +4,7 @@ import com.cretihoy.wordminded.compose.presentation.components.button.ButtonMode
 
 data class UserModel(
     val id: Long,
-    val score: Long,
+    var score: Long,
     val nameButton: ButtonModel,
     val removeButton: ButtonModel
 )
