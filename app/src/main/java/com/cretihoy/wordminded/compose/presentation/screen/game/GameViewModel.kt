@@ -38,18 +38,15 @@ class GameViewModel
         userSide.value = UserSide.HEADER
         isDialogShown.value = true
         iconHeader.value = icCheck
-//        factory.reloadTasks()
     }
 
     fun onContentClick() {
         userSide.value = UserSide.CONTENT
         isDialogShown.value = true
         iconContent.value = icCheck
-//        factory.reloadTasks()
     }
 
     fun successAnswer() {
-        // check rotation and its user
         isDialogShown.value = false
         factory.reloadTasks()
         increaseScore()
@@ -66,7 +63,6 @@ class GameViewModel
     }
 
     fun failAnswer() {
-        // check rotation and its user
         isDialogShown.value = false
         factory.reloadTasks()
         resetIcons()
