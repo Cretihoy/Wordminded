@@ -17,6 +17,9 @@ private val LightColorPalette = lightColors(
 
     onError = LightYellow,
 
+    surface = DarkGray,
+    onSurface = LightGray,
+
     secondary = LightRed,
     onSecondary = Black,
     secondaryVariant = DarkRed
@@ -31,6 +34,9 @@ private val DarkColorPalette = darkColors(
     primaryVariant = LightBlue,
 
     onError = DarkYellow,
+
+    surface = LightGray,
+    onSurface = DarkGray,
 
     secondary = DarkRed,
     onSecondary = White,
