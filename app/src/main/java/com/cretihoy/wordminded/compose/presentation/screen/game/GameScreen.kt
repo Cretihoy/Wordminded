@@ -25,7 +25,6 @@ fun GameScreen(
                 .fillMaxSize()
         ) {
             if (viewModel.task?.value != null && viewModel.letter?.value != null) {
-
                 RotateView(
                     header = {
                         GameSideView(
