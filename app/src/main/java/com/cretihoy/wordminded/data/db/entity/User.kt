@@ -13,5 +13,5 @@ data class User(
     val name: String,
 
     @ColumnInfo
-    val score: Long
+    val score: Int
 )

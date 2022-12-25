@@ -41,7 +41,7 @@ class GameModelFactory
     fun getBottomGameSideModel(): GameSideModel {
         val nameModel = TextModel(
             text = storage.secondPlayer.value?.nameButton?.text,
-            value = storage.secondPlayer.value?.score?.toString(),
+            value = storage.secondPlayer.value?.score ?: mutableStateOf(null),
             fontSize = storage.fontSize,
             isTitle = true
         )
@@ -51,7 +51,7 @@ class GameModelFactory
     fun getTopGameSideModel(): GameSideModel {
         val nameModel = TextModel(
             text = storage.firstPlayer.value?.nameButton?.text,
-            value = storage.firstPlayer.value?.score?.toString(),
+            value = storage.firstPlayer.value?.score ?: mutableStateOf(null),
             fontSize = storage.fontSize,
             isTitle = true
         )

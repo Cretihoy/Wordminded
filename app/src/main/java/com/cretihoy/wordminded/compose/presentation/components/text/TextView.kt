@@ -60,14 +60,14 @@ fun TextView(
                     else
                         FontWeight.Normal
                 )
-                model.value?.let {
+                model.value.value?.let {
                     SpacerView(Modifier.weight(1f))
                     Text(
                         textAlign = TextAlign.Center,
                         text = if (model.isTitle)
-                            it.uppercase()
+                            it.toString().uppercase()
                         else
-                            it,
+                            it.toString(),
                         color = colors.onSecondary,
                         fontSize = if (model.isTitle) {
                             (model.fontSize.value * 2).sp

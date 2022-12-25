@@ -38,7 +38,7 @@ fun UserView(
 fun PreviewUserView() {
     val model = UserModel(
         id = 123,
-        score = 0,
+        score = mutableStateOf(0),
         nameButton = ButtonModel(
             fontSize = mutableStateOf(18f),
             text = "Sashka"

@@ -1,5 +1,6 @@
 package com.cretihoy.wordminded.compose.presentation.screen.users
 
+import androidx.compose.runtime.mutableStateOf
 import com.cretihoy.wordminded.compose.presentation.components.button.ButtonModel
 import com.cretihoy.wordminded.compose.presentation.components.user.UserModel
 import com.cretihoy.wordminded.compose.presentation.theme.icDelete
@@ -15,14 +16,14 @@ class UserMapper @Inject constructor(
         return User(
             id = model.id,
             name = model.nameButton.text.orEmpty(),
-            score = model.score
+            score = model.score.value ?: 0
         )
     }
 
     fun map(user: User): UserModel {
         return UserModel(
             id = user.id,
-            score = user.score,
+            score = mutableStateOf(user.score),
             nameButton = ButtonModel(
                 fontSize = storage.fontSize,
                 text = user.name

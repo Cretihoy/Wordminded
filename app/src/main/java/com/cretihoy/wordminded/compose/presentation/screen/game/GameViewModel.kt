@@ -56,8 +56,16 @@ class GameViewModel
     private fun increaseScore() {
         if (storage.firstPlayer.value != null && storage.secondPlayer.value != null) {
             when (userSide.value) {
-                UserSide.HEADER -> storage.firstPlayer.value!!.score++
-                UserSide.CONTENT -> storage.secondPlayer.value!!.score++
+                UserSide.HEADER -> increaseValue(storage.firstPlayer.value?.score)
+                UserSide.CONTENT -> increaseValue(storage.secondPlayer.value?.score)
+            }
+        }
+    }
+
+    private fun increaseValue(value: MutableState<Int?>?) {
+        value?.let { state ->
+            state.value?.let {
+                state.value = it + 1
             }
         }
     }
