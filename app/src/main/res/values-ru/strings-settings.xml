@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_title">НАСТРОЙКИ</string>
+    <string name="settings_switch_change_orientation">Сменить ориентацию карт</string>
+    <string name="settings_switch_change_theme">Сменить тему</string>
+    <string name="settings_switch_change_infinity">Бесконечная игра</string>
+    <string name="settings_counter_change_font_size">Размер шрифта</string>
+    <string name="settings_counter_minus">-</string>
+    <string name="settings_counter_plus">+</string>
+    <string name="settings_button_manage_users">Управление игроками</string>
+    <string name="settings_button_reset">Сбросить настройки</string>
+</resources>

@@ -33,7 +33,9 @@ class SettingsModelFactory
         return SwitchModel(
             fontSize = storage.fontSize,
             textAttr = R.string.settings_switch_change_orientation,
-            isChecked = storage.isHorizontal
+            isChecked = storage.isHorizontal,
+            isSecondary = true
+
         )
     }
 
@@ -41,7 +43,8 @@ class SettingsModelFactory
         return SwitchModel(
             fontSize = storage.fontSize,
             textAttr = R.string.settings_switch_change_theme,
-            isChecked = storage.isAltTheme
+            isChecked = storage.isAltTheme,
+            isSecondary = true
         )
     }
 
@@ -50,6 +53,7 @@ class SettingsModelFactory
             fontSize = storage.fontSize,
             textAttr = R.string.settings_switch_change_infinity,
             isChecked = storage.isInfinityGame,
+            isSecondary = true
         )
     }
 

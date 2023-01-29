@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_title">SETTINGS</string>
+    <string name="settings_switch_change_orientation">Change card orientation</string>
+    <string name="settings_switch_change_theme">Change theme</string>
+    <string name="settings_switch_change_infinity">Infinity game</string>
+    <string name="settings_counter_change_font_size">Font size</string>
+    <string name="settings_counter_minus">-</string>
+    <string name="settings_counter_plus">+</string>
+    <string name="settings_button_manage_users">Manage players</string>
+    <string name="settings_button_reset">Reset settings</string>
+</resources>

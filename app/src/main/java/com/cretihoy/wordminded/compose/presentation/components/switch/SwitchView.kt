@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.Switch
+import androidx.compose.material.SwitchDefaults
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -39,7 +40,17 @@ fun SwitchView(
             SpacerView(Modifier.weight(1f))
             Switch(
                 checked = model.isChecked.value,
-                onCheckedChange = { model.isChecked.value = it }
+                onCheckedChange = { model.isChecked.value = it },
+                colors = SwitchDefaults.colors(
+                    checkedThumbColor = if (model.isSecondary)
+                        colors.primary
+                    else
+                        colors.primaryVariant,
+                    uncheckedThumbColor = if (model.isSecondary)
+                        colors.surface
+                    else
+                        colors.onSurface
+                )
             )
         }
     }
