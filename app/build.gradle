@@ -84,4 +84,8 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:$roomVersion"
     kapt "androidx.room:room-compiler:$roomVersion"
     implementation "androidx.room:room-ktx:$roomVersion"
+
+    // Inner
+    implementation project(":data")
+    implementation project(":domain")
 }
